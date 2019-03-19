@@ -992,9 +992,8 @@ object {
 /*---------------------*/
 header {
 	display: flex;
-	/* align-items: center; */
 	position: fixed;
-  	top: 0;
+	top: 0;
 	width: 100%;
 	z-index: 999;
 	min-width: 11em;
@@ -1013,8 +1012,8 @@ header {
 }
 
 .website-logo {
-	min-width: 350x;
-	max-width: 350px;
+	min-width: 250x;
+	max-width: 250px;
 }
 
 .social-media {
@@ -1024,7 +1023,7 @@ header {
 }
 
 .social-media ul {
-	width: 25%;
+	width: 20%;
 	display: flex;
 	justify-content: space-around;
 	list-style-type: none;
@@ -1052,15 +1051,18 @@ header {
 
 
 body {
-	height: 100vh;
+	height: 100vh; /* remove white space below footer */
+	font-family: 'Lora', 'Open Sans', Arial, Helvetica, sans-serif;
+	max-width: 1920px;
+}
+	
+#page {
+	margin-top: 8em;
 }
 
-
-
-
-
-
-
+.content-area {
+	min-height: 58vh;
+}
 
 /*---------------------*/
 /* FOOTER STYLES */

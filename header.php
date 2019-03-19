@@ -32,13 +32,13 @@
 		<div class="nav-social">
 			<div class="social-media">
 				<ul>
-					<li><a href="https://www.linkedin.com/in/shanti-chary-96446615" class="facebook" title="Facebook" target="_blank"><img src="<?php the_field('social_media_facebook'); ?>" width="50"></a></li>
+					<li><a href="https://www.linkedin.com/in/shanti-chary-96446615" class="facebook" title="Facebook" target="_blank"><img src="<?php the_field('social_media_facebook'); ?>" width="40"></a></li>
 
-					<li><a href="https://github.com/ShantiChary?tab=repositories" class="linkedin" title="LinkedIn" target="_blank"> <img src="<?php the_field('social_media_linkedin'); ?>" width="50"></a></li>
+					<li><a href="https://github.com/ShantiChary?tab=repositories" class="linkedin" title="LinkedIn" target="_blank"> <img src="<?php the_field('social_media_linkedin'); ?>" width="40"></a></li>
 
-					<li><a href="https://www.instagram.com/shantichary" class="twitter" title="Twitter" target="_blank"><img src="<?php the_field('social_media_twitter'); ?>" width="50"></i></a></li>
+					<li><a href="https://www.instagram.com/shantichary" class="twitter" title="Twitter" target="_blank"><img src="<?php the_field('social_media_twitter'); ?>" width="40"></i></a></li>
 
-					<li><a href="https://www.instagram.com/shantichary" class="youtube" title="YouTube" target="_blank"><img src="<?php the_field('social_media_youtube'); ?>" width="50"></a></li>
+					<li><a href="https://www.instagram.com/shantichary" class="youtube" title="YouTube" target="_blank"><img src="<?php the_field('social_media_youtube'); ?>" width="40"></a></li>
 				</ul>	
 			</div> <!-- social-media -->
 

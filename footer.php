@@ -14,19 +14,25 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'avontec_theme' ) ); ?>">
+		<div class="footer-nav-container">
+			<nav id="site-navigation" class="footer-navigation">
+				<p>Site Map</p>
+				<br>
 				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'avontec_theme' ), 'WordPress' );
+				wp_nav_menu( array(
+					'theme_location' => 'footer_menu',
+					'menu_id'        => 'footer-menu',
+				) );
 				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'avontec_theme' ), 'avontec_theme', '<a href="http://underscores.me/">Shanti Chary</a>' );
-				?>
+			</nav><!-- #site-navigation -->
+		</div> <!-- footer-nav-container -->
+
+		<div class="site-info">	
+			<!-- ?php echo do_shortcode('[mc4wp_form]'); ?> -->
+			<p class="copy">&copy; <?php echo date('Y'); ?> Avontec</p>
+			<!-- <p class="credits">Check out the <a href="/credits/">attribution page.</a></p> -->
 		</div><!-- .site-info -->
+
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
