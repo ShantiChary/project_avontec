@@ -26,21 +26,35 @@
 
 	<header id="masthead" class="site-header">
 		<div class="site-branding">
-			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img class="website-logo" src="<?php the_field('website_logo'); ?>" width="300"></a>
+			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="<?php the_field('website_logo', 'option'); ?>" width=300></a></h1>
 		</div><!-- .site-branding logo-->
+
+
+
 
 		<div class="nav-social">
 			<div class="social-media">
-				<ul>
-					<li><a href="https://www.linkedin.com/in/shanti-chary-96446615" class="facebook" title="Facebook" target="_blank"><img src="<?php the_field('social_media_facebook'); ?>" width="40"></a></li>
+				<?php if( have_rows('social_media', 'option') ): ?>
 
-					<li><a href="https://github.com/ShantiChary?tab=repositories" class="linkedin" title="LinkedIn" target="_blank"> <img src="<?php the_field('social_media_linkedin'); ?>" width="40"></a></li>
+					<ul>
 
-					<li><a href="https://www.instagram.com/shantichary" class="twitter" title="Twitter" target="_blank"><img src="<?php the_field('social_media_twitter'); ?>" width="40"></i></a></li>
+					<?php while( have_rows('social_media', 'option') ): the_row(); ?>
 
-					<li><a href="https://www.instagram.com/shantichary" class="youtube" title="YouTube" target="_blank"><img src="<?php the_field('social_media_youtube'); ?>" width="40"></a></li>
-				</ul>	
-			</div> <!-- social-media -->
+
+						<li><a href="<?php the_sub_field('social_media_link'); ?>" target="_blank"> 
+							<img src="<?php the_sub_field('social_media_icon'); ?>" width=40>
+							</a>
+						</li>
+
+					<?php endwhile; ?>
+
+					</ul>
+
+				<?php endif; ?>
+			</div>
+
+
+
 
 			<nav id="site-navigation" class="main-navigation">
 				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'avontec' ); ?></button>
