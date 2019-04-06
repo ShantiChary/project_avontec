@@ -150,6 +150,116 @@
             ?>
         </div>
 
+    <!-- Section 4 Newsletter content -->
+    <div class="section-4">
+        <?php
+            if(function_exists('get_field')) {
+
+                echo "<h2 class='heading-3'>";
+                the_field('heading_3');
+                echo "</h2>";
+
+                echo "<p>";
+                the_field('section_4');
+                echo "</p>";
+            }
+        ?>
+
+        <div class="newsletter-social">
+            <div class="newsletter">
+                <?php
+                    if(function_exists('get_field')) {
+
+                        echo "<h5 class='newsletter-heading'>";
+                        the_field('newsletter_heading');
+                        echo "</h5>";
+
+                        echo "<p>";
+                        the_field('newsletter_section');
+                        echo "</p>";
+                    }
+
+                ?>
+            </div> <!-- newsletter -->
+
+            <div class="social-media-home">
+                <?php if( have_rows('social_media', 'option') ): ?>
+
+                    <ul>
+
+                    <?php while( have_rows('social_media', 'option') ): the_row(); ?>
+
+
+                        <li><a href="<?php the_sub_field('social_media_link'); ?>" target="_blank"> 
+                            <img src="<?php the_sub_field('social_media_icon'); ?>" width=60>
+                            </a>
+                        </li>
+
+                    <?php endwhile; ?>
+
+                    </ul>
+
+                <?php endif; ?>
+            </div> <!-- social-media-home -->
+        </div> <!-- newsletter-social -->
+    </div>  <!-- section-4 -->
+
+    <!-- Section 5 Exhibitions & News content -->
+    <div class="section-4">
+            <?php    
+                if(function_exists('get_field')) {
+
+                    echo "<h5 class='news_section_heading'>";
+                    the_field('news_section_heading');
+                    echo "</h5>";
+
+            ?>
+            
+            <div class="exhib-news"> 
+                <?php
+                    $image = get_field('news_article_1_image');
+
+                    if( !empty($image) ): ?>
+                        <img src="<?php echo $image['url']; ?>" width="40px" alt="<?php echo $image['alt']; ?>" />
+                    <?php endif; 
+
+                    echo "<p>";
+                    the_field('news_article_1_text');
+                    echo "</p>";
+                }
+                ?>
+
+                <?php    
+                    if(function_exists('get_field')) {
+
+                        $image = get_field('news_article_2_image');
+
+                        if( !empty($image) ): ?>
+                            <img src="<?php echo $image['url']; ?>" width="40px" alt="<?php echo $image['alt']; ?>" />
+                        <?php endif; 
+
+                        echo "<p>";
+                        the_field('news_article_2_text');
+                        echo "</p>";
+                    }
+                ?>
+
+                <?php    
+                    if(function_exists('get_field')) {
+
+                        $image = get_field('news_article_3_image');
+
+                        if( !empty($image) ): ?>
+                            <img src="<?php echo $image['url']; ?>" width="40px" alt="<?php echo $image['alt']; ?>" />
+                        <?php endif; 
+
+                        echo "<p>";
+                        the_field('news_article_3_text');
+                        echo "</p>";
+                    }
+                ?>
+             </div>  <!-- exhib-news -->  
+         </div>  <!-- section-4 -->   
 
 
 

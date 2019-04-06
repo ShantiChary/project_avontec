@@ -54,12 +54,12 @@
 				<p><?php the_field('email_title_2', 'option'); ?></p>
 				<a class="email2" href="<?php the_field('email_address_2', 'option'); ?>"><?php the_field('email_address_2', 'option'); ?></a> 
 			</div>
+
 		</div>
 
 		<div class="site-info">	
 			<!-- ?php echo do_shortcode('[mc4wp_form]'); ?> -->
-			<p class="copy">&copy; <?php echo date('Y'); ?> Avontec</p>
-			<!-- <p class="credits">Check out the <a href="/credits/">attribution page.</a></p> -->
+			<p class="copy">Copyright &copy; <?php echo date('Y'); ?> Avontec Automation Pvt Ltd. All Rights Reserved</p>        <p class="site-design">Designed by <a href="https://www.arusansystems.com" target="_blank">Arusan.com</a></p>
 		</div><!-- .site-info -->
 
 	</footer><!-- #colophon -->

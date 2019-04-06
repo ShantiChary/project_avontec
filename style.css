@@ -1207,9 +1207,10 @@ body {
 .site-footer {
 	width: 100%;
 	background-color: rgb(19, 18, 18);
-	height: 250px;
+	height: 180px;
 	margin: 0;
 	padding: 0;
+	font-size: 12px;
 }
 
 .site-footer a {
@@ -1224,7 +1225,7 @@ body {
 	display: flex;
 	justify-content: space-between;
 	text-align: left;
-	padding: 40px 30px 0;
+	padding: 10px 30px 0;
 }
 
 .footer-nav-container {
@@ -1251,5 +1252,22 @@ footer ul li {
 	text-indent: 0;
 }
 
+.site-info {
+	background-color: gray;
+	margin: 0;
+	padding: 10px 0;
+	display: flex;
+}
+
+.copy,
+.site-design {
+	margin: 0;
+	padding: 0 0 0 20px;
+	color: #fff;
+}
+
+.copy {
+	width: 85%;
+}
 
 
