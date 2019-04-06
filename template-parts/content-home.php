@@ -8,13 +8,7 @@
 ?>
 
 <!-- Home Page Banner Gallery -->
-<section class="home-content">
-    <div class="section-1">
-        <?php  
-        ?>
-    </div>
-
-
+<section id="home-content">
     <!-- SECTION 2 - INTRO -->
     <div class="section-2-intro">
         <?php  
@@ -59,6 +53,8 @@
                 }	
                 ?>
         </div>
+
+
 
         <div class="video-2-section">
             <?php   	   
@@ -140,20 +136,20 @@
                 }	
             ?>    
         </div> <!--video-2-section -->
-
     </section>
 
-    <!-- SECTION 3 - KEY PROJECTS -->
-    <div class="key-projects">
-        <?php
-            if(get_field('heading_2')){
-                echo '<h3>';
-                the_field('heading_2');
-                echo '</h3>';
-            }
+        <!-- SECTION 3 - KEY PROJECTS -->
+        <div class="key-projects">
+            <?php
+                if(get_field('heading_2')){
+                    echo '<h3>';
+                    the_field('heading_2');
+                    echo '</h3>';
+                }
 
-        ?>
-    </div>
+            ?>
+        </div>
+
 
 
 

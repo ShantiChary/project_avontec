@@ -141,6 +141,10 @@ function avontec_theme_scripts() {
 	wp_enqueue_style( 'slickcss', get_stylesheet_directory_uri() . '/css/slick.css', '1.6.0', 'all');
 	wp_enqueue_style( 'slickcsstheme', get_stylesheet_directory_uri(). '/css/slick-theme.css', '1.0', 'all');
 
+	//SCROLL TO TOP BUTTON script
+	wp_enqueue_script( 'scrolltop', get_stylesheet_directory_uri() . '/js/scroll-top.js', array( 'jquery' ) );
+
+
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}

@@ -3,7 +3,14 @@
  * The template for displaying Front Page of the site
  */
 
- get_header();
+//  get_header();
+	if(is_page(101)) {
+		get_header('landing');
+	}
+	else {
+		get_header();
+	}
+	wp_head();
  ?>
 
  	<div id="primary" class="content-area">

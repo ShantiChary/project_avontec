@@ -32,26 +32,26 @@
 
 
 
-		<div class="nav-social">
+		<!-- <div class="nav-social">
 			<div class="social-media">
-				<?php if( have_rows('social_media', 'option') ): ?>
+				?php if( have_rows('social_media', 'option') ): ?>
 
 					<ul>
 
-					<?php while( have_rows('social_media', 'option') ): the_row(); ?>
+					?php while( have_rows('social_media', 'option') ): the_row(); ?>
 
 
-						<li><a href="<?php the_sub_field('social_media_link'); ?>" target="_blank"> 
-							<img src="<?php the_sub_field('social_media_icon'); ?>" width=40>
+						<li><a href="?php the_sub_field('social_media_link'); ?>" target="_blank"> 
+							<img src="?php the_sub_field('social_media_icon'); ?>" width=40>
 							</a>
 						</li>
 
-					<?php endwhile; ?>
+					?php endwhile; ?>
 
 					</ul>
 
-				<?php endif; ?>
-			</div>
+				?php endif; ?>
+			</div> -->
 
 
 
