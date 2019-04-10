@@ -7,8 +7,11 @@
 	if(is_page(101)) {
 		get_header('landing');
 	}
+	else if(is_page(587)) {
+
+	}
 	else {
-		get_header();
+		get_header('internal');
 	}
 	wp_head();
  ?>
@@ -20,7 +23,8 @@
 		while ( have_posts() ) :
 			the_post();
 
-			get_template_part('template-parts/content', 'home');
+			// get_template_part('template-parts/content', 'home');
+			get_template_part('template-parts/content', 'wuc');
 
 		endwhile; // End of the loop.
 		?>		
@@ -30,5 +34,5 @@
 	</div><!-- #primary -->
 
 
-
-<?php get_footer(); ?>
+<!-- Disabled for WUC Page. Enable for actual home page -->
+<!-- php get_footer(); ?> -->
