@@ -1111,8 +1111,18 @@ html,body
 /* NAVIGATION MENU STYLES */
 /*------------------------*/
 /* Website Under Construciton Page styles - temporary page */
+body {
+	background-color: #e0e0e0;
+}
+
 .wuc-banner {
 	width: 100%;
+	height: 600px;
+	background-image: url('http://www.avontec.com/wp-content/uploads/2019/04/page-image-.jpg');
+	background-size: contain;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	border-bottom: 8px solid white;
 }
 
 .wuc-banner img {
@@ -1123,11 +1133,12 @@ html,body
 	background-color: #e0e0e0;
 	display: flex;
 	height: 400px;
-	margin: 10px 0;
-	padding: 2em 1em 0;
+	/* margin: 10px 0; */
+	padding: 0 1em 0;
 	align-items: center;
 	justify-content: center;
 	font-size: 0;
+	border-bottom: 8px solid white;
 }
 
 .fb-icon {
@@ -1163,16 +1174,17 @@ html,body
 .section-two {
 	background-color: #e0e0e0;
 	margin: 0;
-	padding: 0 50px 30px;
+	padding: 0 60px 30px;
+	margin-top: 0 !important;
 }
 
 .section-two h1 {
 	font-size: 50px;	
 }
 
-.section-two p {
-	font-size: 34px;
-	margin-top: 0 !important;
+.section-two p,
+.section-two li {
+	font-size: 30px;
 }
 
 /* .wuc-main-navigation {

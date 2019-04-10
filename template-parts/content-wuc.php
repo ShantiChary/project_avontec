@@ -10,11 +10,11 @@
 <!-- Home Page Banner Gallery -->
 <section id="wuc-content">
     <div class="wuc-banner">
-        <?php if( get_field('wuc_banner') ): ?>
+        <!-- ?php if( get_field('wuc_banner') ): ?>
 
-            <img src="<?php the_field('wuc_banner'); ?>" />
+            <img src="?php the_field('wuc_banner'); ?>" />
 
-        <?php endif; ?>
+        ?php endif; ?> -->
     </div>
 
     <div class="section-one">
@@ -52,7 +52,7 @@
 
         <!-- <div class="wuc-description"> -->
             <?php 
-                echo "<p>";
+                echo "<p class='wuc-desc'>";
                 the_field('wuc_description');
                 echo "</p>";
             ?>  
