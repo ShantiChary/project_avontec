@@ -43,20 +43,64 @@
     </div>
 
     <div class="section-two">
-        <!-- <div class="wuc-heading"> -->
-            <?php echo "<h1>";
+            <!-- ?php echo "<h1>";
                 the_field('wuc_heading');
                 echo "</h1>";
-            ?>
-        <!-- </div> -->
+            ?> -->
 
-        <!-- <div class="wuc-description"> -->
-            <?php 
+            <!-- ?php 
                 echo "<p class='wuc-desc'>";
                 the_field('wuc_description');
                 echo "</p>";
+            ?>   -->
+
+            <?php if(function_exists('get_field')) { ?>
+                <img src="<?php the_field('wuc_lectrotek_logo'); ?>" width=150>
+            <?php } ?>
+
+            <?php 
+                echo "<p>";
+                the_field('wuc_lectrotek_text');
+                echo "</p>";
             ?>  
-        <!-- </div> -->
+
+            <?php if(function_exists('get_field')) { ?>
+                <img src="<?php the_field('wuc_ravon_logo'); ?>" width=200>
+            <?php } ?>
+
+            <?php 
+                echo "<p>";
+                the_field('wuc_ravon_text');
+                echo "</p>";
+            ?>  
+
+            <?php if(function_exists('get_field')) { ?>
+                <img src="<?php the_field('wuc_avontec_logo'); ?>" width=300>
+            <?php } ?>
+
+            <?php 
+                echo "<p>";
+                the_field('wuc_avontec_text');
+                echo "</p>";
+            ?>
+            
+            <?php if(function_exists('get_field')) { ?>
+                <img src="<?php the_field('products_image'); ?>" width=650>
+            <?php } ?>
+
+            <?php 
+                echo "<p>";
+                the_field('wuc_extra_text');
+                echo "</p>";
+            ?>
+
+            <?php 
+                echo "<p>";
+                the_field('office_address');
+                echo "</p>";
+            ?>
+
+
     </div>
 
 

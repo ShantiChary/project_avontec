@@ -39,24 +39,3 @@ jQuery(document).ready(function($){
    });
 });
 
-
-// jQuery(document).ready(function($){
-// 	$('.autoplay').slick({
-// 		slidesToShow: 3,
-// 		slidesToScroll: 1,
-// 		autoplay: true,
-// 		arrows: true,
-// 		autoplaySpeed: 3000
-// 		// centerMode: true
-// 	});
-// 	$('.slider-nav').slick({
-// 		slidesToShow: 3,
-// 		slidesToScroll: 1,
-// 		asNavFor: '.slider-for',
-// 		dots: true,
-// 		arrows: true,
-// 		centerMode: true,
-// 		focusOnSelect: true
-// 	});
-// });
-

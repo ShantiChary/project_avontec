@@ -7,7 +7,8 @@
 	if(is_page(101)) {
 		get_header('landing');
 	}
-	else if(is_page(587)) {
+	// else if(is_page(587)) { for local - 241 is for prod
+		else if(is_page(587)) {
 
 	}
 	else {
@@ -23,8 +24,8 @@
 		while ( have_posts() ) :
 			the_post();
 
-			// get_template_part('template-parts/content', 'home');
-			get_template_part('template-parts/content', 'wuc');
+			get_template_part('template-parts/content', 'home');
+			// get_template_part('template-parts/content', 'wuc');
 
 		endwhile; // End of the loop.
 		?>		
@@ -34,5 +35,5 @@
 	</div><!-- #primary -->
 
 
-<!-- Disabled for WUC Page. Enable for actual home page -->
-<!-- php get_footer(); ?> -->
+<!-- Disabled for WUC Page. Enable for actual home page NOTE: IF YOU DISABLE FOOTER, SLICK SLIDER WILL NOT WORK!!!-->
+<?php get_footer(); ?>

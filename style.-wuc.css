@@ -1110,6 +1110,107 @@ html,body
 /*------------------------*/
 /* NAVIGATION MENU STYLES */
 /*------------------------*/
+/* Website Under Construciton Page styles - temporary page */
+body {
+	background-color: #e0e0e0;
+}
+
+.wuc-banner {
+	width: 100%;
+	height: 600px;
+	background-image: url('http://www.avontec.com/wp-content/uploads/2019/04/page-image-.jpg');
+	background-size: contain;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	border-bottom: 8px solid white;
+}
+
+.wuc-banner img {
+	width: 100%;
+}
+
+.section-one {
+	background-color: #e0e0e0;
+	display: flex;
+	height: 400px;
+	/* margin: 10px 0; */
+	padding: 0 1em 0;
+	align-items: center;
+	justify-content: center;
+	font-size: 0;
+	border-bottom: 8px solid white;
+}
+
+.fb-icon {
+	width: 200px;
+	display: flex;
+	justify-content: flex-end;
+}
+
+.wuc-text {
+	width: 420px;
+	flex-grow: 1;
+	padding-left: 15px;
+}
+
+.wuc-text h1 {
+	width: 420px;
+	color: #cd311b;
+	font-size: 34px;
+	line-height: 1.25;
+}
+
+.wuc-image {
+	width: 800px;
+	text-align: right;
+	/* padding-right: 80px; */
+
+}
+
+.wuc-image {
+	flex-grow: 2;
+}
+
+.section-two {
+	/* background-color: #e0e0e0; */
+	background-color: #fff;
+	margin: 0;
+	padding: 0 60px 30px;
+	margin-top: 0 !important;
+}
+
+.section-two h1 {
+	font-size: 50px;	
+}
+
+.section-two p,
+.section-two li {
+	font-size: 18px;
+}
+
+/* .wuc-main-navigation {
+	position: relative;
+	/* width: 67.25%; 
+	width: 75%;
+	line-height: 1em;
+	font-size: 0.9rem;
+	padding-top: 0;
+	height: 140px;
+	transform: skew(-30deg);
+	background-color:#e3e3e3;	
+} */
+
+/* .wuc-main-navigation  h1{
+	position: absolute;
+	left: 35%;
+	top: 25%;
+	transform:translate(-50%, -50%);
+	transform: skew(30deg);
+	color: #797778;
+} */
+
+/*===========================================================*/
+
 .main-navigation {
 	width: 73%;
 	text-transform: uppercase;
@@ -1180,23 +1281,20 @@ body {
 
 /* Home page Styles */
 .section-2-intro,
-.section-2,
-.section-4-intro {
-	margin: 3em;
+.section-2 {
+	margin: 2em;
 }
 
 .section-2 {
 	display: flex;
 }
 
-.section-2-para,
-.section-4-para {
+.section-2-para {
 	width: 70%;
 }
 
 .section-2-h2,
-.section-2-,
-.section-4-h2 {
+.section-2-para {
 	margin: 0;
 }
 
@@ -1210,7 +1308,6 @@ body {
 	z-index: 801;
 }
 
-
 .video1Title {
 	position: absolute;
 	z-index: 9999;
@@ -1223,23 +1320,7 @@ body {
 }
 
 .video1Text {
-	margin: 0;
-	padding-bottom: 10px;
-}
-
-.learn-more-button { 
-	padding: 10px 15px; 
-	background-color: white; 
-	color: #cf311d;
-	border: 1.5px solid #cf311d;; 
-	text-transform: uppercase; 
-	font-size: 0.8rem; 
-	letter-spacing: 0.04rem; 
-}
-
-.learn-more-button:hover { 
-	color: black; 
-	background-color: #fcf9f5; 
+	width: 88%;
 }
 
 .video-2-section {
@@ -1324,53 +1405,12 @@ body {
 }
 
 .newsletter {
-	width: 40%;
-	height: 200px;
+
+	width: 50%;
 }
 
-.social-media-home {
-	width: 60%;
-	height: 200px;
-}
 
-.newsletter {
-	margin: 1em 0;
-	border: 1px solid #000;
-	padding: 10px;
-	background-color:#e1e1e1;
-}
 
-.newsletter-full {
-	background-color:#fff;	
-}
-
-.newsletter h5 {
-	margin: 0;
-}
-
-.newsletter p {
-	font-size: 14px;
-}
-
-.social-media-home {
-	position: relative;
-	margin: 1em 0;
-	padding: 10px;
-}
-
-.social-media-home ul {
-	width: 500px;
-	position: absolute;
-	margin: 0;
-	padding: 0;
-	left: 50%;
-	top: 50%;
-	transform:translate(-50%, -50%);
-}
-
-.section-5 {
-	padding: 10px;
-}
 /*---------------------*/
 /* FOOTER STYLES */
 /*---------------------*/

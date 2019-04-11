@@ -143,19 +143,6 @@ function avontec_theme_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'avontec_theme_scripts' );
 
-/* ADDS FAVICON TO HEADER */  
-function avontec_favicon() {  
-	$avontec_dir = get_bloginfo('stylesheet_directory');  
-	echo '<link rel="shortcut icon" href="';
-	echo $avontec_dir;
-	echo '/favicon.ico" type="image/x-icon" />';
-	echo '<link rel="icon" href="';
-	echo $avontec_dir;
-	echo '/favicon.ico" type="image/x-icon" />';
- }  
- add_action('wp_head', 'avontec_favicon', 5);
-
-
 /**
  * Implement the Custom Header feature.
  */
