@@ -2,7 +2,8 @@ jQuery(document).ready(function($){
 	$('.slider-for').slick({
 	 slidesToShow: 1,
 	 slidesToScroll: 1,
-	 arrows: true,
+	 dots: false,
+	 arrows: false,
 	 fade: false,
 	 asNavFor: '.slider-nav'
    });
@@ -10,16 +11,15 @@ jQuery(document).ready(function($){
 	 slidesToShow: 1,
 	 slidesToScroll: 1,
 	 asNavFor: '.slider-for',
-	 dots: true,
+	 dots: false,
 	 centerMode: true,
 	 focusOnSelect: true,
-	 arrows: true,
+	 arrows: false,
 	 autoplay: true,
 	 autoplaySpeed: 7000
    });
-});
 
-jQuery(document).ready(function($){
+
 	$('.multiple-items').slick({
 		infinite: true,
 		slidesToShow: 4,
@@ -37,5 +37,23 @@ jQuery(document).ready(function($){
 	 autoplay: true,
 	 autoplaySpeed: 7000
    });
-});
 
+
+	// $('.news-multiple').slick({
+	// 	infinite: true,
+	// 	slidesToShow: 3,
+	// 	slidesToScroll: 1,
+	// 	arrows: false,
+	// 	fade: true,
+	// 	asNavFor: '.news-nav'
+	// });
+	// $('.news-nav').slick({
+	// 	slidesToShow: 3,
+	// 	slidesToScroll: 1,
+	// 	asNavFor: '.news-multiple',
+	// 	arrows: true,
+	// 	autoplay: true,
+	// 	autoplaySpeed: 3000,
+	// 	focusOnSelect: true
+	// });
+});
