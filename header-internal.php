@@ -35,7 +35,12 @@
 				<?php if( have_rows('social_media', 'option') ): ?>
 
 					<ul>
+						<li id="home-icon">			
+							<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="<?php the_field('home_icon', 'option'); ?>" width=30></a></h1>
+						</li>
+
 						<?php while( have_rows('social_media', 'option') ): the_row(); ?>
+
 
 							<li><a href="<?php the_sub_field('social_media_link'); ?>" target="_blank"> 
 								<img src="<?php the_sub_field('social_media_icon'); ?>" width=40>
@@ -55,12 +60,16 @@
 			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="<?php the_field('website_logo', 'option'); ?>" width=300></a></h1>
 		</div><!-- .site-branding logo-->
 
-		<nav id="site-navigation" class="wuc-main-navigation">
-			<h1>Website under Development</h1>
+		<nav id="site-navigation" class="main-navigation">
+			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'avontec' ); ?></button>
+			<?php
+			wp_nav_menu( array(
+				'theme_location' => 'menu-1',
+				'menu_id'        => 'primary-menu',
+			) );
+			?>
 		</nav><!-- #site-navigation -->
 	</div>
-
-
 
 
 	</header> <!--#masthead -->

@@ -48,14 +48,30 @@
                             the_field('video_1_text');
                         echo "</p>";  
                     
-                        echo "<a class='learn-more-button' href='";
-                        the_field('learn_more_button');
-                        echo "'>Learn More</a>";
+                        // echo "<a class='trigger learn-more-button' href='";
+                        // the_field('learn_more_button');
+                        // echo "'>Learn More</a>";
+                        ?>
 
+                        <button class="trigger">Learn More</button>
+
+                    <?php
                     }	
                     ?>
             </div> <!-- video-1-section -->
 
+            <div class="modal">
+                <div class="modal-content">
+                    <div class="popup-content">
+                        <span class="close-button">&times;</span>
+                            <img src="<?php the_field('website_logo', 'option'); ?>" width=120>
+
+                            <p>Hello, I am a modal!</p>
+
+                            <a href="<?php the_field('contact_us_button'); ?>"><button>Contact Us</button></a>
+                    </div>
+                </div>
+            </div>
 
             <!-- Side videos --> 
             <div class="video-2-section">
@@ -93,10 +109,9 @@
                                         </div>
                 
                                 <?php
-                                endwhile;                             
-                            echo '</div>'; //video2MainContainer  
-                        }  
-                    ?>                
+                                endwhile;   ?>                          
+                            </div> <!--video2MainContainer  -->
+                      <?php  }    ?>          
 
             </div> <!--video-2-section -->
         </section> <!-- section-2 -->
@@ -171,11 +186,11 @@
                         if(function_exists('get_field')) {
 
                             echo "<h2 class='section-4-h2'>";
-                            the_field('heading_3');
+                            the_field('heading_3', 'option');
                             echo "</h2>";
 
                             echo "<p class='section-4-para'>";
-                            the_field('section_4');
+                            the_field('section_4', 'option');
                             echo "</p>";
                         }
                     ?>
@@ -186,11 +201,11 @@
                                 if(function_exists('get_field')) {
                                     echo "<div class='newsletter-full'>";
                                     echo "<h5>";
-                                    the_field('newsletter_heading');
+                                    the_field('newsletter_heading', 'option');
                                     echo "</h5>";
 
                                     echo "<p>";
-                                    the_field('newsletter_section');
+                                    the_field('newsletter_section', 'option');
                                     echo "</p>";
                                     echo "</div>";
                                 }

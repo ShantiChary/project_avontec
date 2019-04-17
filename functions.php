@@ -142,6 +142,9 @@ function avontec_theme_scripts() {
 	//SCROLL TO TOP BUTTON script
 	wp_enqueue_script( 'scrolltop', get_stylesheet_directory_uri() . '/js/scroll-top.js', array( 'jquery' ) );
 
+	// //POPUP MODAL script
+	// wp_enqueue_script( 'popup', get_stylesheet_directory_uri() . '/js/popup-modal.js', array( 'jquery' ) );
+
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
@@ -194,6 +197,40 @@ if( function_exists('acf_add_options_page') ) {
 	acf_add_options_page();
 	
 }
+
+/* YoTube subscribe button javascript */
+function wpb_hook_javascript() {
+  if (is_page ('about-us')) { 
+    ?>
+        <!-- <script type="text/javascript"> -->
+          <script src="https://apis.google.com/js/platform.js"></script>
+				<!-- </script> -->
+				
+
+				<div id="fb-root"></div>
+				<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2"></script>
+
+
+				<!-- <script>
+					window.fbAsyncInit = function() {
+						FB.init({
+							appId            : '433005377509194',
+							autoLogAppEvents : true,
+							xfbml            : true,
+							version          : 'v3.2'
+						});
+					};
+				</script> -->
+
+		<!-- <script async defer src="https://connect.facebook.net/en_US/sdk.js"></script> -->
+    <?php
+  }
+}
+add_action('wp_head', 'wpb_hook_javascript');
+
+
+
+
 
 
 

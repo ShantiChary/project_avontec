@@ -4,16 +4,16 @@
  */
 
 //  get_header();
-	if(is_page(101)) {
+	if(is_page('101')) {
 		get_header('landing');
 	}
 	// else if(is_page(587)) { for local - 241 is for prod
 		else if(is_page(587)) {
 
 	}
-	else {
-		get_header('internal');
-	}
+	// else {
+	// 	get_header('internal');
+	// }
 	wp_head();
  ?>
 
