@@ -1,13 +1,13 @@
 <?php
 /**
- * Template part for displaying page content in page-contact-us.php
+ * Template part for displaying page content in page-news.php
  *
  * @package avontec
  */
 
 ?>
 
-<!-- Contact Us Content -->
+<!-- Events & News Content -->
 <section id="about-content">
 
             <div class="about-section-1">
