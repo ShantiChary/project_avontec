@@ -24,7 +24,7 @@ get_header('internal');
 			the_post();
 
 			get_template_part( 'template-parts/content', 'contact' );
-
+			get_template_part( 'template-parts/content', 'newsletter' );
 
 		endwhile; // End of the loop.
 		?>

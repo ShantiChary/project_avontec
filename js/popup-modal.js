@@ -18,3 +18,10 @@ jQuery(document).ready(function($){
 		window.addEventListener("click", windowOnClick);
 });
 
+
+var wpcf7Elm = document.querySelector( '.wpcf7' );
+ 
+wpcf7Elm.addEventListener( 'wpcf7submit', function( event ) {
+    alert( "Fire!" );
+}, false );
+

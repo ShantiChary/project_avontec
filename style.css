@@ -1113,7 +1113,7 @@ html,body
 /*------------------------*/
 .main-navigation {
 	width: 73%;
-	text-transform: uppercase;
+	/* text-transform: uppercase; */
 	line-height: 1em;
 	font-size: 0.9rem;
 	letter-spacing: 0.03rem;
@@ -1221,14 +1221,8 @@ body {
 	margin: 3em;
 }
 
-.about-section-1 {
-	margin: 1em;
-	padding-top: 12px;
-	/* margin: 1em 0em 1em 1em; */
-}
-
 .section-4 {
-	margin: 1em 3em 0;
+	margin: 1em 3em 2em;
 }
 
 .section-5 {
@@ -1273,6 +1267,7 @@ body {
 }
 
 .video1Text {
+	width: 640px;
 	margin: 0;
 	padding-bottom: 10px;
 }
@@ -1294,7 +1289,7 @@ body {
 .video-2-section {
 	background-color: rgba(196, 192, 195, 0.15);
 	height: 450px;		
-	overflow: scroll;
+	overflow-y: scroll;
 }
 
 .video2MainContainer {
@@ -1368,17 +1363,17 @@ body {
 
 .newsletter-social {
 	display: flex;
-	height: 210px;
+	height: 240px;
 }
 
 .social-media-home {
 	width: 60%;
-	height: 200px;
+	height: 230px;
 }
 
 .newsletter {
 	width: 40%;
-	height: 200px;
+	height: 230px;
 	margin: 1em 0;
 	padding: 5px;
 	background-color:#e1e1e1;
@@ -1386,7 +1381,7 @@ body {
 
 .newsletter-full {
 	background-color:#fff;	
-	height: 190px;
+	height: 210px;
 	padding: 10px;
 }
 
@@ -1419,14 +1414,14 @@ body {
 	width: 1400px;
 	height: 280px;
 	position: relative;
-	padding: 1em 0.5em;
+	padding: 0.2em 0.5em;
 	/* z-index:777;	 */
 }
 
 .section-5-inner {
 	position: absolute;
 	width: 1380px;
-	height: 250px;
+	height: 270px;
 	background-color: #fff;
 	padding: 10px;
 }
@@ -1434,25 +1429,45 @@ body {
 /*---------------------*/
 /* ABOUT US PAGE STYLES */
 /*---------------------*/
-.about-content {
-
-}
-
-.about-section-1 {
+.internal-section-1 {
 	display: flex;
 	justify-content: space-between;
+	margin: 1em;
+	padding-top: 12px;
+	/* margin: 1em 0em 1em 1em; */
 }
 
-.about-section-1-text ,
+.about-section-main,
 .about-section-1-sidebar {
-	height: 1350px;
+	height: 1460px;
 	margin-top: 25px;
 	background-color: #e0e0e0;
 }
 
-.about-section-1-text {
-	width: 74.75%;
-	padding: 2em;
+.about-section-main {
+	width: 74.7%;
+	padding: 0 2em 2em 0;
+	overflow-y: scroll;
+}
+
+.about-section-main img {
+	width: 80%;
+	margin: 0;
+	padding: 0;
+}
+
+.about-section-text h2 {
+	padding: 0 0 0 1em;
+}
+
+.about-section-text p {
+	padding: 0 1.5em 1.5em 1.5em;
+	color: rgb(0, 19, 132);
+}
+
+.about-section-text p {
+	padding: 0 1.5em 1.5em 1.5em;
+	color: rgb(0, 19, 132);
 }
 
 .about-section-1-sidebar {
@@ -1478,12 +1493,23 @@ body {
 	font-size: 12px;
 }
 
-/* About us Sidebar COntact Form Styles */
+/* About us Sidebar Contact Form Styles */
+#secondary {
+	width: 25%;
+	/* height: 1460px; */
+	margin-top: 25px;
+	padding: 2em;
+	text-align: center;
+	background-color: #e0e0e0;
+}
+
 .contact-form {
+	position: relative;
 	background-color: #6a6868;
 	color: #fff;
 	margin: 0px 0 20px 0;
 	padding: 3px 10px;
+	/* z-index: 9990; */
 }
 
 .contact-form h4 {
@@ -1496,6 +1522,22 @@ body {
 .wpcf7 textarea.wpcf7-textarea { width: 100%; font-size: 12px; font-weight: bold; color: #6a6868; } 
 .wpcf7-form textarea { height: 100px; }
 input.wpcf7-submit {margin: 0;}
+.wpcf7-validation-errors {display: none; } /* display once email is tested */
+
+/* Contact Form Overlay */
+.contact-us-overlay {
+	position: absolute;
+	width: 100%;
+	height: 276px;
+	top: 0;
+	left: 0;
+	/* transform: translate(-50%, -50%); */
+	background-color: #fff;
+	color: #000;
+	padding: 20px;
+	z-index: 9998;
+}
+
 
 /*---------------------*/
 /*POPUP WINDOW STYLES */
@@ -1534,6 +1576,8 @@ input.wpcf7-submit {margin: 0;}
 	border-radius: 0.25rem;
 	background-color: lightgray;
 }
+
+/*-------------------------------------------*/
 
 .video-1-section button {
 	padding: 8px 15px; 

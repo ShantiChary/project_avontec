@@ -74,3 +74,11 @@ jQuery(document).ready(function($){
     closeButton.addEventListener("click", toggleModal);
     window.addEventListener("click", windowOnClick);
 });
+
+// jQuery(document).ready(function($){
+//     var wpcf7Elm = document.querySelector( '.wpcf7' );
+ 
+//     wpcf7Elm.addEventListener( 'wpcf7submit', function( event ) {
+//         alert( "Fire!" );
+//     }, false );
+// });

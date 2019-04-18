@@ -28,7 +28,7 @@
 	<div class="header-top-fixed">
 
 		<div class="contact-us-image">
-			<a href="<?php the_field('contact_us_button'); ?>"><img src="<?php the_field('contact_us_image', 'option'); ?>" width=410></a></h1>
+			<a href="<?php the_field('contact_us_button', 'option'); ?>"><img src="<?php the_field('contact_us_image', 'option'); ?>" width=410></a></h1>
 		</div>
 
 		<div class="social-media">
