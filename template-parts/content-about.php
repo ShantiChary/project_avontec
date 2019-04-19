@@ -19,8 +19,20 @@
                         $image = get_field('about_us_banner', 'option');
 
                         if( !empty($image) ): ?>
+                            <div class="banner-sub-menu">
+                                <div class="banner-img-div">
+                                    <!-- <img class="banner-img" src="?php echo $image['url']; ?>" alt="?php echo $image['alt']; ?>" /> -->
+                                </div>
 
-                            <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+                                <h1 class="banner-h1"><?php echo get_the_title(); ?> </h1>
+
+                                <!-- Sub menu div -->
+                                <div class="sub-menu-div">
+
+                                <h3><?php echo get_the_title( $post->post_parent ); ?></h3>
+                                    <?php echo do_shortcode('[wpb_childpages]'); ?>
+                                </div>
+                            </div>
 
                     <?php endif; ?>
 

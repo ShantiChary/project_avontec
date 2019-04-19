@@ -23,9 +23,14 @@ get_header('internal');
 		while ( have_posts() ) :
 			the_post();
 
-			get_template_part( 'template-parts/content', 'contact' );
-			get_template_part( 'template-parts/content', 'newsletter' );
+			get_template_part( 'template-parts/content', 'contact' ); ?>
 
+			<div class="sec-4">
+				<?php
+					get_template_part( 'template-parts/content', 'newsletter' );
+				?>
+			</div>
+		<?php	
 		endwhile; // End of the loop.
 		?>
 
