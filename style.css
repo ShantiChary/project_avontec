@@ -1516,7 +1516,7 @@ body {
 
 .banner-h1 {
 	position: absolute;
-	top: 7%;
+	top: 5%;
 	left: 5%;
 	color: var(--theme-white);
 	font-size: 2.5em;
@@ -1591,6 +1591,31 @@ input.wpcf7-submit {margin: 0;}
 	padding: 20px;
 	z-index: 9998;
 }
+
+/*---------------------*/
+/*CONTACT US STYLES */
+/*---------------------*/
+.contact-info {
+	padding: 2em;
+	text-align: center;
+}
+
+.contact-info p {
+	margin: 0;
+	padding: 0;
+}
+
+.google-map div {
+	padding: 1em;
+}
+
+.google-map {
+	width: 100%;
+	margin: 2em 0 0;
+	padding: 1em;
+}
+
+
 
 
 /*---------------------*/
