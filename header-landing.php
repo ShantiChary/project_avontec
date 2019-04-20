@@ -42,10 +42,10 @@
 						<?php while( have_rows('social_media', 'option') ): the_row(); ?>
 
 
-							<li><a href="<?php the_sub_field('social_media_link'); ?>" target="_blank"> 
-								<img src="<?php the_sub_field('social_media_icon'); ?>" width=40>
-								</a>
+							<a href="<?php the_sub_field('social_media_link'); ?>" target="_blank"> 
+							<li><img src="<?php the_sub_field('social_media_icon'); ?>" width=40>
 							</li>
+							</a>
 
 						<?php endwhile; ?>
 

@@ -200,8 +200,8 @@ if( function_exists('acf_add_options_page') ) {
 
 /* YoTube subscribe button javascript */
 function wpb_hook_javascript() {
-  if (is_page ('about-us')) { 
-    ?>
+  // if (is_page ('about-us')) { 
+  //   ?>
         <!-- <script type="text/javascript"> -->
           <script src="https://apis.google.com/js/platform.js"></script>
 				<!-- </script> -->
@@ -224,7 +224,7 @@ function wpb_hook_javascript() {
 
 		<!-- <script async defer src="https://connect.facebook.net/en_US/sdk.js"></script> -->
     <?php
-  }
+  // }
 }
 add_action('wp_head', 'wpb_hook_javascript');
 

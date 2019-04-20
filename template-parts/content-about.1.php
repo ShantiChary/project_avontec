@@ -17,12 +17,12 @@
 
                             <?php 
                             // if( !empty($image) ):
-                            //         $image = get_field('about_us_banner', 'option');
+                                    $image = get_field('about_us_banner');
                             // endif; ?>
 
                             <div class="banner-sub-menu">
                                 <div class="banner-img-div">
-                                    <!-- <img class="banner-img" src="?php echo $image['url']; ?>" alt="?php echo $image['alt']; ?>" /> -->
+                                    <img class="banner-img" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" width=875/>
                                 </div>
 
                                 <h1 class="banner-h1"><?php echo get_the_title(); ?> </h1>
