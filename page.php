@@ -40,6 +40,10 @@ get_header('internal');
 												$image = get_field('custom_rd_banner', 'option');
 											}
 
+											if ((is_page ('efficiency-management')) || (is_page ('application-management')) || (is_page ('machine-upgrade')) || (is_page ('annual-maintenance-contract'))  || (is_page ('spare-parts-change-parts'))) { 
+												$image = get_field('engineering_banner', 'option');
+											}
+
 										?>
 
 										<div class="banner-img-div">

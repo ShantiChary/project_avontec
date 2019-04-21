@@ -27,10 +27,16 @@ get_header('internal');
 									<div class="banner-sub-menu">
 
 										<?php 
-											// if ((is_page ('about-avontec')) || (is_page ('share-holders')) || (is_page ('partners')) || (is_page ('client-list'))  || (is_page ('case-studies')) || (is_page ('work-avontec'))) { 
-												$image = get_field('conveying_banner', 'option');
-											// }
-
+											if (is_single() && is_post_type('conveying')){
+												// if ((is_page ('about-avontec')) || (is_page ('share-holders')) || (is_page ('partners')) || (is_page ('client-list'))  || (is_page ('case-studies')) || (is_page ('work-avontec'))) { 
+													$image = get_field('conveying_banner', 'option');
+												// }
+											}
+											if (is_single() && is_post_type('automation')){
+												// if ((is_page ('about-avontec')) || (is_page ('share-holders')) || (is_page ('partners')) || (is_page ('client-list'))  || (is_page ('case-studies')) || (is_page ('work-avontec'))) { 
+													$image = get_field('automation_banner', 'option');
+												// }
+											}
 										?>
 
 										<div class="banner-img-div">
@@ -50,7 +56,7 @@ get_header('internal');
 												echo '</h3>';
 
 
-											$children = get_pages( array( 'child_of' => $post_typesub m, ) );
+											$children = get_pages( array( 'child_of' => $post_type, ) );
 
 
 
