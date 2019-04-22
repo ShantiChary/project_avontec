@@ -228,27 +228,119 @@ function wpb_hook_javascript() {
 }
 add_action('wp_head', 'wpb_hook_javascript');
 
-
+/* Display Child Pages list of a Parent Page in Sub Menu of Child pages */
 function wpb_list_child_pages() { 
  
 	global $post; 
 	 
-	if ( is_page() && $post->post_parent ) 
+	if ( is_page() && $post->post_parent ) {
 			$childpages = wp_list_pages( 'sort_column=menu_order&title_li=&child_of=' . $post->post_parent . '&echo=0' );
-	
-	else
+	}
+	else {
 			$childpages = wp_list_pages( 'sort_column=menu_order&title_li=&child_of=' . $post->ID . '&echo=0' );
-	 
+	} 
 	if ( $childpages ) {
 
 			$string = '<ul>' . $childpages . '</ul>';
 	}
-	 
 	return $string;
 	 
+}
+add_shortcode('wpb_childpages', 'wpb_list_child_pages');
+
+
+function eyesore_list_child_pages() { 
+    ob_start(); 
+    global $post;
+	//check if this is a parent or child post
+	if (is_single() && is_post_type('conveying')){
+			$args = array(
+				'post_parent' => $post->ID,
+				'post_type' => 'conveying',
+				'order' => 'asc' 
+			);
+			$children = get_children($args); 
+
+			//if this is a parent post
+			if(!empty($children)) {
+				//has children
+				$postsarr = array(
+					'post_parent' => $post->ID,
+					'post_type' => 'conveying',
+					'order' => 'asc' 
+					); 
+				$childQuery = new WP_Query($postsarr);
+				if ( $childQuery->have_posts()) : while ( $childQuery->have_posts()) : $childQuery->the_post();
+				echo '<ul>';
+				echo '<li>';
+				the_title(); 
+				echo '<li>';
+				echo '</ul>';
+				endwhile; endif; 
+				
+			} else {
+				//if this is a child post
+				$parent = wp_get_post_parent_id($post->ID); 
+				$siblingsarr = array(
+					'post_parent' => $parent,
+					'post_type' => 'conveying',
+					'order' => 'asc' 
+				); 
+				$siblings = new WP_Query($siblingsarr); 
+				if ( $siblings->have_posts()) : while ( $siblings->have_posts()) : $siblings->the_post();
+				echo '<ul>';
+				echo '<li>';
+				the_title(); 
+				echo '<li>';
+				echo '</ul>';
+				endwhile; endif; 
+			}
 	}
-	 
-	add_shortcode('wpb_childpages', 'wpb_list_child_pages');
+	elseif (is_single() && is_post_type('automation')){
+		$args = array(
+			'post_parent' => $post->ID,
+			'post_type' => 'automation',
+			'order' => 'asc'  
+		);
+		$children = get_children($args); 
+
+		//if this is a parent post
+		if(!empty($children)) {
+			//has children
+			$postsarr = array(
+				'post_parent' => $post->ID,
+				'post_type' => 'automation',
+				'order' => 'asc' 
+				); 
+			$childQuery = new WP_Query($postsarr);
+			if ( $childQuery->have_posts()) : while ( $childQuery->have_posts()) : $childQuery->the_post();
+			echo '<ul>';
+			the_title(); 
+			echo '</ul>';
+			endwhile; endif; 
+			
+		} else {
+			//if this is a child post
+			$parent = wp_get_post_parent_id($post->ID); 
+			$siblingsarr = array(
+				'post_parent' => $parent,
+				'post_type' => 'automation',
+				'order' => 'asc' 
+				); 
+			$siblings = new WP_Query($siblingsarr); 
+			if ( $siblings->have_posts()) : while ( $siblings->have_posts()) : $siblings->the_post();
+			echo '<ul>';
+			the_title(); 
+			echo '</ul>';
+			endwhile; endif; 
+		}
+	}
+   return ob_get_clean();
+}
+add_shortcode('eyesore_childpages', 'eyesore_list_child_pages');
+
+
+
 
 	
 	function is_post_type($type){
@@ -256,4 +348,3 @@ function wpb_list_child_pages() {
 		if($type == get_post_type($wp_query->post->ID)) return true;
 		return false;
 	}
-

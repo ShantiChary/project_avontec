@@ -57,6 +57,7 @@ get_header('internal');
 
 										<h3><?php echo 'More' . ' ' . get_the_title( $post->post_parent ); ?></h3>
 											<?php echo do_shortcode('[wpb_childpages]'); ?>
+											
 										</div>
 									</div> <!--banner-sub-menu -->
 

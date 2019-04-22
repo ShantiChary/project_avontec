@@ -51,6 +51,8 @@
 				<br>
 				<p><?php the_field('email_title_1', 'option'); ?></p>
 				<a class="email1" href="<?php the_field('email_address_1', 'option'); ?>"><?php the_field('email_address_1', 'option'); ?></a> 
+				<br>
+				<br>
 				<p><?php the_field('email_title_2', 'option'); ?></p>
 				<a class="email2" href="<?php the_field('email_address_2', 'option'); ?>"><?php the_field('email_address_2', 'option'); ?></a> 
 			</div>

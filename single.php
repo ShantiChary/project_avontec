@@ -54,16 +54,70 @@ get_header('internal');
 												echo '<h3>';
 												echo 'More' . ' ' . $post_type->label ; 
 												echo '</h3>';
-
-
-											$children = get_pages( array( 'child_of' => $post_type, ) );
-
-
-
-											echo '<p>';
-											echo $children->label;
-											echo '</p>';
 											?>
+
+<?php
+
+											echo do_shortcode('[eyesore_childpages]');
+
+?>											
+											<!-- ?php
+											if (is_single() && is_post_type('conveying')){
+
+													$query = new WP_Query(array(
+														'post_type' => 'conveying',
+														'post_status' => 'publish',
+														'posts_per_page' => -1
+													));
+
+
+													while ($query->have_posts()) {
+														$query->the_post();
+														$post_id = get_the_title();
+														echo $post_id;
+														echo "<br>";
+													}
+
+													wp_reset_query();
+
+											}
+											?>
+											
+											?php
+											if (is_single() && is_post_type('automation')){
+
+													$query = new WP_Query(array(
+														'post_type' => 'automation',
+														'posts_per_page' => -1
+													));
+
+
+													while ($query->have_posts()) {
+														$query->the_post();
+														$post_id = get_the_title();
+														echo $post_id;
+														echo "<br>";
+													}
+
+													wp_reset_query();
+
+											}
+											?> -->
+
+
+												<!-- ?php 
+
+
+													$pages = get_posts('child_of=conveying');
+													foreach($pages as $child) {
+												
+													// Now you have an object full of Children ID's that you can use for whatever
+													// E.G 
+													echo $child->post_title . "<br />";
+												}
+
+												?> -->
+												
 										</div>
 									</div> <!--banner-sub-menu -->
 
