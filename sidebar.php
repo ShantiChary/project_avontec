@@ -19,7 +19,7 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
                     </div>
 
                     <!-- Display news image -->
-                    <div class="about-us-news">
+                    <div class="sidebar-news">
                         <?php
                             if(function_exists('get_field')) {
                                 echo '<h5>';
@@ -43,7 +43,7 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
                     </div>
 
                     <!-- Display news video -->
-                    <div class="about-us-news">
+                    <div class="sidebar-news">
                         <?php 
                             if(function_exists('get_field')) {
 

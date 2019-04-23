@@ -1591,20 +1591,20 @@ body {
 	color: var(--theme-blue);
 }
 
-.about-us-news {
+.sidebar-news {
 	text-align: left;
 }
 
-.about-us-news h5 {
+.sidebar-news h5 {
 	margin-bottom: 0;
 	text-transform: uppercase;
 }
 
-.about-us-news img {
+.sidebar-news img {
 	height: 200px;
 }
 
-.about-us-news p {
+.sidebar-news p {
 	font-size: 12px;
 }
 
