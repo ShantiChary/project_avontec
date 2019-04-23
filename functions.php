@@ -200,8 +200,7 @@ if( function_exists('acf_add_options_page') ) {
 
 /* YoTube subscribe button javascript */
 function wpb_hook_javascript() {
-  // if (is_page ('about-us')) { 
-  //   ?>
+     ?>
         <!-- <script type="text/javascript"> -->
           <script src="https://apis.google.com/js/platform.js"></script>
 				<!-- </script> -->
@@ -210,8 +209,7 @@ function wpb_hook_javascript() {
 				<div id="fb-root"></div>
 				<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2"></script>
 
-
-				<!-- <script>
+				<script>
 					window.fbAsyncInit = function() {
 						FB.init({
 							appId            : '433005377509194',
@@ -220,11 +218,10 @@ function wpb_hook_javascript() {
 							version          : 'v3.2'
 						});
 					};
-				</script> -->
+				</script>
 
 		<!-- <script async defer src="https://connect.facebook.net/en_US/sdk.js"></script> -->
     <?php
-  // }
 }
 add_action('wp_head', 'wpb_hook_javascript');
 
