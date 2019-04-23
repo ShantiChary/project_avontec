@@ -23,11 +23,11 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
                         <?php
                             if(function_exists('get_field')) {
                                 echo '<h5>';
-                                the_field('about_us_news_heading');
+                                the_field('sidebar_news_heading', 'option');
                                 echo '</h5>';
 
                                 echo '<div>';
-                                    $image = get_field('about_us_news_image');
+                                    $image = get_field('sidebar_news_image', 'option');
 
                                     if( !empty($image) ): ?>
 
@@ -37,7 +37,7 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
                                     echo '</div>';
 
                                     echo '<p>';
-                                    the_field('about_us_news_text');
+                                    the_field('sidebar_news_text', 'option');
                                 echo '</p>';
                             } ?>
                     </div>
@@ -47,22 +47,22 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
                         <?php 
                             if(function_exists('get_field')) {
 
-                                $videoTitle = get_field('about_us_news_video_heading');
-                                $videoText = get_field('about_us_news_video_text');
-                                $videoUrl = get_post_meta($post->ID, 'about_us_news_video_url', true);
-                    
+                                $videoTitle = get_field('sidebar_news_video_heading', 'option');
+                                $videoText = get_field('sidebar_news_video_text', 'option');
+                                // $videoUrl = get_post_meta($post->ID, 'sidebar_news_video_url', true);
+                                $videoUrl = get_field('sidebar_news_video', 'option');
+
                                 // Display video ?>
                                 <?php
                                 echo '<h5>';
-                                the_field('about_us_news_video_heading');
+                                the_field('sidebar_news_video_heading', 'option');
                                 echo '</h5>';
-
+                                
                                 // Get the video URL and put it in the $video variable
                                 // Check if there is in fact a video URL
                                 if ($videoUrl) {
                                     echo '<div>';
-                                        // Echo the embed code via oEmbed
-                                        echo wp_oembed_get( 'http://www.youtube.com/watch?v=' . $videoUrl, array('width'=>320, 'height'=>150)); 
+                                    echo $videoUrl;
                                     echo '</div>';
                                 }
 

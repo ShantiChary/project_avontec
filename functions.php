@@ -272,8 +272,8 @@ function eyesore_list_child_pages() {
 				$childQuery = new WP_Query($postsarr);
 				if ( $childQuery->have_posts()) : while ( $childQuery->have_posts()) : $childQuery->the_post();
 				echo '<ul>';
-				echo '<li>';
-				the_title(); 
+				echo "<li class='current_page_item'>";
+				echo the_title(); 
 				echo '<li>';
 				echo '</ul>';
 				endwhile; endif; 
@@ -289,8 +289,8 @@ function eyesore_list_child_pages() {
 				$siblings = new WP_Query($siblingsarr); 
 				if ( $siblings->have_posts()) : while ( $siblings->have_posts()) : $siblings->the_post();
 				echo '<ul>';
-				echo '<li>';
-				the_title(); 
+				echo "<li class='current_page_item'>";
+				echo the_title(); 
 				echo '<li>';
 				echo '</ul>';
 				endwhile; endif; 
@@ -315,7 +315,9 @@ function eyesore_list_child_pages() {
 			$childQuery = new WP_Query($postsarr);
 			if ( $childQuery->have_posts()) : while ( $childQuery->have_posts()) : $childQuery->the_post();
 			echo '<ul>';
+			echo '<li>';
 			the_title(); 
+			echo '</li>';
 			echo '</ul>';
 			endwhile; endif; 
 			
@@ -330,7 +332,9 @@ function eyesore_list_child_pages() {
 			$siblings = new WP_Query($siblingsarr); 
 			if ( $siblings->have_posts()) : while ( $siblings->have_posts()) : $siblings->the_post();
 			echo '<ul>';
+			echo '<li>';
 			the_title(); 
+			echo '</li>';
 			echo '</ul>';
 			endwhile; endif; 
 		}
