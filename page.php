@@ -35,6 +35,14 @@ get_header('internal');
 											if ((is_page ('about-avontec')) || (is_page ('share-holders')) || (is_page ('partners')) || (is_page ('client-list'))  || (is_page ('case-studies')) || (is_page ('work-avontec'))) { 
 												$image = get_field('about_us_banner', 'option');
 											}
+
+											if ((is_page ('primary-packaging')) || (is_page ('secondary-packaging')) || (is_page ('tertiary-packaging')) || (is_page ('electrical-automation')) || (is_page ('line-integration')) || (is_page ('robotics')) ) { 
+												$image = get_field('automation_banner', 'option');
+											}
+
+											if ((is_page ('chain-conveying')) || (is_page ('modular-conveying')) || (is_page ('elevating-conveying')) || (is_page ('pallet-bucket-conveying'))) { 
+												$image = get_field('conveying_banner', 'option');
+											}
 										
 											if ((is_page ('description')) || (is_page ('contact-us')) || (is_page ('key-projects')) || (is_page ('events-news'))  || (is_page ('video-page')) || (is_page ('site-policy'))) { 
 												$image = get_field('custom_rd_banner', 'option');
@@ -44,10 +52,14 @@ get_header('internal');
 												$image = get_field('engineering_banner', 'option');
 											}
 
+											if ((is_page ('industrial-displays'))) { 
+												$image = get_field('industrial_displays_banner', 'option');
+											}
+
 										?>
 
 										<div class="banner-img-div">
-											<img class="banner-img" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" width="875"/>
+											<img class="banner-img" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" width="890"/>
 
 											<h1 class="banner-h1"><?php echo get_the_title(); ?> </h1>
 										</div>
@@ -65,6 +77,9 @@ get_header('internal');
 									<?php
 											if (is_page ('about-avontec')) { 
 												get_template_part( 'template-parts/content', 'about-avontec' ); 
+											}
+											elseif (is_page ('chain-conveying')) { 
+												get_template_part( 'template-parts/content', 'chain-conveying' ); 
 											}
 											elseif (is_page ('contact-us')) { 
 												get_template_part( 'template-parts/content', 'contact' ); 

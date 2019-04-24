@@ -28,7 +28,7 @@
 	<div class="header-top-fixed">
 
 		<div class="contact-us-image">
-			<a href="<?php the_field('contact_us_button', 'option'); ?>"><img src="<?php the_field('contact_us_image', 'option'); ?>" width=410></a></h1>
+			<a href="<?php the_field('contact_us_button', 'option'); ?>"><img src="<?php the_field('contact_us_image', 'option'); ?>" width=480></a></h1>
 		</div>
 
 		<div class="social-media">
@@ -104,12 +104,15 @@
 			} ?>
 	</div>
 
-	<div id="block-header">
+	<div id="block-header" class="block-logo-nav">
 		<div class="logo-div">
 			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="<?php the_field('website_logo', 'option'); ?>" width=300></a></h1>
 		</div><!-- .site-branding logo-->
 
-		<nav id="site-navigation" class="main-navigation">
+		<input type="checkbox" name="nav-btn" id="nav-btn" />
+		<span></span>
+		
+		<nav id="site-navigation" class="main-navigation nav">
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'avontec' ); ?></button>
 			<?php
 			wp_nav_menu( array(

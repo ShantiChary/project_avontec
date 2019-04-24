@@ -12,7 +12,7 @@
         <!-- SECTION 2 - Intro heading and Para-->
         <div class="section-2-intro">
             <?php  
-                echo "<h2 class='section-2-h2'>";
+                echo "<h1 class='section-2-h1'>";
                 the_field('heading_1');
                 echo "</h2>";
 
@@ -120,9 +120,9 @@
         <div id="key-projects" class="projects-slider">
                 <?php
                     if(get_field('heading_2')){
-                        echo '<h4 class="key-heading">';
+                        echo '<h3 class="key-heading">';
                         the_field('heading_2');
-                        echo '</h4>';
+                        echo '</h3>';
                     }
                 ?>
 
@@ -189,9 +189,9 @@
                     <?php    
                             if(function_exists('get_field')) {
 
-                                echo "<h4 class='news_section_heading'>";
+                                echo "<h3>";
                                 the_field('news_section_heading');
-                                echo "</h4>";
+                                echo "</h3>";
                             }
                     ?>
 

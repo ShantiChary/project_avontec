@@ -14,9 +14,9 @@
                     <?php
                         if(function_exists('get_field')) {
 
-                            echo "<h2 class='section-4-h2'>";
+                            echo "<h1 class='section-4-h1'>";
                             the_field('heading_3', 'option');
-                            echo "</h2>";
+                            echo "</h1>";
 
                             echo "<p class='section-4-para'>";
                             the_field('section_4', 'option');
@@ -29,9 +29,9 @@
                             <?php
                                 if(function_exists('get_field')) {
                                     echo "<div class='newsletter-full'>";
-                                        echo "<h5>";
+                                        echo "<h4>";
                                         the_field('newsletter_heading', 'option');
-                                        echo "</h5>";
+                                        echo "</h4>";
 
                                         echo "<p>";
                                         the_field('newsletter_section', 'option');
