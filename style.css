@@ -1636,7 +1636,7 @@ body {
 /* About us Sidebar Contact Form Styles */
 #secondary {
 	width: 25%;
-	margin-top: 25px;
+	margin-top: 58px;
 	padding: 2em;
 	text-align: center;
 	background-color: var(--theme-lightgray);
@@ -1677,9 +1677,21 @@ input.wpcf7-submit {margin: 0;}
 	z-index: 9998;
 }
 
-.fb-subscribe {
-	height: 50px;
-	z-index: 9998;
+.fb-follow {
+	height: 60px;
+	/* margin: 0 0 0 50px; */
+}
+
+.addthis_toolbox {
+	margin: 0 auto;
+}
+
+.addthis_tool p {
+	margin: 4px 0 0;
+}
+
+.fb-follow h5 {
+	margin: 0;
 }
 
 /*---------------------*/
