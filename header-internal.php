@@ -35,19 +35,18 @@
 				<?php if( have_rows('social_media', 'option') ): ?>
 
 					<ul>
-						<li id="home-icon">			
-							<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="<?php the_field('home_icon', 'option'); ?>" width=30></a></h1>
-						</li>
+							<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+								<li id="home-icon">			
+									<img src="<?php the_field('home_icon', 'option'); ?>" width=30>
+								</li>
+							</a>
 
-						<?php while( have_rows('social_media', 'option') ): the_row(); ?>
-
-
-							<li><a href="<?php the_sub_field('social_media_link'); ?>" target="_blank"> 
-								<img src="<?php the_sub_field('social_media_icon'); ?>" width=40>
+							<?php while( have_rows('social_media', 'option') ): the_row(); ?>
+								<a href="<?php the_sub_field('social_media_link'); ?>" target="_blank"> 
+									<li><img src="<?php the_sub_field('social_media_icon'); ?>" width=40>
+									</li>
 								</a>
-							</li>
-
-						<?php endwhile; ?>
+							<?php endwhile; ?>
 
 					</ul>
 

@@ -56,7 +56,7 @@
 
 
                                     <li><a href="<?php the_sub_field('social_media_link'); ?>" target="_blank"> 
-                                        <img src="<?php the_sub_field('social_media_icon'); ?>" width=120>
+                                        <img src="<?php the_sub_field('social_media_icon'); ?>" width=90>
                                         </a>
                                     </li>
 

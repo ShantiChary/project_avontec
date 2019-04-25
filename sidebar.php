@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The sidebar containing the main widget area
  *
@@ -17,6 +18,10 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
                     <!-- YouTube Subscribe div -->
                     <div class="about-section-1-youtube g-ytsubscribe" data-channel="GoogleDevelopers" data-layout="default" data-count="hidden">
                     </div>
+
+                    <div class="fb-subscribe" 
+  data-href="https://www.facebook.com/Avontec/?__tn__=%2Cd%2CP-R&eid=ARDxHJCynkbUrl_A4AG1MQirE74FSDIOHre77rZqvljsB1vFy542qPD8-GTXwCC1vHzi2TfSila1tc9x" data-width="450">
+</div>
 
                     <!-- Display news image -->
                     <div class="sidebar-news">
@@ -92,22 +97,13 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
     
                     </div> <!-- contact-form -->
 
-                    <!-- Facebook Feed -->
-                    <!-- <fb:subscribe href="https://www.facebook.com/Avontec" width="450"></fb:subscribe> -->
-                    <div class="fb-subscribe" 
-  data-href="https://www.facebook.com/Avontec/?__tn__=%2Cd%2CP-R&eid=ARDxHJCynkbUrl_A4AG1MQirE74FSDIOHre77rZqvljsB1vFy542qPD8-GTXwCC1vHzi2TfSila1tc9x" data-width="450">
-</div>
+                    <?php echo do_shortcode('[addthis tool=addthis_vertical_follow_toolbox]'); ?>;
 
-<!-- <iframe src="https://www.facebook.com/plugins/subscribe.php?
-  href=https%3A%2F%2Fwww.facebook.com%2Fzuck
-  &amp;width=450&amp;appId=APP_ID" scrolling="no"
-  frameborder="0" style="border:none; overflow:hidden; width:450px;"
-  allowTransparency="true">
-</iframe> -->
-                    
-                     <div class="fb-page" data-href="https://www.facebook.com/Avontec/" data-tabs="timeline" data-height="380px"  data-width="310px" data-small-header="true" data-adapt-container-width="false" data-hide-cover="true" data-show-facepile="false"><blockquote cite="https://www.facebook.com/Avontec/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/Avontec/">Avontec Automation</a></blockquote></div>
+                    <!-- Facebook Feed -->                  
+                     <div class="fb-page" data-href="https://www.facebook.com/Avontec/" data-tabs="timeline" data-height="380px"  data-width="310px" data-small-header="true" data-adapt-container-width="false" data-hide-cover="true" data-show-facepile="false"><blockquote cite="https://www.facebook.com/Avontec/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/Avontec/">Avontec Automation</a></blockquote>
+                    </div>
 
-                </div>
+                <!-- </div> -->
 <!-- </div> about-section-1-sidebar -->
 
 
