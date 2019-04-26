@@ -1214,7 +1214,7 @@ html,body
 	text-align: left;
 	transform: skew(-20deg); /* INVERSE SKEW */
 	width: 270px;
-	font-size: 14px;
+	font-size: 12px;
 	/* font-weight: normal; */
 }
 
@@ -1604,14 +1604,16 @@ body {
 	font-weight: normal;
 }
 
-.about-section-text {
-	padding: 0 3em;
+.about-section,
+.share-holders-section {
+	padding: 2em 3em;
 }
 
-.about-section-text p {
+.about-section p {
 	color: var(--theme-blue);
 }
 
+/* Sidebar Styles */
 .sidebar-news {
 	text-align: left;
 }
@@ -1628,10 +1630,6 @@ body {
 .sidebar-news p {
 	font-size: 12px;
 }
-
-/* .fb-subscribe {
-	z-index: 9999;
-} */
 
 /* About us Sidebar Contact Form Styles */
 #secondary {
@@ -1693,6 +1691,24 @@ input.wpcf7-submit {margin: 0;}
 .fb-follow h5 {
 	margin: 0;
 }
+
+/*---------------------*/
+/*SHARE HOLDER STYLES */
+/*---------------------*/
+.member-details {
+	display: flex;
+	padding: 2em;
+}
+
+.member-info {
+	padding: 1em 0 0 2em;
+}
+
+.member-info h4,
+.member-info h5 {
+	margin: 0;
+}
+
 
 /*---------------------*/
 /*CONTACT US STYLES */

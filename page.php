@@ -78,6 +78,9 @@ get_header('internal');
 											if (is_page ('about-avontec')) { 
 												get_template_part( 'template-parts/content', 'about-avontec' ); 
 											}
+											elseif (is_page ('share-holders')) { 
+												get_template_part( 'template-parts/content', 'share-holders' ); 
+											}
 											elseif (is_page ('chain-conveying')) { 
 												get_template_part( 'template-parts/content', 'chain-conveying' ); 
 											}

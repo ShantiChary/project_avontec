@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for displaying page content in page-about-us.php
+ * Template part for displaying page content in content-about-avontec.php
  *
  * @package avontec
  */
@@ -9,19 +9,19 @@
 
 <!-- About Avontec Page Content -->
 
-        <div class="about-section-text">
+        <div class="about-section">
             <?php
                     // loop through the rows of data
-                    while ( have_rows('about_us_section') ) : the_row();
+                    while ( have_rows('about_avontec_section') ) : the_row();
                         // display a sub field value
                         //variable
-                        $aboutUsHeading = get_sub_field('about_us_heading');
-                        $aboutUsText = get_sub_field('about_us_text');
+                        $aboutAvontecHeading = get_sub_field('about_avontec_heading');
+                        $aboutAvontecText = get_sub_field('about_avontec_text');
 
                         ?>
 
-                        <h2><?php echo $aboutUsHeading; ?></h2>
-                        <p><?php echo $aboutUsText; ?></p>
+                        <h2><?php echo $aboutAvontecHeading; ?></h2>
+                        <p><?php echo $aboutAvontecText; ?></p>
     
                     <?php
                     endwhile;
