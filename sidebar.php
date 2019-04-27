@@ -14,7 +14,6 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 ?>
 
 <aside id="secondary" class="widget-area">
-	<!-- <div class="about-section-1-sidebar"> -->
                     <!-- YouTube Subscribe div -->
                     <div class="about-section-1-youtube g-ytsubscribe" data-channel="GoogleDevelopers" data-layout="default" data-count="hidden">
                     </div>
@@ -32,7 +31,7 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 
                                     if( !empty($image) ): ?>
 
-                                        <a href="<?php the_field('events_news_url', 'option'); ?>"><img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>"/></a>
+                                        <a href="<?php the_field('events_news_url', 'option'); ?>"><img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt'];?>"width="320"/></a>
 
                                     <?php endif; 
                                     echo '</div>';
@@ -103,10 +102,6 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 
                         <!-- Facebook Feed -->                  
                         <div class="fb-page" data-href="https://www.facebook.com/Avontec/" data-tabs="timeline" data-height="380px"  data-width="310px" data-small-header="true" data-adapt-container-width="false" data-hide-cover="true" data-show-facepile="false"><blockquote cite="https://www.facebook.com/Avontec/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/Avontec/">Avontec Automation</a></blockquote>
-                        </div>
-
-
-<!-- </div> about-section-1-sidebar -->
-
+                    </div>
 
 </aside><!-- #secondary -->

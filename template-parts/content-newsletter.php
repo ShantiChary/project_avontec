@@ -38,7 +38,7 @@
                                         echo "</p>";
 
                                         echo "<p>";
-                                        echo do_shortcode('[mc4wp_form id="758"]');
+                                        echo do_shortcode('[mc4wp_form]');
                                         echo "</p>";
                                     echo "</div>";
 

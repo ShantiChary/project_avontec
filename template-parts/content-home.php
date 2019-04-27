@@ -87,7 +87,9 @@
                                         <?php
                                             $videoTitle = get_sub_field('video_title');
                                             $videoText = get_sub_field('video_text');
-                                            $videoUrl = get_post_meta($post->ID, 'video_2_url', true);
+                                            // $video2ID = get_post_meta($post->ID, 'video_url', true);
+                                            // $video2ID = get_sub_field('video_url');
+                                            $video2ID = get_sub_field('video_url');
                                     
                                             // Display video ?>
                                             <div class="video2TitleText">
@@ -99,10 +101,13 @@
                                             <?php
                                             // Get the video URL and put it in the $video variable
                                             // Check if there is in fact a video URL
-                                            if ($videoUrl) {
-                                                echo '<div class="videoContainer">';
+                                            if ($video2ID) {
+                                                echo '<div class="video2Container">';
                                                 // Echo the embed code via oEmbed
-                                                echo wp_oembed_get( 'http://www.youtube.com/watch?v=' . $videoUrl, array('width'=>280, 'height'=>150)); 
+                                                // echo wp_oembed_get( 'http://www.youtube.com/watch?v=' . $videoHome2, array('width'=>280, 'height'=>150)); 
+                                                // echo wp_oembed_get( 'http://www.youtube.com/watch?v=' . $video2ID ); 
+                                                // echo do_shortcode("[video src=".get_sub_field('video_url')."]");
+                                                echo $video2ID;
                                                 echo '</div>';
                                             }
                                         ?>

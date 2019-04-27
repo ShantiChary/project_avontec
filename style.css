@@ -1232,6 +1232,91 @@ html,body
 /*---------------------*/
 /* BODY STYLES */
 /*---------------------*/
+
+/* Website Under Construciton Page styles - temporary page */
+/* body {
+	background-color: #e0e0e0;
+} */
+
+.wuc-banner {
+	width: 100%;
+	height: 600px;
+	background-image: url('http://www.avontec.com/wp-content/uploads/2019/04/page-image-.jpg');
+	background-size: contain;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	border-bottom: 8px solid white;
+}
+
+.wuc-banner img {
+	width: 100%;
+}
+
+.section-one {
+	background-color: #e0e0e0;
+	display: flex;
+	height: 400px;
+	/* margin: 10px 0; */
+	padding: 0 1em 0;
+	align-items: center;
+	justify-content: center;
+	font-size: 0;
+	border-bottom: 8px solid white;
+}
+
+.fb-icon {
+	width: 200px;
+	display: flex;
+	justify-content: flex-end;
+}
+
+.wuc-text {
+	width: 420px;
+	flex-grow: 1;
+	padding-left: 15px;
+}
+
+.wuc-text h1 {
+	width: 420px;
+	color: #cd311b;
+	font-size: 34px;
+	line-height: 1.25;
+}
+
+.wuc-image {
+	width: 800px;
+	text-align: right;
+	/* padding-right: 80px; */
+
+}
+
+.wuc-image {
+	flex-grow: 2;
+}
+
+.section-two {
+	/* background-color: #e0e0e0; */
+	background-color: #fff;
+	margin: 0;
+	padding: 0 60px 30px;
+	margin-top: 0 !important;
+}
+
+.section-two h1 {
+	font-size: 50px;	
+}
+
+.section-two p,
+.section-two li {
+	font-size: 18px;
+}
+
+/*-----------------------------------------*/
+
+
+
+
+
 body {
 	width:100%;
 	overflow-x: hidden;
@@ -1396,7 +1481,7 @@ body {
 	display: flex;
 }
 
-.videoContainer {
+.video2Container {
 	margin: 10px;
 }
 
