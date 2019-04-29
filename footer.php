@@ -32,16 +32,24 @@
 				<br>
 				<p><?php the_field('company_name', 'option'); ?></p>
 				<p><?php the_field('address_line_1', 'option'); ?></p>
-				<p><?php the_field('address_line_2', 'option'); ?></p>			
-				<p><?php the_field('city', 'option'); ?></p>
-				<p><?php the_field('postal_code', '-', 'option'); ?></p>
+				<p><?php the_field('address_line_2', 'option'); ?></p>
+				
+				<?php
+					$city = get_field('city', 'option');
+					$postalCode = get_field('postal_code', 'option');
+					$cityPostalCode = $city ." - ". $postalCode;
+				?>
+				<p><?php echo $cityPostalCode; ?></p>
+
 				<p><?php the_field('country', 'option'); ?></p>
 			</div>	
 
 			<div class="footer-contact-phone footer-item">
 				<h3 class="phone-title">Phone:</h3>
 				<br>
-				<p><a class="telephone1" href="<?php the_field('phone_number_1', 'option'); ?>"><?php the_field('phone_number_1', 'option'); ?></a> </p>
+				<!-- <p><a class="telephone1" href="?php the_field('phone_number_1', 'option'); ?>">?php the_field('phone_number_1', 'option'); ?></a> </p> -->
+				<p> <?php the_field('phone_number_1', 'option'); ?> </p>
+
 				<p><a class="telephone2" href="<?php the_field('phone_number_2', 'option'); ?>"><?php the_field('phone_number_2', 'option'); ?></a></p>
 				<p><a class="fax" href="<?php the_field('fax_number', 'option'); ?>"><?php the_field('fax_number', 'option'); ?></a></p> 
 			</div>

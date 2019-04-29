@@ -40,4 +40,8 @@
 
 
 <!-- Disabled for WUC Page. Enable for actual home page NOTE: IF YOU DISABLE FOOTER, SLICK SLIDER WILL NOT WORK!!!-->
-<?php get_footer(); ?>
+<?php 
+	if(is_page('101')) {
+		get_footer(); 
+	}
+?>

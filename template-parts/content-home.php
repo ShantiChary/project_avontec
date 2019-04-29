@@ -64,7 +64,7 @@
                 <div class="modal-content">
                     <div class="popup-content">
                         <span class="close-button">&times;</span>
-                            <img src="<?php the_field('website_logo', 'option'); ?>" width=120>
+                            <img src="<?php the_field('website_logo', 'option'); ?>" width=150>
 
                             <p>Hello, I am a modal!</p>
 
