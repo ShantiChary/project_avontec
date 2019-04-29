@@ -66,7 +66,7 @@
                         <span class="close-button">&times;</span>
                             <img src="<?php the_field('website_logo', 'option'); ?>" width=150>
 
-                            <p>Hello, I am a modal!</p>
+                            <p>Hello, please contact us for more information.</p>
 
                             <a href="<?php the_field('contact_us_button', 'option'); ?>"><button>Contact Us</button></a>
                     </div>

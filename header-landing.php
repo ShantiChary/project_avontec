@@ -21,6 +21,7 @@
 </head>
 
 <body <?php body_class(); ?>>
+
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'avontec' ); ?></a>
 
@@ -108,11 +109,11 @@
 			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="<?php the_field('website_logo', 'option'); ?>" width=300></a></h1>
 		</div><!-- .site-branding logo-->
 
-		<input type="checkbox" name="nav-btn" id="nav-btn" />
-		<span></span>
+		<!-- <input type="checkbox" name="nav-btn" id="nav-btn" />
+		<span></span> -->
 		
 		<nav id="site-navigation" class="main-navigation nav">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'avontec' ); ?></button>
+			<!-- <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">?php esc_html_e( 'Primary Menu', 'avontec' ); ?></button> -->
 			<?php
 			wp_nav_menu( array(
 				'theme_location' => 'menu-1',
