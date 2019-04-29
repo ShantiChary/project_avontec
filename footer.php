@@ -55,14 +55,14 @@
 			</div>
 
 			<div class="footer-contact-email footer-item">
-				<h3 class="email-title">Email:</h3>
-				<br>
-				<p><?php the_field('email_title_1', 'option'); ?></p>
-				<a class="email1" href="<?php the_field('email_address_1', 'option'); ?>"><?php the_field('email_address_1', 'option'); ?></a> 
-				<br>
-				<br>
-				<p><?php the_field('email_title_2', 'option'); ?></p>
-				<a class="email2" href="<?php the_field('email_address_2', 'option'); ?>"><?php the_field('email_address_2', 'option'); ?></a> 
+			<h3 class="email-title">Email:</h3>
+                    <p><?php the_field('email_title_1', 'option'); ?></p>
+                    <a class="telephone" href="mailto:<?php the_field('email', 'option'); ?>"><?php the_field('email_address_1', 'option'); ?></a>
+                    <br>
+					<br>
+					<br>
+                    <p><?php the_field('email_title_2', 'option'); ?></p>
+                    <a class="telephone" href="mailto:<?php the_field('email', 'option'); ?>"><?php the_field('email_address_2', 'option'); ?></a>
 			</div>
 
 		</div>
