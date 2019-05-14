@@ -1,15 +1,14 @@
 <?php
 /**
- * Template part for displaying page content in content-about-avontec.php
+ * Template part for displaying page content in page-work-avontec.php
  *
  * @package avontec
  */
 
 ?>
 
-<!-- About Avontec Page Content -->
-
-        <div class="about-section">
+<!-- Work @ Avontec Content -->
+<div class="about-section">
             <?php
                     // loop through the rows of data
                     while ( have_rows('about_avontec_section') ) : the_row();
@@ -27,6 +26,3 @@
                     endwhile;
                 ?>
         </div>
-
-
-

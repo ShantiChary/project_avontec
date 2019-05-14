@@ -7,8 +7,8 @@
 	if(is_page('101')) {
 		get_header('landing');
 	}
-	// else if(is_page(587)) { for local - 241 is for prod
-		else if(is_page(241)) {
+	// else if(is_page(587)) { for local - 241 is for prod Website Under Construction page
+		else if(is_page(587)) {
 
 	}
 	// else {

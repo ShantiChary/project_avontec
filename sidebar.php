@@ -15,8 +15,10 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 
 <aside id="secondary" class="widget-area">
                     <!-- YouTube Subscribe div -->
-                    <div class="about-section-1-youtube g-ytsubscribe" data-channel="GoogleDevelopers" data-layout="default" data-count="hidden">
-                    </div>
+                    <!-- <div class="about-section-1-youtube g-ytsubscribe" data-channel="GoogleDevelopers" data-layout="default" data-count="hidden">
+                    </div> -->
+
+                    <?php echo do_shortcode('[Awesome-youtube-subscribe]'); ?>
 
                     <!-- Display news image -->
                     <div class="sidebar-news">
@@ -101,7 +103,7 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
                     </div>
 
                         <!-- Facebook Feed -->                  
-                        <div class="fb-page" data-href="https://www.facebook.com/Avontec/" data-tabs="timeline" data-height="380px"  data-width="310px" data-small-header="true" data-adapt-container-width="false" data-hide-cover="true" data-show-facepile="false"><blockquote cite="https://www.facebook.com/Avontec/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/Avontec/">Avontec Automation</a></blockquote>
+                        <div class="fb-page" data-href="https://www.facebook.com/Avontec/" data-tabs="timeline" data-height="380px"  data-width="240px" data-small-header="true" data-adapt-container-width="false" data-hide-cover="true" data-show-facepile="false"><blockquote cite="https://www.facebook.com/Avontec/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/Avontec/">Avontec Automation</a></blockquote>
                     </div>
 
 </aside><!-- #secondary -->

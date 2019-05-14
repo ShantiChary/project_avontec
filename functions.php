@@ -99,6 +99,12 @@ function avontec_theme_content_width() {
 }
 add_action( 'after_setup_theme', 'avontec_theme_content_width', 0 );
 
+
+
+// add_filter( 'mc4wp_use_sslverify', '__return_false' );
+
+
+
 /**
  * Register widget area.
  *
@@ -229,116 +235,115 @@ add_action('wp_head', 'wpb_hook_javascript');
 function wpb_list_child_pages() { 
  
 	global $post; 
-	 
-	if ( is_page() && $post->post_parent ) {
-			$childpages = wp_list_pages( 'sort_column=menu_order&title_li=&child_of=' . $post->post_parent . '&echo=0' );
-	}
-	else {
-			$childpages = wp_list_pages( 'sort_column=menu_order&title_li=&child_of=' . $post->ID . '&echo=0' );
-	} 
-	if ( $childpages ) {
+		if ( is_page() && $post->post_parent ) {
+				$childpages = wp_list_pages( 'sort_column=menu_order&title_li=&child_of=' . $post->post_parent . '&echo=0' );
+		}
+		else {
+				$childpages = wp_list_pages( 'sort_column=menu_order&title_li=&child_of=' . $post->ID . '&echo=0' );
+		} 
+		if ( $childpages ) {
 
-			$string = '<ul>' . $childpages . '</ul>';
-	}
-	return $string;
-	 
-}
+				$string = '<ul>' . $childpages . '</ul>';
+		}
+		return $string;
+		}	
+  
 add_shortcode('wpb_childpages', 'wpb_list_child_pages');
 
 
-function eyesore_list_child_pages() { 
-    ob_start(); 
-    global $post;
-	//check if this is a parent or child post
-	if (is_single() && is_post_type('conveying')){
-			$args = array(
-				'post_parent' => $post->ID,
-				'post_type' => 'conveying',
-				'order' => 'asc' 
-			);
-			$children = get_children($args); 
+// function eyesore_list_child_pages() { 
+//     ob_start(); 
+//     global $post;
+// 	//check if this is a parent or child post
+// 	if (is_single() && is_post_type('conveying')){
+// 			$args = array(
+// 				'post_parent' => $post->ID,
+// 				'post_type' => 'conveying',
+// 				'order' => 'asc' 
+// 			);
+// 			$children = get_children($args); 
 
-			//if this is a parent post
-			if(!empty($children)) {
-				//has children
-				$postsarr = array(
-					'post_parent' => $post->ID,
-					'post_type' => 'conveying',
-					'order' => 'asc' 
-					); 
-				$childQuery = new WP_Query($postsarr);
-				if ( $childQuery->have_posts()) : while ( $childQuery->have_posts()) : $childQuery->the_post();
-				echo '<ul>';
-				echo "<li class='current_page_item'>";
-				echo the_title(); 
-				echo '<li>';
-				echo '</ul>';
-				endwhile; endif; 
+// 			//if this is a parent post
+// 			if(!empty($children)) {
+// 				//has children
+// 				$postsarr = array(
+// 					'post_parent' => $post->ID,
+// 					'post_type' => 'conveying',
+// 					'order' => 'asc' 
+// 					); 
+// 				$childQuery = new WP_Query($postsarr);
+// 				if ( $childQuery->have_posts()) : while ( $childQuery->have_posts()) : $childQuery->the_post();
+// 				echo '<ul>';
+// 				echo "<li class='current_page_item'>";
+// 				echo the_title(); 
+// 				echo '<li>';
+// 				echo '</ul>';
+// 				endwhile; endif; 
 				
-			} else {
-				//if this is a child post
-				$parent = wp_get_post_parent_id($post->ID); 
-				$siblingsarr = array(
-					'post_parent' => $parent,
-					'post_type' => 'conveying',
-					'order' => 'asc' 
-				); 
-				$siblings = new WP_Query($siblingsarr); 
-				if ( $siblings->have_posts()) : while ( $siblings->have_posts()) : $siblings->the_post();
-				echo '<ul>';
-				echo "<li class='current_page_item'>";
-				echo the_title(); 
-				echo '<li>';
-				echo '</ul>';
-				endwhile; endif; 
-			}
-	}
-	elseif (is_single() && is_post_type('automation')){
-		$args = array(
-			'post_parent' => $post->ID,
-			'post_type' => 'automation',
-			'order' => 'asc'  
-		);
-		$children = get_children($args); 
+// 			} else {
+// 				//if this is a child post
+// 				$parent = wp_get_post_parent_id($post->ID); 
+// 				$siblingsarr = array(
+// 					'post_parent' => $parent,
+// 					'post_type' => 'conveying',
+// 					'order' => 'asc' 
+// 				); 
+// 				$siblings = new WP_Query($siblingsarr); 
+// 				if ( $siblings->have_posts()) : while ( $siblings->have_posts()) : $siblings->the_post();
+// 				echo '<ul>';
+// 				echo "<li class='current_page_item'>";
+// 				echo the_title(); 
+// 				echo '<li>';
+// 				echo '</ul>';
+// 				endwhile; endif; 
+// 			}
+// 	}
+// 	elseif (is_single() && is_post_type('automation')){
+// 		$args = array(
+// 			'post_parent' => $post->ID,
+// 			'post_type' => 'automation',
+// 			'order' => 'asc'  
+// 		);
+// 		$children = get_children($args); 
 
-		//if this is a parent post
-		if(!empty($children)) {
-			//has children
-			$postsarr = array(
-				'post_parent' => $post->ID,
-				'post_type' => 'automation',
-				'order' => 'asc' 
-				); 
-			$childQuery = new WP_Query($postsarr);
-			if ( $childQuery->have_posts()) : while ( $childQuery->have_posts()) : $childQuery->the_post();
-			echo '<ul>';
-			echo '<li>';
-			the_title(); 
-			echo '</li>';
-			echo '</ul>';
-			endwhile; endif; 
+// 		//if this is a parent post
+// 		if(!empty($children)) {
+// 			//has children
+// 			$postsarr = array(
+// 				'post_parent' => $post->ID,
+// 				'post_type' => 'automation',
+// 				'order' => 'asc' 
+// 				); 
+// 			$childQuery = new WP_Query($postsarr);
+// 			if ( $childQuery->have_posts()) : while ( $childQuery->have_posts()) : $childQuery->the_post();
+// 			echo '<ul>';
+// 			echo '<li>';
+// 			the_title(); 
+// 			echo '</li>';
+// 			echo '</ul>';
+// 			endwhile; endif; 
 			
-		} else {
-			//if this is a child post
-			$parent = wp_get_post_parent_id($post->ID); 
-			$siblingsarr = array(
-				'post_parent' => $parent,
-				'post_type' => 'automation',
-				'order' => 'asc' 
-				); 
-			$siblings = new WP_Query($siblingsarr); 
-			if ( $siblings->have_posts()) : while ( $siblings->have_posts()) : $siblings->the_post();
-			echo '<ul>';
-			echo '<li>';
-			the_title(); 
-			echo '</li>';
-			echo '</ul>';
-			endwhile; endif; 
-		}
-	}
-   return ob_get_clean();
-}
-add_shortcode('eyesore_childpages', 'eyesore_list_child_pages');
+// 		} else {
+// 			//if this is a child post
+// 			$parent = wp_get_post_parent_id($post->ID); 
+// 			$siblingsarr = array(
+// 				'post_parent' => $parent,
+// 				'post_type' => 'automation',
+// 				'order' => 'asc' 
+// 				); 
+// 			$siblings = new WP_Query($siblingsarr); 
+// 			if ( $siblings->have_posts()) : while ( $siblings->have_posts()) : $siblings->the_post();
+// 			echo '<ul>';
+// 			echo '<li>';
+// 			the_title(); 
+// 			echo '</li>';
+// 			echo '</ul>';
+// 			endwhile; endif; 
+// 		}
+// 	}
+//    return ob_get_clean();
+// }
+// add_shortcode('eyesore_childpages', 'eyesore_list_child_pages');
 
 
 

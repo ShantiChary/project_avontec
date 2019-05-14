@@ -1,6 +1,7 @@
-jQuery(function ($) {
-    $(document).ready(function () {
-
+// jQuery(function ($) {
+//     $(document).ready(function () {
+    
+    jQuery(document).ready(function($){
         $(window).scroll(function () {
             if ($(this).scrollTop() > 100) {
                 $('.scrollToTop').fadeIn();
@@ -17,7 +18,7 @@ jQuery(function ($) {
         });
 
     });
-});
+// });
 
 
 jQuery(document).ready(function($){
@@ -56,13 +57,19 @@ jQuery(document).ready(function($){
 
 
 jQuery(document).ready(function($){
-    var modal = document.querySelector(".modal");
-    var trigger = document.querySelector(".trigger");
-    var closeButton = document.querySelector(".close-button");
+    // var modal = document.querySelector(".modal");
+    var modal = document.getElementById("modal-id");
+    // var trigger = document.querySelector(".trigger");
+    var trigger = document.getElementById("trigger-id");
+    // var closeButton = document.querySelector(".close-button");
+    var closeButton = document.getElementById("close-button-id");
 
-    function toggleModal() {
-        modal.classList.toggle("show-modal");
-    }
+    // window.onload=function(){
+    if(modal && trigger && closeButton){    
+        trigger.addEventListener("click", toggleModal);
+        closeButton.addEventListener("click", toggleModal);
+        window.addEventListener("click", windowOnClick);
+    };
 
     function windowOnClick(event) {
         if (event.target === modal) {
@@ -70,9 +77,10 @@ jQuery(document).ready(function($){
         }
     }
 
-    trigger.addEventListener("click", toggleModal);
-    closeButton.addEventListener("click", toggleModal);
-    window.addEventListener("click", windowOnClick);
+    function toggleModal() {
+        modal.classList.toggle("show-modal");
+    }
+
 });
 
 // jQuery(document).ready(function($){

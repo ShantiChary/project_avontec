@@ -38,7 +38,8 @@
                                         echo "</p>";
 
                                         echo "<p>";
-                                        echo do_shortcode('[mc4wp_form]');
+                                        echo do_shortcode('[sibwp_form id=1]');
+                                        // echo do_shortcode('[mc4wp_form]');
                                         echo "</p>";
                                     echo "</div>";
 

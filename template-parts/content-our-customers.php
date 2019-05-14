@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for displaying page content in content-about-avontec.php
+ * Template part for displaying page content in content-our-customers.php
  *
  * @package avontec
  */
@@ -20,7 +20,7 @@
 
                         ?>
 
-                        <h4><?php echo $aboutAvontecHeading; ?></h4>
+                        <h2><?php echo $aboutAvontecHeading; ?></h2>
                         <p><?php echo $aboutAvontecText; ?></p>
     
                     <?php

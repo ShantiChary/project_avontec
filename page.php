@@ -32,61 +32,96 @@ get_header('internal');
 									<div class="banner-sub-menu">
 
 										<?php 
-											if ((is_page ('about-avontec')) || (is_page ('share-holders')) || (is_page ('partners')) || (is_page ('client-list'))  || (is_page ('case-studies')) || (is_page ('work-avontec'))) { 
+											/* About Us Banner */
+											if ( $post->post_parent == '77' ) {
 												$image = get_field('about_us_banner', 'option');
-											}
-
-											if ((is_page ('primary-packaging')) || (is_page ('secondary-packaging')) || (is_page ('tertiary-packaging')) || (is_page ('electrical-automation')) || (is_page ('line-integration')) || (is_page ('robotics')) ) { 
+											}												
+											/* Packaging Automation Banner */
+											elseif ( $post->post_parent == '423' ) {
 												$image = get_field('automation_banner', 'option');
-											}
-
-											if ((is_page ('chain-conveying')) || (is_page ('modular-conveying')) || (is_page ('elevating-conveying')) || (is_page ('pallet-bucket-conveying'))) { 
+											}	
+											/* Conveying Automation & Robotics Banner */
+											elseif ( $post->post_parent == '437' ) {
 												$image = get_field('conveying_banner', 'option');
+											}	
+											/* Industrial Displays Banner */							
+											elseif ( $post->post_parent == '468' ) {
+												$image = get_field('industrial_displays_banner', 'option');
 											}
-										
-											if ((is_page ('description')) || (is_page ('contact-us')) || (is_page ('key-projects')) || (is_page ('events-news'))  || (is_page ('video-page')) || (is_page ('site-policy'))) { 
+											/* Custom Process Control RD Banner */
+											elseif ( $post->post_parent == '83' ) {
 												$image = get_field('custom_rd_banner', 'option');
 											}
-
-											if ((is_page ('efficiency-management')) || (is_page ('application-management')) || (is_page ('machine-upgrade')) || (is_page ('annual-maintenance-contract'))  || (is_page ('spare-parts-change-parts'))) { 
+											/* Engineering Banner */
+											elseif ( $post->post_parent == '79' ) {
 												$image = get_field('engineering_banner', 'option');
 											}
-
-											if ((is_page ('industrial-displays'))) { 
-												$image = get_field('industrial_displays_banner', 'option');
+											/* About Us Banner */
+											elseif ( $post->post_parent == '610' ) {
+												$image = get_field('iot_banner', 'option');
+											}
+											/* Primary Packaging Banner */
+											elseif ( $post->post_parent == '425' ) {
+												$image = get_field('primary_packaging_banner1', 'option');
 											}
 
 										?>
 
-										<div class="banner-img-div">
-											<img class="banner-img" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" width="890"/>
+										<?php
+										if ( ! is_page('contact-us') ) { ?>
+											<div class="banner-img-div">
+												<img class="banner-img" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" width="890"/>
 
-											<h1 class="banner-h1"><?php echo get_the_title(); ?> </h1>
-										</div>
+												<h1 class="banner-h1"><?php echo get_the_title(); ?> </h1>
+											</div>
+										<?php } ?>	
 
 										<!-- Sub menu div -->
-										<div class="sub-menu-div">
+											<?php 
+												if ( ! is_page('contact-us') ) { ?>
+													<div class="sub-menu-div">
 
-										<h3><?php echo 'More' . ' ' . get_the_title( $post->post_parent ); ?></h3>
-											<?php echo do_shortcode('[wpb_childpages]'); ?>
-											
-										</div>
+														<!-- <h3>?php echo 'More' . ' ' . get_the_title( $post->post_parent ); ?></h3> -->
+														<h4><?php echo get_the_title( $post->post_parent ); ?></h4>
+															<?php echo do_shortcode('[wpb_childpages]'); ?>
+													
+													</div>
+												<?php } ?>	
 									</div> <!--banner-sub-menu -->
+
 
 									<!-- Get template-part content for each page -->
 									<?php
 											if (is_page ('about-avontec')) { 
 												get_template_part( 'template-parts/content', 'about-avontec' ); 
 											}
-											elseif (is_page ('share-holders')) { 
-												get_template_part( 'template-parts/content', 'share-holders' ); 
+											elseif (is_page ('avontec-today')) { 
+												get_template_part( 'template-parts/content', 'avontec-today' ); 
+											}
+											elseif (is_page ('leadership')) { 
+												get_template_part( 'template-parts/content', 'leadership' ); 
+											}
+											elseif (is_page ('our-customers')) { 
+												get_template_part( 'template-parts/content', 'our-customers' ); 
+											}
+											elseif (is_page ('work-avontec')) { 
+												get_template_part( 'template-parts/content', 'work-avontec' ); 
 											}
 											elseif (is_page ('chain-conveying')) { 
 												get_template_part( 'template-parts/content', 'chain-conveying' ); 
 											}
 											elseif (is_page ('contact-us')) { 
-												get_template_part( 'template-parts/content', 'contact' ); 
+												get_template_part( 'template-parts/content', 'contact' );
 											}
+											elseif ((is_page ('primary-packaging')) || (is_page ('beer')) || (is_page ('carbonated-soft-drinks'))) { 
+												get_template_part( 'template-parts/content', 'beer' );
+											}
+											// elseif (is_page ('beer')) { 
+											// 	get_template_part( 'template-parts/content', 'beer' );
+											// }
+											// elseif (is_page ('carbonated-soft-drinks')) { 
+											// 	get_template_part( 'template-parts/content', 'beer' );
+											// }
 									?>
 						</div>	<!-- internal-content-div -->
 					
@@ -94,9 +129,9 @@ get_header('internal');
 
 					</div> <!-- internal-div -->
 	 
-					<div class="sec-4">
+					<div class="sec-5">
 							<?php
-								get_template_part( 'template-parts/content', 'newsletter' );
+								get_template_part( 'template-parts/content', 'exhibitions-news' );
 							?>
 					</div>
 

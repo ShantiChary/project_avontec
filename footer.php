@@ -50,19 +50,21 @@
 				<!-- <p><a class="telephone1" href="?php the_field('phone_number_1', 'option'); ?>">?php the_field('phone_number_1', 'option'); ?></a> </p> -->
 				<p> <?php the_field('phone_number_1', 'option'); ?> </p>
 
-				<p><a class="telephone2" href="<?php the_field('phone_number_2', 'option'); ?>"><?php the_field('phone_number_2', 'option'); ?></a></p>
+				<p> <?php the_field('phone_number_2', 'option'); ?> </p>
+
+				<!-- <p><a class="telephone2" href="?php the_field('phone_number_2', 'option'); ?>">?php the_field('phone_number_2', 'option'); ?></a></p> -->
+
 				<p><a class="fax" href="<?php the_field('fax_number', 'option'); ?>"><?php the_field('fax_number', 'option'); ?></a></p> 
 			</div>
 
 			<div class="footer-contact-email footer-item">
-			<h3 class="email-title">Email:</h3>
+				<h3 class="email-title">Email:</h3>
+					<br>
                     <p><?php the_field('email_title_1', 'option'); ?></p>
-                    <a class="telephone" href="mailto:<?php the_field('email', 'option'); ?>"><?php the_field('email_address_1', 'option'); ?></a>
-                    <br>
-					<br>
-					<br>
-                    <p><?php the_field('email_title_2', 'option'); ?></p>
-                    <a class="telephone" href="mailto:<?php the_field('email', 'option'); ?>"><?php the_field('email_address_2', 'option'); ?></a>
+                    <a class="telephone" href="mailto:<?php the_field('email_address_1', 'option'); ?>"><?php the_field('email_address_1', 'option'); ?></a>
+
+                    <p class="email-2"><?php the_field('email_title_2', 'option'); ?></p>
+                    <a class="telephone" href="mailto:<?php the_field('email_address_2', 'option'); ?>"><?php the_field('email_address_2', 'option'); ?></a>
 			</div>
 
 		</div>

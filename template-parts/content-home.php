@@ -52,18 +52,19 @@
                         // the_field('learn_more_button');
                         // echo "'>Learn More</a>";
                         ?>
-
-                        <button class="trigger">Learn More</button>
+                        <div class="learn-button">
+                            <button id="trigger-id" class="trigger">Learn More</button>
+                        </div>
 
                     <?php
                     }	
                     ?>
             </div> <!-- video-1-section -->
 
-            <div class="modal">
-                <div class="modal-content">
+            <div id="modal-id" class="modal">
+                <div id="modal-content-id" class="modal-content">
                     <div class="popup-content">
-                        <span class="close-button">&times;</span>
+                        <span id="close-button-id" class="close-button">&times;</span>
                             <img src="<?php the_field('website_logo', 'option'); ?>" width=150>
 
                             <p>Hello, please contact us for more information.</p>
@@ -186,51 +187,8 @@
 
 
             <?php get_template_part( 'template-parts/content', 'newsletter' ); ?>
+            <?php get_template_part( 'template-parts/content', 'exhibitions-news' ); ?>
             
-            <!-- Section 5 Exhibitions & News content -->
-            <div class="section-5">
-                <div class="section-5-inner">
-
-                    <?php    
-                            if(function_exists('get_field')) {
-
-                                echo "<h3>";
-                                the_field('news_section_heading');
-                                echo "</h3>";
-                            }
-                    ?>
-
-
-                    <div id="exampleSlider">      <!-- Give wrapper ID to target with jQuery & CSS -->
-                            <div class="MS-content">
-
-                                <!-- // loop through the rows of data -->
-                                <?php
-                                while ( have_rows('news_article') ) : the_row(); ?>
-                                
-                                    <?php
-                                        $image = get_sub_field('news_article_image');
-                                        $newsText = get_sub_field('news_article_text');
-
-                                    ?>                        
-                                    <div class="item">
-                                        <img src="<?php echo $image['url']; ?>" width=50>   
-                                    <!-- </div> -->
-
-                                    <!-- <div class="news-text">  -->
-                                        <p><?php echo $newsText; ?></p>
-                                    </div>
-                                <?php
-                                endwhile;
-                                ?>            
-                            </div>
-                            <div class="MS-controls">
-                                <button class="MS-left"><i class="fa fa-chevron-left" aria-hidden="true"></i></button>
-                                <button class="MS-right"><i class="fa fa-chevron-right" aria-hidden="true"></i></button>
-                            </div>
-                    </div>
-                </div>
-            </div>
 
 
 </section> <!-- home-content -->
