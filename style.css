@@ -691,7 +691,7 @@ a:active {
 	position: absolute;
 	top: 100%;
 	left: -999em;
-
+	transform: skew(20deg) !important;
 }
 
 .main-navigation ul ul ul {
@@ -1155,6 +1155,15 @@ html,body
 /*------------------------*/
 /* NAVIGATION MENU STYLES */
 /*------------------------*/
+.menu-main-menu-container {
+	background: white;
+	transform: skew(-20deg) !important;
+}
+
+.menu-div {
+	background: white;
+}
+
 .main-navigation {
 	width: 68.5%;
 	line-height: 1em;
@@ -1162,41 +1171,22 @@ html,body
 	letter-spacing: 0.03rem;
 	padding-top: 0;
 	height: 180px;
-
-	/* transform: skew(-20deg); */
-	/* background-color:#e1e1e1; */
-	background-color: var(--theme-white);
-}
-
-.menu-main-menu-container {
-	transform: skew(-20deg);
 	background-color: var(--theme-white);
 }
 
 .main-navigation ul {
-	transform: skew(0deg);
 	display: flex;
 	background-color: var(--theme-lightgray);
 }
 
 .main-navigation ul ul {
-	/* margin: 0 0 0 -32px; */
-	transform: skew(0deg);
 	margin: 0;
-	padding: 0;
 }
 
 .main-navigation ul li {
-	/* position: relative; */
 	width: 20%;
 	color: rgb(116, 116, 121);
-	/* transform: skew(20deg); */
-	 /* INVERSE SKEW */
 }
-
-/* .main-navigation ul ul li {
-	width: 100%;
-} */
 
 .main-navigation ul li a {
 	height: 180px;
@@ -1206,8 +1196,7 @@ html,body
 	padding-top: 75px;
 	text-align: center;
 	line-height: 1.5;
-	/* transform: skew(-20deg);  */
-	/* INVERSE SKEW */
+	transform: skew(20deg) !important;
 }
 
 .main-navigation ul li a:hover {
@@ -1223,7 +1212,7 @@ html,body
 	background-color: var(--theme-lightgray);
 	display: flex;
 	flex-direction: column;
-	padding-top: 20px; /* added SC 12042019 */
+	/* padding-top: 20px;  added SC 12042019 */
 	width: 260px; /* added SC 12042019 */
 }
 
@@ -1237,24 +1226,29 @@ html,body
 }
 
 .main-navigation ul ul li a {
+	transform: skew(0deg) !important;
 	padding: 12px 0 0 12px;
 	text-align: left;
-	/* transform: skew(-20deg);  */
 	width: 270px;
 	font-size: var(--theme-font-body);
 	font-weight: normal;
+	height: 40px;
+}
+
+.sub-menu li .sub-menu {
+	transform: skew(0deg) !important;
+	margin-left: 200px;
 }
 
 .sub-menu li,
 .sub-menu li a {
-	height: 50px; /* added SC 12042019 */
+	height: 30px; /* added SC 12042019 */
 }
 
 .sub-menu li a:hover {
 	width: 260px; /* added SC 12042019 */
-	height: 50px; /* added SC 12042019 */
+	height: 30px; /* added SC 12042019 */
 	text-align: left;
-	padding-left: 20px;
 }
 /*---------------------*/
 /* BODY STYLES */
@@ -1741,8 +1735,6 @@ input.sib-default-btn {
 }
 
 .sub-menu-div ul li {
-	margin: 5px 0;
-	padding: 5px 0 0 5px;
 	line-height: 20px;
 
 }
@@ -2211,7 +2203,7 @@ background: pink;
 
   /*---------------------------------*/
 
-	.header-top-fixed,
+	/* .header-top-fixed, */
 	.logo-div,
 	#block-header,
 	.banner-slider,
@@ -2222,6 +2214,12 @@ background: pink;
 	.main-navigation {
 		display: none;
 	}
+
+	.menu-main-menu-container {
+		/* background: white; */
+		transform: skew(0deg) !important;
+	}
+	
 
 	.sub-menu {
 		padding-top: 0;

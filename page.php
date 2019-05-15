@@ -82,6 +82,25 @@ get_header('internal');
 													<div class="sub-menu-div">
 
 														<!-- <h3>?php echo 'More' . ' ' . get_the_title( $post->post_parent ); ?></h3> -->
+														<!-- ?php
+														if ($post->post_parent)	{
+														$ancestors=get_post_ancestors($post->ID);
+														$root=count($ancestors)-1;
+														$parent = $ancestors[$root];}
+														?> -->
+<?php
+														// $currentpage = $post->ID;
+														// immediate parent page id
+														// $parentpage = $post->post_parent;
+														// get all parents and grand parents in an array
+														$grandparent = get_post_ancestors($currentpage);
+														// grand parent page id = From the array created above
+														$grandparentID = $grandparent[1];
+														// echo out your new array if you want to see
+														// echo "<pre>"; print_r($parent); echo "</pre>";
+										?>
+
+														<h4><?php echo get_the_title( $grandparentID ); ?></h4>
 														<h4><?php echo get_the_title( $post->post_parent ); ?></h4>
 															<?php echo do_shortcode('[wpb_childpages]'); ?>
 													
@@ -113,15 +132,48 @@ get_header('internal');
 											elseif (is_page ('contact-us')) { 
 												get_template_part( 'template-parts/content', 'contact' );
 											}
-											elseif ((is_page ('primary-packaging')) || (is_page ('beer')) || (is_page ('carbonated-soft-drinks'))) { 
+											/* Primary Packaging */
+											elseif (is_page ('primary-packaging')) { 
+												get_template_part( 'template-parts/content', 'primary-packaging' );
+											}
+											elseif (is_page ('beer')) { 
 												get_template_part( 'template-parts/content', 'beer' );
 											}
-											// elseif (is_page ('beer')) { 
-											// 	get_template_part( 'template-parts/content', 'beer' );
-											// }
-											// elseif (is_page ('carbonated-soft-drinks')) { 
-											// 	get_template_part( 'template-parts/content', 'beer' );
-											// }
+											elseif (is_page ('carbonated-soft-drinks')) { 
+												get_template_part( 'template-parts/content', 'carbonated-soft-drinks' );
+											}
+											elseif (is_page ('detergents-chemicals')) { 
+												get_template_part( 'template-parts/content', 'detergents-chemicals' );
+											}
+											elseif (is_page ('edible-oil')) { 
+												get_template_part( 'template-parts/content', 'edible-oil' );
+											}
+											elseif (is_page ('juices')) { 
+												get_template_part( 'template-parts/content', 'juices' );
+											}
+											elseif (is_page ('lube-oil-filling')) { 
+												get_template_part( 'template-parts/content', 'lube-oil-filling' );
+											}
+											elseif (is_page ('milk-yoghurt')) { 
+												get_template_part( 'template-parts/content', 'milk-yoghurt' );
+											}
+											elseif (is_page ('spirits')) { 
+												get_template_part( 'template-parts/content', 'spirits' );
+											}
+											elseif (is_page ('water')) { 
+												get_template_part( 'template-parts/content', 'water' );
+											}
+											elseif (is_page ('wine')) { 
+												get_template_part( 'template-parts/content', 'wine' );
+											}
+											elseif (is_page ('kykloo-unscrambler')) { 
+												get_template_part( 'template-parts/content', 'kykloo-unscrambler' );
+											}
+
+											/* IOT SOlutions */
+											elseif (is_page ('kykloo-unscrambler')) { 
+												get_template_part( 'template-parts/content', 'kykloo-unscrambler' );
+											}
 									?>
 						</div>	<!-- internal-content-div -->
 					

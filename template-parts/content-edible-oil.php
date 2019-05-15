@@ -1,13 +1,13 @@
 <?php
 /**
- * Template part for displaying page content in primary-packaging.php
+ * Template part for displaying page content in edible-oil.php
  *
  * @package avontec
  */
 
 ?>
 
-<!-- Primary Packaging Content -->
+<!-- Beer page Content -->
 <div class="about-section">
         <?php
             $ppText = get_field('pp_text');
