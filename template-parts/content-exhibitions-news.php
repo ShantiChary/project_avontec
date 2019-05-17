@@ -22,42 +22,77 @@
                     }
             ?>
 
-
             <div id="exampleSlider">      <!-- Give wrapper ID to target with jQuery & CSS -->
                     <div class="MS-content">
 
-                        <!-- // loop through the rows of data -->
-                        <?php
-                        while ( have_rows('news_article', 'option') ) : the_row(); ?>
-                        
-                            <?php
-                                $image = get_sub_field('news_article_image', 'option');
-                                $newsLink = get_sub_field('news_article_link', 'option');
-                                $newsTitle = get_sub_field('news_article_title', 'option');
-                                $newsText = get_sub_field('news_article_text', 'option');
+                                <?php
+                                    $args = array(
+                                            'post_type' => 'news',
+                                            'posts_per_page' => -1,
+                                            'order' => 'ASC',
+                                            'orderby' => 'title'
+                                    );
 
-                            ?>                        
-                            <div class="item">
-                                <div class="news-item">
-                                    <div class="news-image">
-                                        <img src="<?php echo $image['url']; ?>" width=250 height=100%>   
-                                    </div>
+                                    $multislides = new WP_Query($args);
 
-                                    <div class="news-text"> 
-                                        <h5><a href="#"><?php echo $newsLink; ?></a></h5>
-                                        <h5><?php echo $newsTitle; ?></h5>
-                                        <p><?php echo $newsText; ?></p>
-                                    </div>
-                                </div>
-                            </div>
-                        <?php
-                        endwhile;
-                        ?>            
-                    </div>
-                    <div class="MS-controls">
-                        <button class="MS-left"><i class="fa fa-chevron-left" aria-hidden="true"></i></button>
-                        <button class="MS-right"><i class="fa fa-chevron-right" aria-hidden="true"></i></button>
-                    </div>
-            </div>
-        </div>
-    </div>
+                                    if($multislides->have_posts()) {
+                                        while($multislides->have_posts()) {
+                                            $multislides->the_post();
+
+                                            echo '<div class="item">';
+                                                if(function_exists('get_field')){
+                                                    echo '<div class="news-item">'; 
+
+                                                    $image = get_field('news_image');
+                                                    $size = 'thumbnail'; // (thumbnail, medium, large, full or custom size)
+                                                    if(!empty($image)) {
+                                                        if( $image ) {
+
+                                                            echo '<div class="news-image">'; 
+                                                                echo '<a href="';
+                                                                the_permalink();
+                                                                echo '">'; 
+                                                                echo wp_get_attachment_image( $image, $size );
+                                                                echo '</a>';
+                                                            echo '</div>';
+
+                                                            echo '<div class="news-text">'; 
+                                                            if(get_field('news_link')){
+                                                                echo '<a href="';
+                                                                the_permalink();
+                                                                echo '">'; 
+                                                                echo "<h5>";
+                                                                the_field('news_link');
+                                                                echo "</h5>";
+                                                                echo '</a>';
+                                                            }
+                                                            if(get_field('news_heading')){
+                                                                echo "<h5>";
+                                                                the_field('news_heading');
+                                                                echo "</h5>";
+                                                            }
+                                                            if(get_field('news_excerpt')){
+                                                                echo "<p>";
+                                                                the_field('news_excerpt');
+                                                                echo "</p>";
+                                                            }
+                                                            echo '</div>';
+
+                                                        }
+                                                    }
+                                                    echo '</div>';
+                                                }  ?> <!-- end if -->
+
+                                            <?php echo '</div>';
+
+
+                                        } ?> <!-- end while --> 
+                               
+                                        <?php wp_reset_postdata();
+                                    } ?> <!-- end if -->
+
+                    </div> <!-- end MS-Content -->
+            </div> <!-- exampleSlider -->                                        
+
+        </div> <!-- end section-5-inner -->
+    </div> <!-- end section-5 -->

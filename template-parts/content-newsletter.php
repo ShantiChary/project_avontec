@@ -14,9 +14,9 @@
                     <?php
                         if(function_exists('get_field')) {
 
-                            echo "<h1 class='section-4-h1'>";
+                            echo "<h3 class='section-4-h3'>";
                             the_field('heading_3', 'option');
-                            echo "</h1>";
+                            echo "</h3>";
 
                             echo "<p class='section-4-para'>";
                             the_field('section_4', 'option');

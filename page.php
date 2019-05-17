@@ -35,7 +35,7 @@ get_header('internal');
 											/* About Us Banner */
 											if ( $post->post_parent == '77' ) {
 												$image = get_field('about_us_banner', 'option');
-											}												
+											}									
 											/* Packaging Automation Banner */
 											elseif ( $post->post_parent == '423' ) {
 												$image = get_field('automation_banner', 'option');
@@ -64,6 +64,7 @@ get_header('internal');
 											elseif ( $post->post_parent == '425' ) {
 												$image = get_field('primary_packaging_banner1', 'option');
 											}
+											
 
 										?>
 
@@ -88,21 +89,57 @@ get_header('internal');
 														$root=count($ancestors)-1;
 														$parent = $ancestors[$root];}
 														?> -->
-<?php
+										<?php
 														// $currentpage = $post->ID;
 														// immediate parent page id
 														// $parentpage = $post->post_parent;
 														// get all parents and grand parents in an array
-														$grandparent = get_post_ancestors($currentpage);
+														// $grandparent = get_post_ancestors($currentpage);
 														// grand parent page id = From the array created above
-														$grandparentID = $grandparent[1];
+														// $grandparentID = $grandparent[1];
 														// echo out your new array if you want to see
 														// echo "<pre>"; print_r($parent); echo "</pre>";
 										?>
 
-														<h4><?php echo get_the_title( $grandparentID ); ?></h4>
-														<h4><?php echo get_the_title( $post->post_parent ); ?></h4>
-															<?php echo do_shortcode('[wpb_childpages]'); ?>
+														<!-- <h4>?php echo get_the_title( $grandparentID ); ?></h4> -->
+
+														<?php
+														echo '<h4>';
+														if ( 0 == $post->post_parent ) {
+															echo get_the_title( $post->post_parent );
+														} else {
+															$parents = get_post_ancestors( $post->ID );
+															echo apply_filters( "the_title", get_the_title( end ( $parents ) ) );
+														}
+														echo '</h4>'; ?>
+
+														<!-- <h4><php echo get_the_title( $post->post_parent ); ?></h4> -->
+
+														<?php 
+															echo '<ul id="extra-menu">';
+										
+																echo '<li class="extra-menu-item">'; 
+
+																if ( 0 == $post->post_parent ) {
+																 ?>
+																		<a href="<?php echo get_permalink( $post->post_parent ); ?>" >
+																		<?php echo get_the_title( $post->post_parent ); ?>
+																		</a>
+																<?php } 
+
+																// if ( ! 0 == $post->post_parent ) {
+																// 	echo '<a href="';
+																// 	the_permalink();
+																// 	echo '">';
+																// 	echo get_the_title( $post->post_parent );
+																// 	echo '</a>';
+																// } 
+
+																echo do_shortcode('[wpb_childpages]');
+
+																echo '</li>';
+															echo '<ul id="extra-menu">';
+														?>
 													
 													</div>
 												<?php } ?>	
@@ -111,6 +148,7 @@ get_header('internal');
 
 									<!-- Get template-part content for each page -->
 									<?php
+											/* About Us */
 											if (is_page ('about-avontec')) { 
 												get_template_part( 'template-parts/content', 'about-avontec' ); 
 											}
@@ -123,12 +161,16 @@ get_header('internal');
 											elseif (is_page ('our-customers')) { 
 												get_template_part( 'template-parts/content', 'our-customers' ); 
 											}
+											elseif (is_page ('projects')) { 
+												get_template_part( 'template-parts/content', 'projects' ); 
+											}
+											elseif (is_page ('news')) { 
+												get_template_part( 'template-parts/content', 'news' ); 
+											}
 											elseif (is_page ('work-avontec')) { 
 												get_template_part( 'template-parts/content', 'work-avontec' ); 
 											}
-											elseif (is_page ('chain-conveying')) { 
-												get_template_part( 'template-parts/content', 'chain-conveying' ); 
-											}
+
 											elseif (is_page ('contact-us')) { 
 												get_template_part( 'template-parts/content', 'contact' );
 											}
@@ -170,6 +212,47 @@ get_header('internal');
 												get_template_part( 'template-parts/content', 'kykloo-unscrambler' );
 											}
 
+											/* Chain Conveying */
+											elseif (is_page ('chain-conveying')) { 
+												get_template_part( 'template-parts/content', 'chain-conveying' );
+											}
+											elseif (is_page ('modular-conveying')) { 
+												get_template_part( 'template-parts/content', 'modular-conveying' );
+											}
+											elseif (is_page ('elevating-solutions')) { 
+												get_template_part( 'template-parts/content', 'elevating-solutions' );
+											}
+											elseif (is_page ('pallet-bucket-conveying')) { 
+												get_template_part( 'template-parts/content', 'pallet-bucket-conveying' );
+											}
+											elseif (is_page ('robotics')) { 
+												get_template_part( 'template-parts/content', 'robotics' );
+											}
+											elseif (is_page ('line-integration')) { 
+												get_template_part( 'template-parts/content', 'line-integration' );
+											}
+
+											/* Industrial Displays */
+											elseif (is_page ('large-displays')) { 
+												get_template_part( 'template-parts/content', 'large-displays' );
+											}
+											elseif (is_page ('jumbo-displays-2-12')) { 
+												get_template_part( 'template-parts/content', 'jumbo-displays-2-12' );
+											}
+											elseif (is_page ('multi-line-2-sided')) { 
+												get_template_part( 'template-parts/content', 'multi-line-2-sided' );
+											}
+											elseif (is_page ('counter-timers-target')) { 
+												get_template_part( 'template-parts/content', 'counter-timers-target' );
+											}
+											elseif (is_page ('clocks-gprs-ntp-poe')) { 
+												get_template_part( 'template-parts/content', 'clocks-gprs-ntp-poe' );
+											}
+											elseif (is_page ('protocols-and-inputs')) { 
+												get_template_part( 'template-parts/content', 'protocols-and-inputs' );
+											}
+											
+
 											/* IOT SOlutions */
 											elseif (is_page ('kykloo-unscrambler')) { 
 												get_template_part( 'template-parts/content', 'kykloo-unscrambler' );
@@ -179,7 +262,7 @@ get_header('internal');
 					
 						<?php get_sidebar(); ?>
 
-					</div> <!-- internal-div -->
+					</div> <!-- internal-page-div -->
 	 
 					<div class="sec-5">
 							<?php

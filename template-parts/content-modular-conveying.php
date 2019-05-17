@@ -7,26 +7,25 @@
 
 ?>
 
-<!-- Chain Conveying Page Content -->
+<!-- Modular Conveying Page Content -->
 
-        <div class="about-section-text">
-            <!-- ?php
-                    // loop through the rows of data
-                    while ( have_rows('about_us_section') ) : the_row();
-                        // display a sub field value
-                        //variable
-                        $aboutUsHeading = get_sub_field('about_us_heading');
-                        $aboutUsText = get_sub_field('about_us_text');
+<div class="about-section">
+        <?php
+            $ppText = get_field('pp_text');
+            $ppImage = get_field('pp_image'); ?>
 
-                        ?>
+            <div class="conveying-list-text">
+                <ul>
+                    <?php echo $ppText; ?>
+                </ul>
+            </div>
 
-                        <h2>?php echo $aboutUsHeading; ?></h2>
-                        <p>?php echo $aboutUsText; ?></p>
-    
-                    ?php
-                    endwhile;
-                ?> -->
-        </div>
+            <?php   
+                if( !empty($ppImage) ): ?>
+                    <img src="<?php echo $ppImage['url']; ?>" alt="<?php echo $ppImage['alt']; ?>" width=100%/>
+            <?php endif;  
+        ?>
+</div>
 
 
 

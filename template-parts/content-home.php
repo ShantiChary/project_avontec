@@ -123,72 +123,70 @@
         </section> <!-- section-2 -->
 
         <!-- SECTION 3 - KEY PROJECTS -->
-        <div id="key-projects" class="projects-slider">
-                <?php
-                    if(get_field('heading_2')){
-                        echo '<h3 class="key-heading">';
-                        the_field('heading_2');
-                        echo '</h3>';
-                    }
-                ?>
-
-                <?php
-                    //Image Slider
-                    //slider_portfolio = Repeater field
-                    //slider_image = subfield
-
-                    if( have_rows('key_projects_slider') ){ ?>
-                        <div class="multiple-items projects-slide">
+        <section id="key-projects" class="projects-slider">
                             <?php
-                                // loop through the rows of data
-                                while ( have_rows('key_projects_slider') ) : the_row();
-                                    // display a sub field value
-                                    //variable
-                                    $image = get_sub_field('project_image');
-                                    $projectTitle = get_sub_field('project_title');
-                                    $projectDescription = get_sub_field('project_description');
-                                    $projectLink = get_sub_field('project_link');
-
-                                    ?>
-
-                                    <div class="project-slides">
-                                        <a href="<?php the_sub_field('project_link'); ?>">
-                                            <img src="<?php echo $image['url']; ?>" width=200>
-                                        </a>
-                                        <h4><?php echo $projectTitle; ?></h4>
-                                        <p><?php echo $projectDescription; ?></p>
-
-                                    </div> <!-- project-slides -->
-                
-                                <?php
-                                endwhile;
-                                ?>
-                        </div> <!-- multiple-items projects-slide -->
-
-                        <div class="multiple-nav">';
-                            <!-- // loop through the rows of data -->
-                            <?php
-                            while ( have_rows('key_projects_slider') ) : the_row();
-                            // display a sub field value
-                            //vars
-                                $image = get_sub_field('project_image');
-                                $projectTitle = get_sub_field('project_title');
-                                $projectDescription = get_sub_field('project_description');
-                                $projectLink = get_sub_field('project_link');
+                                echo '<h3 class="project-heading">';
+                                echo "Projects";
+                                echo '</h3>';
                             ?>
 
-                            <!-- Image carousel - enable but do not display -->
-                            <div class="image-carousel"></div>
-                            <?php
-                            endwhile; ?>
-                        </div> <!-- multiple-nav -->
-                   <?php } ?>
-            </div> <!-- projects-slider -->
+                            <div class="multiple-items projects-slide">
 
+									<?php
+                                        $args = array(
+                                                'post_type' => 'project',
+                                                'posts_per_page' => -1,
+                                                'order' => 'ASC',
+                                                'orderby' => 'title'
+                                        );
+
+                                        $slickslides = new WP_Query($args);
+
+                                        if($slickslides->have_posts()) {
+                                            while($slickslides->have_posts()) {
+                                                $slickslides->the_post();
+
+                                                echo '<div class="project-slides">';
+
+                                                        if(function_exists('get_field')){
+
+                                                            $image = get_field('project_image');
+                                                            $size = 'thumbnail'; // (thumbnail, medium, large, full or custom size)
+                                                    
+                                                            if(!empty($image)) {                                
+                                                                if( $image ) {
+                                                                    echo '<a href="';
+                                                                    the_permalink();
+                                                                    echo '">'; 
+                                                                    echo wp_get_attachment_image( $image, $size );
+                                                                    echo '</a>';
+                                                                }
+                                                            }
+            
+                                                            if(get_field('project_heading')){
+                                                                    echo "<h4>";
+                                                                    the_field('project_heading');
+                                                                    echo "</h4>";
+                                                            }
+                                                            if(get_field('project_excerpt')){
+                                                                    echo "<p>";
+                                                                    the_field('project_excerpt');
+                                                                    echo "</p>";
+                                                            }
+                                                        }                                                            
+                                                echo '</div>';
+                                            }
+                                            
+                                            wp_reset_postdata();
+                                        }
+                                    ?>
+
+					        </div>
+			</section>
 
             <?php get_template_part( 'template-parts/content', 'newsletter' ); ?>
             <?php get_template_part( 'template-parts/content', 'exhibitions-news' ); ?>
-            
+        
 
 
 </section> <!-- home-content -->

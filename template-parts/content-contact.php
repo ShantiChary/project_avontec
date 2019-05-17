@@ -42,7 +42,7 @@
                         </div>
 
                         <div class="contact-address">
-                            <h3><?php echo 'FACTORY ADDRESS'; ?></h3>
+                            <h4><?php echo 'FACTORY ADDRESS'; ?></h4>
                             <p><?php the_field('company_name', 'option'); ?></p>
                             <p><?php the_field('address_line_1', 'option'); ?></p>
                             <p><?php the_field('address_line_2', 'option'); ?></p>

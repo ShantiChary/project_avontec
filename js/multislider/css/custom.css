@@ -55,17 +55,18 @@ html h2 {
 @media (max-width: 767px) {
   #exampleSlider .MS-content .item {
     width: 100%;
+    margin: 0;
   }
 }
 #exampleSlider .MS-content .item p {
   /* font-size: 30px; */
-  width: 90%;
-  height: 150px;
+  width: 100%;
+  height: 95px;
   font-size: 12px;
   /* font-weight: bold; */
   /* color: #cf311d; */
   color: #000000;
-  text-align: center;
+  /* text-align: center; */
   line-height: 1.5;
   vertical-align: middle;
   margin: 0;

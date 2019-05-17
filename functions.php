@@ -231,6 +231,27 @@ function wpb_hook_javascript() {
 }
 add_action('wp_head', 'wpb_hook_javascript');
 
+/* Display Ancestor (Main Menu Item name) */
+function my_menu_parent($theme_location) {
+	$locations = get_nav_menu_locations();
+	if ( isset( $locations[ $theme_location ] ) ) {
+			$menu = wp_get_nav_menu_object( $locations[ $theme_location ] );
+			$menu_items = wp_get_nav_menu_items($menu->term_id);
+			_wp_menu_item_classes_by_context( $menu_items );
+			$breadcrumbs = array();
+
+			foreach ( $menu_items as $menu_item ) {         
+					if ($menu_item->current_item_ancestor) {
+							$breadcrumbs[] = $menu_item->title;
+					}
+			}
+
+			return $breadcrumbs;
+	 }
+}
+add_shortcode('my_parent', 'my_menu_parent');
+
+
 /* Display Child Pages list of a Parent Page in Sub Menu of Child pages */
 function wpb_list_child_pages() { 
  
@@ -250,15 +271,15 @@ function wpb_list_child_pages() {
   
 add_shortcode('wpb_childpages', 'wpb_list_child_pages');
 
-
+/* Display CUstom Post Type Single Post Title */
 // function eyesore_list_child_pages() { 
 //     ob_start(); 
 //     global $post;
 // 	//check if this is a parent or child post
-// 	if (is_single() && is_post_type('conveying')){
+// 	if (is_single() && is_post_type('project')){
 // 			$args = array(
 // 				'post_parent' => $post->ID,
-// 				'post_type' => 'conveying',
+// 				'post_type' => 'project',
 // 				'order' => 'asc' 
 // 			);
 // 			$children = get_children($args); 
@@ -268,16 +289,12 @@ add_shortcode('wpb_childpages', 'wpb_list_child_pages');
 // 				//has children
 // 				$postsarr = array(
 // 					'post_parent' => $post->ID,
-// 					'post_type' => 'conveying',
+// 					'post_type' => 'project',
 // 					'order' => 'asc' 
 // 					); 
 // 				$childQuery = new WP_Query($postsarr);
 // 				if ( $childQuery->have_posts()) : while ( $childQuery->have_posts()) : $childQuery->the_post();
-// 				echo '<ul>';
-// 				echo "<li class='current_page_item'>";
-// 				echo the_title(); 
-// 				echo '<li>';
-// 				echo '</ul>';
+// 					the_title();
 // 				endwhile; endif; 
 				
 // 			} else {
@@ -285,23 +302,19 @@ add_shortcode('wpb_childpages', 'wpb_list_child_pages');
 // 				$parent = wp_get_post_parent_id($post->ID); 
 // 				$siblingsarr = array(
 // 					'post_parent' => $parent,
-// 					'post_type' => 'conveying',
+// 					'post_type' => 'project',
 // 					'order' => 'asc' 
 // 				); 
 // 				$siblings = new WP_Query($siblingsarr); 
 // 				if ( $siblings->have_posts()) : while ( $siblings->have_posts()) : $siblings->the_post();
-// 				echo '<ul>';
-// 				echo "<li class='current_page_item'>";
-// 				echo the_title(); 
-// 				echo '<li>';
-// 				echo '</ul>';
+// 					the_title();
 // 				endwhile; endif; 
 // 			}
 // 	}
-// 	elseif (is_single() && is_post_type('automation')){
+// 	elseif (is_single() && is_post_type('news')){
 // 		$args = array(
 // 			'post_parent' => $post->ID,
-// 			'post_type' => 'automation',
+// 			'post_type' => 'news',
 // 			'order' => 'asc'  
 // 		);
 // 		$children = get_children($args); 
@@ -311,16 +324,12 @@ add_shortcode('wpb_childpages', 'wpb_list_child_pages');
 // 			//has children
 // 			$postsarr = array(
 // 				'post_parent' => $post->ID,
-// 				'post_type' => 'automation',
+// 				'post_type' => 'news',
 // 				'order' => 'asc' 
 // 				); 
 // 			$childQuery = new WP_Query($postsarr);
 // 			if ( $childQuery->have_posts()) : while ( $childQuery->have_posts()) : $childQuery->the_post();
-// 			echo '<ul>';
-// 			echo '<li>';
-// 			the_title(); 
-// 			echo '</li>';
-// 			echo '</ul>';
+// 				the_title();
 // 			endwhile; endif; 
 			
 // 		} else {
@@ -328,16 +337,12 @@ add_shortcode('wpb_childpages', 'wpb_list_child_pages');
 // 			$parent = wp_get_post_parent_id($post->ID); 
 // 			$siblingsarr = array(
 // 				'post_parent' => $parent,
-// 				'post_type' => 'automation',
+// 				'post_type' => 'news',
 // 				'order' => 'asc' 
 // 				); 
 // 			$siblings = new WP_Query($siblingsarr); 
 // 			if ( $siblings->have_posts()) : while ( $siblings->have_posts()) : $siblings->the_post();
-// 			echo '<ul>';
-// 			echo '<li>';
-// 			the_title(); 
-// 			echo '</li>';
-// 			echo '</ul>';
+// 				the_title();
 // 			endwhile; endif; 
 // 		}
 // 	}

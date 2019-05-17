@@ -1,13 +1,13 @@
 <?php
 /**
- * Template part for displaying page content in content-share-holders.php
+ * Template part for displaying page content in content-projects.php
  *
  * @package avontec
  */
 
 ?>
 
-<!-- Share Holders Page Content -->
+<!-- Projects Page Content -->
 
     <div class="about-section">
             <?php
@@ -18,9 +18,9 @@
                     $leadershipImage = get_field('leadership_top_image'); ?>
 
                     <?php   
-                    //     if( !empty($leadershipImage) ): ?
-                    //         <img src="<?php echo $leadershipImage['url']; ?" alt="<?php echo $leadershipImage['alt']; ?" width=600/>
-                    // <?php endif;  ?>
+                        if( !empty($leadershipImage) ): ?>
+                            <img src="<?php echo $leadershipImage['url']; ?>" alt="<?php echo $leadershipImage['alt']; ?>" width=600/>
+                    <?php endif;  ?>
                     </div>              
 
                     <?php
