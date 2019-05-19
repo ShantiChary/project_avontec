@@ -265,7 +265,9 @@ function wpb_list_child_pages() {
 		if ( $childpages ) {
 
 				$string = '<ul>' . $childpages . '</ul>';
+ 
 		}
+
 		return $string;
 		}	
   

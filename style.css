@@ -1197,11 +1197,13 @@ html,body
 }
 
 .main-navigation ul li a {
+	display: flex;
+    align-items: center;
 	height: 174px;
 	color: var(--theme-black);
 	font-weight: 600;
 	padding: 0 20px;
-	padding-top: 75px;
+	/* padding-top: 50px; */
 	text-align: center;
 	line-height: 1.5;
 	transform: skew(0deg) !important;
@@ -1225,12 +1227,24 @@ html,body
 }
 
 /* change active menu color */
-/* .main-navigation li.current_page_item > a, //to change sub menu item colors as well
-.main-navigation li.current-menu-item > a, */
+.main-navigation li.current_page_item > a, /* //to change sub menu item colors as well */
+.main-navigation li.current-menu-item > a,
 .main-navigation li.current_page_ancestor > a,
 .main-navigation li.current-menu-ancestor > a {
 	background-color:  var(--theme-red);
 	color: var(--theme-white);
+}
+
+.sub-menu-div li.current_page_item > a, /* //to change sub menu item colors as well */
+.sub-menu-div li.current-menu-item > a,
+.sub-menu-div li.current_page_ancestor > a,
+.sub-menu-div ul.current-menu-ancestor > a,
+.sub-menu-div ul.current_page_item > a, /* //to change sub menu item colors as well */
+.sub-menu-div ul.current-menu-item > a,
+.sub-menu-div ul.current_page_ancestor > a,
+.sub-menu-div.current-menu-ancestor > a {
+	/* background-color:  var(--theme-red); */
+	color: var(--theme-red);
 }
 
 .main-navigation ul ul li {
@@ -1246,7 +1260,7 @@ html,body
 	font-size: var(--theme-font-body);
 	font-weight: normal;
 	height: 35px;
-		line-height: 1;
+	line-height: 1;
 }
 
 .sub-menu li .sub-menu {
@@ -1719,7 +1733,6 @@ input.sib-default-btn {
 	width: 74.7%;
 	height: 1460px;
 	margin-top: 58px;
-	/* background-color: var(--theme-lightgray); */
 	padding: 0 0 2em 0;
 	overflow-y: scroll;
 }
@@ -1768,14 +1781,13 @@ input.sib-default-btn {
 }
 
 .sub-menu-div ul li a:hover {
-	background-color: var(--theme-darkgray);
+	background-color: var(--theme-blue);
 	color: var(--theme-white);
 	padding: 5px 0;
 }
 
-.current_page_item a:visited,
-.current_page_item a:active {
-	color: var(--theme-red);
+.cpt-sub-menu {
+	padding: 3px 0 0 15px;
 }
 
 .sub-menu-div h4 {
@@ -1787,20 +1799,17 @@ input.sib-default-btn {
 	font-weight: normal;
 }
 
+/* ---------------------------------*/
+
 .about-section,
 .avontec-today-section {
 	padding: 2em 3em;
 }
 
-/* .about-section h4 {
-	font-size: var(--theme-font-button);
-} */
-
 .about-section p,
 .avontec-today-section p {
 	font-size: var(--theme-font-body);
 	color: var(--theme-black);
-	/* color: var(--theme-blue); */
 }
 
 /* Sidebar Styles */
@@ -2260,6 +2269,10 @@ background: pink;
 		width: 40px;
 	}
 
+	.news-slide {
+		width: 300px;
+	}
+
 	.news-article {
 		display: block;
 	}
@@ -2277,19 +2290,28 @@ background: pink;
 		height: auto;
 	}
 
-	/* .section-5 {
-		/* width: 300px;
-		/* padding: 10px;
-	} */
+	.sec-5 {
+		margin: 0;
+	}
+
+	.section-5 {
+		width: 318px;
+		height: 250px;
+		margin: 0 auto 15px;
+		padding: 0;
+	}
 
 	.section-5-inner {
 		/* width: 94%; */
-		height: 260px;
+		height: 240px;
 	}
-/* 
-	.news-p {
-		width: 50%;
-		white-space: nowrap;
+
+	.news-item {
+		height: 120px;
+	}
+
+	/* .news-image {
+		height: 110px;
 	} */
 
 	.internal-page-div {

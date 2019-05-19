@@ -46,31 +46,7 @@ get_header('internal');
 											<?php 
 												if ( ! is_page('contact-us') ) { ?>
 													<div class="sub-menu-div">
-
-														<!-- <h3>?php echo 'More' . ' ' . get_the_title( $post->post_parent ); ?></h3> -->
-														<!-- ?php
-														if ($post->post_parent)	{
-														$ancestors=get_post_ancestors($post->ID);
-														$root=count($ancestors)-1;
-														$parent = $ancestors[$root];}
-														?> -->
-														<?php
-														// $currentpage = $post->ID;
-														// immediate parent page id
-														// $parentpage = $post->post_parent;
-														// get all parents and grand parents in an array
-														// $grandparent = get_post_ancestors($currentpage);
-														// grand parent page id = From the array created above
-														// $grandparentID = $grandparent[1];
-														// echo out your new array if you want to see
-														// echo "<pre>"; print_r($parent); echo "</pre>";
-														?>
-
-														<!-- <h4>?php echo get_the_title( $grandparentID ); ?></h4> -->
-														<!-- <h4>?php echo get_the_title( $post->post_parent ); ?></h4> --?
-														?php echo do_shortcode('[eyesore_childpages]'); ?> -->
-
-
+														
 														<?php
 														// Define the WP query
 														$args = array(
@@ -84,8 +60,13 @@ get_header('internal');
 
 														if ($query->have_posts()) {
 
+															echo '<h4>';
+															$post_type = get_post_type_object( get_post_type($post) );
+															echo $post_type->label; 
+															echo '</h4>';
+
 															// Output the post titles in a list
-															echo '<ul id="extra-menu">';
+															echo '<ul>';
 
 															// echo '<h4>';
 															// if ( 0 == $post->post_parent ) {
@@ -96,22 +77,16 @@ get_header('internal');
 															// }
 															// echo '</h4>'; 
 
-																echo '<h4>';
-																$post_type = get_post_type_object( get_post_type($post) );
-																echo $post_type->label; 
-																echo '</h4>';
-
 																// Start the Loop
 																while ( $query->have_posts() ) : $query->the_post(); ?>
 
-																<li class="extra-menu-item" id="post-<?php the_ID(); ?>">
+																<li class="cpt-sub-menu" id="post-<?php the_ID(); ?>">
 																	<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 																</li>
 
 																<?php endwhile;
-
-																echo '</ul>';
 														}
+														echo '</ul>';
 
 														// Reset the WP Query
 														wp_reset_postdata();

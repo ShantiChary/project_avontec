@@ -116,9 +116,9 @@ get_header('internal');
 														<!-- <h4><php echo get_the_title( $post->post_parent ); ?></h4> -->
 
 														<?php 
-															echo '<ul id="extra-menu">';
+															echo '<ul>';
 										
-																echo '<li class="extra-menu-item">'; 
+																echo '<li>'; 
 
 																if ( 0 == $post->post_parent ) {
 																 ?>
@@ -138,6 +138,9 @@ get_header('internal');
 																echo do_shortcode('[wpb_childpages]');
 
 																echo '</li>';
+
+																echo '</li>';
+		
 															echo '<ul id="extra-menu">';
 														?>
 													

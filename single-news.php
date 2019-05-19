@@ -83,24 +83,23 @@ get_header('internal');
 
 														if ($query->have_posts()) {
 
-															// Output the post titles in a list
-															echo '<ul id="extra-menu">';
+															echo '<h4>';
+															$post_type = get_post_type_object( get_post_type($post) );
+															echo $post_type->label; 
+															echo '</h4>';
 
-																echo '<h4>';
-																$post_type = get_post_type_object( get_post_type($post) );
-																echo $post_type->label; 
-																echo '</h4>';
+															// Output the post titles in a list
+															echo '<ul>';
 
 																// Start the Loop
 																while ( $query->have_posts() ) : $query->the_post(); ?>
-																<li class="extra-menu-item" id="post-<?php the_ID(); ?>">
+																<li class="cpt-sub-menu" id="post-<?php the_ID(); ?>">
 																	<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 																</li>
 
 																<?php endwhile;
-
-																echo '</ul>';
 														}
+														echo '</ul>';
 
 														// Reset the WP Query
 														wp_reset_postdata();

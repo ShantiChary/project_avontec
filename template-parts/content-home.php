@@ -153,21 +153,25 @@
                                                             $image = get_field('project_image');
                                                             $size = 'thumbnail'; // (thumbnail, medium, large, full or custom size)
                                                     
+                                                            
                                                             if(!empty($image)) {                                
                                                                 if( $image ) {
-                                                                    echo '<a href="';
-                                                                    the_permalink();
-                                                                    echo '">'; 
+
+                                                                    // the_permalink();
+                                echo '<a href="http://avontec.com/about-us/projects/#name"';
+                                                                    echo "'>";        
                                                                     echo wp_get_attachment_image( $image, $size );
-                                                                    echo '</a>';
+                                                                    echo '</a>';                                                   
                                                                 }
                                                             }
             
-                                                            if(get_field('project_heading')){
+                                                            if(get_field('project_heading')){ ?>
+
+                                                                <?php
                                                                     echo "<h4>";
                                                                     the_field('project_heading');
                                                                     echo "</h4>";
-                                                            }
+                                                           }
                                                             if(get_field('project_excerpt')){
                                                                     echo "<p>";
                                                                     the_field('project_excerpt');
