@@ -153,19 +153,21 @@
 
                                                             $image = get_field('project_image');
                                                             $size = 'thumbnail'; // (thumbnail, medium, large, full or custom size)
-                                                    
-                                                            
+                                                                                                             
                                                             if(!empty($image)) {                                
                                                                 if( $image ) {
 
-                                                                    // the_permalink();
-                                echo '<a href="http://avontec.com/about-us/projects/#name"';
-                                                                    echo "'>";        
-                                                                    echo wp_get_attachment_image( $image, $size );
-                                                                    echo '</a>';                                                   
+                                                                    // the_permalink(); ?>
+
+                                                                    <a href="http://avontec.com/about-us/projects/#post-<?php echo the_ID(); ?>">
+                                                                    
+                                                                    <?php echo wp_get_attachment_image( $image, $size );                                                 
                                                                 }
                                                             }
-            
+                                                            ?>
+                                                            </a> 
+                                                            
+                                                            <?php
                                                             if(get_field('project_heading')){ ?>
 
                                                                 <?php

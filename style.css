@@ -1999,6 +1999,7 @@ input.wpcf7-submit {margin: 0;}
 	width: 100%;
 	display: flex;
 	border: 2px solid var(--theme-black);
+	margin: 20px 0;
 	padding: 10px 5px;
 }
 
