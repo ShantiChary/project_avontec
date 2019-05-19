@@ -24,6 +24,7 @@
 
         <!-- Section 2 Videos content -->
         <section class="section-2">
+
             <!-- Main video -->
             <div class="video-1-section">
                 <?php   	   

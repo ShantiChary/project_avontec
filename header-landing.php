@@ -20,16 +20,45 @@
 	<?php wp_head(); ?>
 </head>
 
+<div class="header-contact-mobile">
+                <div class="contact-us-image">
+                    <a href="<?php the_field('contact_us_button', 'option'); ?>"><img src="<?php the_field('contact_us_image', 'option'); ?>"></a>
+				</div>
+				
+				<div class="social-media">
+				<?php if( have_rows('social_media', 'option') ): ?>
+
+					<ul>
+							<!-- <a href="?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+								<li id="home-icon">			
+									<img src="?php the_field('home_icon', 'option'); ?>" width=30>
+								</li>
+							</a> -->
+
+							<?php while( have_rows('social_media', 'option') ): the_row(); ?>
+								<a href="<?php the_sub_field('social_media_link'); ?>" target="_blank"> 
+									<li><img src="<?php the_sub_field('social_media_icon'); ?>" width=25>
+									</li>
+								</a>
+							<?php endwhile; ?>
+
+					</ul>
+
+				<?php endif; ?>
+		</div>
+</div>
+
 <body <?php body_class(); ?>>
 
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'avontec' ); ?></a>
 
 	<header id="masthead" class="site-header">
+
 	<div class="header-top-fixed">
 
 		<div class="contact-us-image">
-			<a href="<?php the_field('contact_us_button', 'option'); ?>"><img src="<?php the_field('contact_us_image', 'option'); ?>" width=480></a></h1>
+			<a href="<?php the_field('contact_us_button', 'option'); ?>"><img src="<?php the_field('contact_us_image', 'option'); ?>" width=480></a>
 		</div>
 
 		<div class="social-media">
@@ -53,6 +82,7 @@
 
 				<?php endif; ?>
 		</div>
+
 	</div>
 
 	<div class="banner-slider">

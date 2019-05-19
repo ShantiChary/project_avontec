@@ -1046,6 +1046,10 @@ html,body
 	padding-top: 25px;
 }
 
+.header-contact-mobile {
+	display: none;
+}
+
 #block-header {
 	background: var(--theme-white);
 	width: 100%;
@@ -2149,11 +2153,42 @@ background: pink;
 /* Responsive */
 /* --------------------------------------------------- */
 @media only screen and (min-width: 320px) and (max-width: 980px){
-	.site-content {
-		margin-top: 10px !important;	
+
+
+	.header-contact-mobile {
+		display: block !important;
+		position: absolute;
+		top:0;
+		z-index: 99999 !important;
+		height: 80px !important;
 	}
 
-	/* .header-top-fixed, */
+	.contact-us-image,
+	.social-media {
+		width: 100%;
+		height: 40px;
+		margin: 0;
+		padding: 0;
+		background: var(--theme-white);
+	}
+
+	.social-media ul {
+		text-align: center;
+		width: 50%;
+		top: 0;
+		left: 0;
+		transform: translate(50%, 20%);
+		padding: 0;
+		display: flex;
+		justify-content: space-between;
+		background: var(--theme-white);
+	}
+
+	.site-content {
+		margin-top: 85px !important;	
+	}
+	
+
 	.logo-div,
 	#block-header,
 	.banner-slider,
@@ -2200,6 +2235,16 @@ background: pink;
 	.section-2-para {
 		width: 100%;
 	}
+
+	.modal-content {
+		top: 65%;
+		width: 20rem;
+	}
+
+	.popup-content {
+		width: 18rem;
+	}
+
 
 	.video1Container {
 		width: 100%;
@@ -2435,3 +2480,9 @@ background: pink;
 		width: 60%;
 	}
 } 
+
+@media only screen and (min-width: 400px) and (max-width: 979px){
+	header-contact-mobile {
+		display: flex !important;
+	}
+}
