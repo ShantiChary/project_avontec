@@ -20,15 +20,16 @@
                         
                         $loop = new WP_Query( $args );
                         while ( $loop->have_posts() ) : $loop->the_post(); ?>
-	                        <?php $projectPostID = $loop->post->ID; ?>
-                            <!-- ?php echo $projectPostID; ?> -->
 
-                            <!-- Anchor Tag -->
-                            <a name="post-<?php the_ID(); ?>"></a>
+                            <div class="dummy-div">
+                                <!-- Anchor Tag -->
+                                <a name="post-<?php the_ID(); ?>"></a>
 
-                            <?php $post_type=get_post_type(); ?>
-                            <h4 id="post-<?php the_ID(); ?>"> <?php the_title(); ?> </h4>
-                       
+                                <?php $post_type=get_post_type(); ?>
+                                <h4 id="post-<?php the_ID(); ?>"></h4>
+                                <!-- <h4 id="post-?php the_ID(); ?>"> ?php the_title(); ?> </h4> -->
+                            </div>
+                     
                             <div class="news-article">
 
                                 <div class="news-img">
@@ -58,10 +59,13 @@
                                         $projectText = "project_text";
                                         ?>
 
-                                        <!-- <h5>?php the_field($projectHeading); ?></h5> -->
+                                        <h5><?php the_field($projectHeading); ?></h5>
                                         <p><?php the_field($projectText); ?></p>
+
                                 </div>
-                            </div>                              
+
+                            </div>  
+
                        <?php endwhile;
     ?>  
 </div>

@@ -1587,9 +1587,8 @@ body {
 }
 
 .project-slides p {
-	width: 180px;
 	margin: 0 auto;
-	padding: 0;
+	padding: 0 40px;
 	font-size: var(--theme-font-body);
 }
 
@@ -1994,25 +1993,35 @@ input.wpcf7-submit {margin: 0;}
 	color: var(--theme-white) !important;
 }
 
+.dummy-div {
+	height: 50px;
+}
+
 
 .news-article {
 	width: 100%;
-	display: flex;
+	height: auto;
+	/* display: flex; */
 	border: 2px solid var(--theme-black);
-	margin: 20px 0;
-	padding: 10px 5px;
+	margin: 20px auto;
+	padding: 10px 5px 20px;
 }
 
 .news-img {
 	width: 20%;
+	text-align: center;
+	margin: 0 auto;
 }
 
 .news-div {
-	width: 80%;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0 20px;
 }
 
 .news-div h5 {
-	margin: 10px 0 0 0;
+	margin: 10px 0;
+	text-align: center;
 }
 
 
@@ -2291,7 +2300,6 @@ background: pink;
 
 	.project-slides p {
 		width: 80%;
-		padding-left: 20px;
 	}
 
 	.newsletter {
