@@ -1980,7 +1980,7 @@ input.wpcf7-submit {margin: 0;}
 /*---------------------*/
 /*SINGLE PROJECT PAGE STYLES */
 /*---------------------*/
-.project-btns {
+/* .project-btns {
 	background: var(--theme-darkgray);
 	padding: 5px 20px;
 	display: flex;
@@ -1991,7 +1991,29 @@ input.wpcf7-submit {margin: 0;}
 .nxt-btn a {
 	font-size: 14px !important;
 	color: var(--theme-white) !important;
+} */
+
+/*--------------------------------------------------------------
+News Tabs Styles
+--------------------------------------------------------------*/
+.news-tabs {
+	text-align: center;
+	display: flex;
+	justify-content: space-around;
+	list-style: none;
+	font-size: var(--theme-font-footer);
 }
+
+.news-tabs li {
+	border: 1px solid #000;
+	padding: 2px 5px;
+}
+
+.news-tabs li a {
+ text-decoration: none;
+}
+
+/*--------------------------------------------------------------*/
 
 .dummy-div {
 	height: 50px;

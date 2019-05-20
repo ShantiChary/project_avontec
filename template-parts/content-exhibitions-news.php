@@ -56,27 +56,35 @@
                                                                 echo '</a>';
                                                             echo '</div>';
 
-                                                            echo '<div class="news-text">'; 
-                                                            if(get_field('news_link')){
-                                                                echo '<a href="';
-                                                                the_permalink();
-                                                                echo '">'; 
-                                                                echo "<h5>";
-                                                                the_field('news_link');
-                                                                echo "</h5>";
-                                                                echo '</a>';
-                                                            }
-                                                            if(get_field('news_heading')){
-                                                                echo "<h5>";
-                                                                the_field('news_heading');
-                                                                echo "</h5>";
-                                                            }
-                                                            if(get_field('news_excerpt')){
-                                                                echo "<p>";
-                                                                the_field('news_excerpt');
-                                                                echo "</p>";
-                                                            }
-                                                            echo '</div>';
+                                                            echo '<div class="news-text">'; ?>
+
+                                                                <a href="http://avontec.com/about-us/news/#post-<?php echo the_ID(); ?>">
+
+                                                                    <?php
+                                                                    if(get_field('news_link')){
+                                                                        // echo '<a href="';
+                                                                        // the_permalink();
+                                                                        // echo '">'; 
+                                                                        echo "<h5>";
+                                                                        the_field('news_link');
+                                                                        echo "</h5>";
+                                                                        // echo '</a>';
+                                                                    } ?>
+                                                                    </a> 
+
+                                                                    <?php
+                                                                    if(get_field('news_heading')){
+                                                                        echo "<h5>";
+                                                                        the_field('news_heading');
+                                                                        echo "</h5>";
+                                                                    }
+                                                                    if(get_field('news_excerpt')){
+                                                                        echo "<p>";
+                                                                        the_field('news_excerpt');
+                                                                        echo "</p>";
+                                                                    } ?>
+                                                            </a>                                                                 
+                                                            <?php echo '</div>';
 
                                                         }
                                                     }
