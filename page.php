@@ -102,9 +102,9 @@ get_header('internal');
 																	if ( 0 !== $post->post_parent ) {
 																		echo get_the_title( $post->post_parent ); ?>
 																	<?php } 
-																	else {
-																		echo ' ';
-																	}
+																	// else {
+																	// 	echo ' ';
+																	// }
 
 
 																	echo do_shortcode('[wpb_childpages]');
