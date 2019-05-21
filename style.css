@@ -730,14 +730,14 @@ a:active {
 	flex-direction: column;
 	background-color: var(--theme-lightgray);
 	list-style: none;
-	margin: 0;
+	margin: 10px 0 0 39.5px;
 	padding-left: 0;
-	/* width: 260px; */
-	width: 410px;
+	width: 215px;
+	/* width: 410px; */
 	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 	float: left;
 	position: absolute;
-	top: 100%;
+	top: 98%;
 	/* left: -999em; */
 	left: 0;
 	transform: skew(20deg) !important;
@@ -746,11 +746,14 @@ a:active {
 }
 
 .sub-menu li {
-	width: 25%;
+	width: 215px;
 	color: rgb(116, 116, 121);
-	border: 1px solid var(--theme-white);
+	/* border: 1px solid var(--theme-white); */
 	transform: skew(0deg) !important;
 	border: none;
+	/* margin: -30px 0 0 185px; */
+	margin: 0;
+	/* background: yellow; */
 }
 
 .sub-menu li a {
@@ -760,13 +763,14 @@ a:active {
 	padding: 10px 0 10px 10px;
 	text-align: left;
 	width: 250px;
-	font-size: var(--theme-font-body);
+	font-size: var(--theme-font-footer);
 	font-weight: normal;
 	height: 35px;
 	line-height: 1;
 	transform: skew(0deg) !important;
 }
 
+.main-navigation a:hover, 
 .sub-menu li a:hover {
 	color: var(--theme-white);
 }
@@ -816,14 +820,16 @@ a:active {
 
 .sub-menu li .sub-menu {
 	transform: skew(0deg) !important;
-	margin-left: 190px;
+	margin-top: -15%;
+	margin-left: 50%;
+	background: pink;
 }
 
-.sub-menu li,
+/* .sub-menu li,
 .sub-menu li a {
-	height: 30px; /* added SC 12042019 */
+	height: 30px; /* added SC 12042019 
 	border: none;
-}
+} */
 
 /* .sub-menu li a:hover {
 	width: 250px; /* added SC 12042019 
@@ -861,8 +867,8 @@ a:active {
 
 /* Sub-menu items */
 .main-navigation ul ul a {
-	width: 200px;
-	font-size: var(--theme-font-button);
+	width: 215px;
+	font-size: var(--theme-font-footer);
 }
 
 .main-navigation ul li:hover > ul,
@@ -875,7 +881,7 @@ a:active {
 }
 
 li:hover > .sub-menu {
-    display: block;
+	display: block;
 }
 
 .sub-menu-columns ul.sub-menu li {
@@ -2261,10 +2267,11 @@ footer ul li {
 		background: var(--theme-lightgray);
 		transform: skew(0deg) !important;
 		position: relative;
-		font-size: 16px !important;
+		font-size: var(--theme-font-body) !important;
 		margin: 0 0 10px 0 !important;
 		padding: 0 0 10px 0 !important;
 		height: 170px;
+		z-index: 1;
 	}
 	
 
@@ -2272,12 +2279,19 @@ footer ul li {
 		left: 0;
 		background: var(--theme-white) !important;
 		width: 100% !important;
+		transform: skew(0deg) !important;
 		margin: 0 0 10px 0 !important;
 		padding: 0 0 10px 0 !important;
 		position: absolute !important;
 		z-index: 9999 !important;
 		font-size: 16px !important;
 		width: 250px;
+	}
+
+	.sub-menu ul {
+		background: yellow !important;
+		color: pink;
+		position: absolute;
 	}
 
 	.section-2-intro h1 {
