@@ -1796,6 +1796,126 @@ input.sib-default-btn {
 	padding: 0;
 }
 
+
+/* Sidebar Styles */
+.sidebar-news-item {
+	display: flex !important;
+	/* flex-direction: column !important; */
+	height: 150px !important;
+	width: 100% !important;
+}
+
+.sidebar-news #exampleSlider .MS-content .item {
+	width: 100% !important;
+	/* margin: 0 !important;
+	padding: 5px !important; */
+}
+
+.sidebar-news-item h6 {
+	margin: 0;
+	padding: 0;
+}
+
+.sidebar-news #exampleSlider .MS-content .item p {
+	font-size: 10px;
+}
+
+.sidebar-news {
+	text-align: left;
+}
+
+.sidebar-news h5 {
+	margin-bottom: 0;
+	text-transform: uppercase;
+}
+
+.sidebar-news img {
+	width: 70px;
+}
+
+.sidebar-news p {
+	font-size: var(--theme-font-body);
+}
+
+/* Sidebar Contact Form Styles */
+#secondary {
+	width: 25%;
+	height: 1460px;
+	margin: 38px 4px 0 0;
+	padding: 2em;
+	text-align: center;
+	background-color: var(--theme-lightgray);
+}
+
+.contact-form {
+	position: relative;
+	background-color: var(--theme-darkgray);
+	color: var(--theme-white);
+	margin: 0px 0 20px 0;
+	padding: 3px 10px;
+	/* z-index: 9990; */
+}
+
+.contact-form h4 {
+	padding: 5px 0 0;
+	margin: 0;
+}
+
+/* COntact Form 7 Styles */
+.wpcf7-form p { margin: 5px;}
+.wpcf7 input.wpcf7-text { width: 100%; font-size: 12px; font-weight: bold; color: #6a6868;} 
+.wpcf7 textarea.wpcf7-textarea { width: 100%; font-size: 12px; font-weight: bold; color: #6a6868; } 
+.wpcf7-form textarea { height: 100px; }
+input.wpcf7-submit {margin: 0;}
+
+.wpcf7-validation-errors {
+	display: none; 
+
+} /* display once email is tested */
+
+/* Message box after clicking 'Submit' */
+.wpcf7-response-output,
+.wpcf7-form .wpcf7-response-output.wpcf7-mail-sent-ok {
+	width: 295px;
+	height: 257px;
+	background-color: var(--theme-white);
+	color: var(--theme-black);
+	position: absolute;
+	top: -20px;
+	left: 0;
+
+}
+
+/* Contact Form Overlay */
+/* .contact-us-overlay {
+	position: absolute;
+	width: 100%;
+	height: 276px;
+	top: 0;
+	left: 0;
+	background-color: var(--theme-white);
+	color: var(--theme-black);
+	padding: 20px;
+	z-index: 9998;
+} */
+
+.fb-follow {
+	height: 60px;
+	/* margin: 0 0 0 50px; */
+}
+
+.addthis_toolbox {
+	margin: 0 auto;
+}
+
+.addthis_tool p {
+	margin: 4px 0 0;
+}
+
+.fb-follow h5 {
+	margin: 0;
+}
+
 /*---------------------*/
 /* ABOUT US PAGE STYLES */
 /*---------------------*/
@@ -1892,104 +2012,6 @@ input.sib-default-btn {
 .avontec-today-section p {
 	font-size: var(--theme-font-body);
 	color: var(--theme-black);
-}
-
-/* Sidebar Styles */
-.sidebar-news {
-	text-align: left;
-}
-
-.sidebar-news h5 {
-	margin-bottom: 0;
-	text-transform: uppercase;
-}
-
-.sidebar-news img {
-	width: 100%;
-	height: 200px;
-}
-
-.sidebar-news p {
-	font-size: var(--theme-font-body);
-}
-
-/* About us Sidebar Contact Form Styles */
-#secondary {
-	width: 25%;
-	height: 1460px;
-	margin: 38px 4px 0 0;
-	padding: 2em;
-	text-align: center;
-	background-color: var(--theme-lightgray);
-}
-
-.contact-form {
-	position: relative;
-	background-color: var(--theme-darkgray);
-	color: var(--theme-white);
-	margin: 0px 0 20px 0;
-	padding: 3px 10px;
-	/* z-index: 9990; */
-}
-
-.contact-form h4 {
-	padding: 5px 0 0;
-	margin: 0;
-}
-
-/* COntact Form 7 Styles */
-.wpcf7-form p { margin: 5px;}
-.wpcf7 input.wpcf7-text { width: 100%; font-size: 12px; font-weight: bold; color: #6a6868;} 
-.wpcf7 textarea.wpcf7-textarea { width: 100%; font-size: 12px; font-weight: bold; color: #6a6868; } 
-.wpcf7-form textarea { height: 100px; }
-input.wpcf7-submit {margin: 0;}
-
-.wpcf7-validation-errors {
-	display: none; 
-
-} /* display once email is tested */
-
-/* Message box after clicking 'Submit' */
-.wpcf7-response-output,
-.wpcf7-form .wpcf7-response-output.wpcf7-mail-sent-ok {
-	width: 295px;
-	height: 257px;
-	background-color: var(--theme-white);
-	color: var(--theme-black);
-	position: absolute;
-	top: -20px;
-	left: 0;
-
-}
-
-/* Contact Form Overlay */
-/* .contact-us-overlay {
-	position: absolute;
-	width: 100%;
-	height: 276px;
-	top: 0;
-	left: 0;
-	background-color: var(--theme-white);
-	color: var(--theme-black);
-	padding: 20px;
-	z-index: 9998;
-} */
-
-.fb-follow {
-	height: 60px;
-	/* margin: 0 0 0 50px; */
-}
-
-.addthis_toolbox {
-	margin: 0 auto;
-}
-
-.addthis_tool p {
-	margin: 4px 0 0;
-}
-
-.fb-follow h5 {
-	margin: 0;
 }
 
 /*---------------------*/

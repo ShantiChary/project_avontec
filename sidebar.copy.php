@@ -20,7 +20,29 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 
                     <?php echo do_shortcode('[Awesome-youtube-subscribe]'); ?>
 
-                    <!-- Display news slider -->
+                    <!-- Display news image -->
+                    <div class="sidebar-news">
+                        <?php
+                            if(function_exists('get_field')) {
+                                echo '<h5>';
+                                the_field('sidebar_news_heading', 'option');
+                                echo '</h5>';
+
+                                echo '<div>';
+                                    $image = get_field('sidebar_news_image', 'option');
+
+                                    if( !empty($image) ): ?>
+
+                                        <a href="<?php the_field('events_news_url', 'option'); ?>"><img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt'];?>"width="320"/></a>
+
+                                    <?php endif; 
+                                    echo '</div>';
+
+                                    echo '<p>';
+                                    the_field('sidebar_news_text', 'option');
+                                echo '</p>';
+                            } ?>
+                    </div>
 
                     <!-- Display news video -->
                     <div class="sidebar-news">
