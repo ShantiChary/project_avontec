@@ -32,8 +32,17 @@ get_header('internal');
 									<div class="banner-sub-menu">
 
 										<?php 
+
+// if (( 0 == $post->post_parent ) && ($post->ID == '77')) {
+// 	// $parents = get_post_ancestors( $post->ID );
+// 	$image = get_field('about_us_banner', 'option');
+// }	
+
+
+
 											/* About Us Banner */
-											if ( $post->post_parent == '77' ) {
+											// if ( $post->post_parent == '77' ) {
+											if( ! is_page('about-us') )
 												$image = get_field('about_us_banner', 'option');
 											}									
 											/* Packaging Automation Banner */
@@ -56,15 +65,26 @@ get_header('internal');
 											elseif ( $post->post_parent == '79' ) {
 												$image = get_field('engineering_banner', 'option');
 											}
-											/* About Us Banner */
-											elseif ( $post->post_parent == '610' ) {
+											/* Products-Services Banner */
+											elseif ( $post->post_parent == '1059' ) {
 												$image = get_field('iot_banner', 'option');
 											}
 											/* Primary Packaging Banner */
 											elseif ( $post->post_parent == '425' ) {
 												$image = get_field('primary_packaging_banner1', 'option');
 											}
-											
+
+											/* Our Partners Banner */
+											elseif ( $post->post_parent == '1057' ) {
+												$image = get_field('iot_banner', 'option');
+											}
+
+											/* Core Values Banner */
+											$cvID=get_post_meta( $item->ID, '_menu_item_object_id' );
+											elseif ( $cvID == '1055' ) {
+												
+												$image = get_field('iot_banner', 'option');
+											}								
 
 										?>
 
@@ -107,117 +127,159 @@ get_header('internal');
 
 									</div> <!--banner-sub-menu -->
 
+									<!------------------------------------------------------------------------- -->
 
 									<!-- Get template-part content for each page -->
 									<?php
-											/* About Us */
-											if (is_page ('about-avontec')) { 
+											/* ABOUT US*/
+											if ( is_page('about-us') ) { 
 												get_template_part( 'template-parts/content', 'about-avontec' ); 
 											}
-											elseif (is_page ('avontec-today')) { 
+											elseif ($post->ID == 415) { 
 												get_template_part( 'template-parts/content', 'avontec-today' ); 
 											}
-											elseif (is_page ('leadership')) { 
+											elseif ($post->ID == 413)  { 
 												get_template_part( 'template-parts/content', 'leadership' ); 
 											}
-											elseif (is_page ('our-customers')) { 
+											elseif ($post->ID == 417) { 
 												get_template_part( 'template-parts/content', 'our-customers' ); 
 											}
-											elseif (is_page ('projects')) { 
-												get_template_part( 'template-parts/content', 'projects' ); 
-											}
-											elseif (is_page ('news')) { 
-												get_template_part( 'template-parts/content', 'news' ); 
-											}
-											elseif (is_page ('work-avontec')) { 
+											elseif ($post->ID == 421) { 
 												get_template_part( 'template-parts/content', 'work-avontec' ); 
 											}
-
-											elseif (is_page ('contact-us')) { 
-												get_template_part( 'template-parts/content', 'contact' );
+											elseif ($post->ID == 981) { 
+												get_template_part( 'template-parts/content', 'projects' ); 
 											}
+											elseif ($post->ID == 975) { 
+												get_template_part( 'template-parts/content', 'news' ); 
+											}
+											/* END About Us */
+
+											/* Contact Us */
+											elseif ($post->ID == 87) { 
+												get_template_part( 'template-parts/content', 'contact-us' );
+											}
+
+											/* PRODUCTS/SERVICES */
+											/* Automated Machinery */
 											/* Primary Packaging */
-											elseif (is_page ('primary-packaging')) { 
+											elseif ($post->ID == 425) { 
 												get_template_part( 'template-parts/content', 'primary-packaging' );
 											}
-											elseif (is_page ('beer')) { 
+											elseif ($post->ID == 788) { 
 												get_template_part( 'template-parts/content', 'beer' );
 											}
-											elseif (is_page ('carbonated-soft-drinks')) { 
+											elseif ($post->ID == 807) { 
 												get_template_part( 'template-parts/content', 'carbonated-soft-drinks' );
 											}
-											elseif (is_page ('detergents-chemicals')) { 
+											elseif ($post->ID == 824) { 
 												get_template_part( 'template-parts/content', 'detergents-chemicals' );
 											}
-											elseif (is_page ('edible-oil')) { 
+											elseif ($post->ID == 826) { 
 												get_template_part( 'template-parts/content', 'edible-oil' );
 											}
-											elseif (is_page ('juices')) { 
+											elseif ($post->ID == 828) { 
 												get_template_part( 'template-parts/content', 'juices' );
 											}
-											elseif (is_page ('lube-oil-filling')) { 
+											elseif ($post->ID == 830) { 
 												get_template_part( 'template-parts/content', 'lube-oil-filling' );
 											}
-											elseif (is_page ('milk-yoghurt')) { 
+											elseif ($post->ID == 832) { 
 												get_template_part( 'template-parts/content', 'milk-yoghurt' );
 											}
-											elseif (is_page ('spirits')) { 
+											elseif ($post->ID == 834) { 
 												get_template_part( 'template-parts/content', 'spirits' );
 											}
-											elseif (is_page ('water')) { 
+											elseif ($post->ID == 836) { 
 												get_template_part( 'template-parts/content', 'water' );
 											}
-											elseif (is_page ('wine')) { 
+											elseif ($post->ID == 838) { 
 												get_template_part( 'template-parts/content', 'wine' );
 											}
-											elseif (is_page ('kykloo-unscrambler')) { 
-												get_template_part( 'template-parts/content', 'kykloo-unscrambler' );
+											/* END Primary Packaging */
+											/* Secondary Packaging */
+											elseif ($post->ID == 427) { 
+												get_template_part( 'template-parts/content', 'secondary-packaging' );
+											}
+											/* Tertiary Packaging */
+											elseif ($post->ID == 429) { 
+												get_template_part( 'template-parts/content', 'tertiary-packaging' );
 											}
 
+											/* CONVEYING SYSTEMS */
 											/* Chain Conveying */
-											elseif (is_page ('chain-conveying')) { 
+											elseif ($post->ID == 439) { 
 												get_template_part( 'template-parts/content', 'chain-conveying' );
 											}
-											elseif (is_page ('modular-conveying')) { 
+											elseif ($post->ID == 1072) { 
+												get_template_part( 'template-parts/content', 'aluminum-flexible-chains' );
+											}
+											elseif ($post->ID == 1074) { 
+												get_template_part( 'template-parts/content', 'stainless-steel-flexible-chains' );
+											}
+											/* Modular Conveying */
+											elseif ($post->ID == 441) { 
 												get_template_part( 'template-parts/content', 'modular-conveying' );
 											}
-											elseif (is_page ('elevating-solutions')) { 
-												get_template_part( 'template-parts/content', 'elevating-solutions' );
-											}
-											elseif (is_page ('pallet-bucket-conveying')) { 
+											elseif ($post->ID == 445) { 
 												get_template_part( 'template-parts/content', 'pallet-bucket-conveying' );
 											}
-											elseif (is_page ('robotics')) { 
+											elseif ($post->ID == 443) { 
+												get_template_part( 'template-parts/content', 'elevating-solutions' );
+											}
+											elseif ($post->ID == 1078) { 
+												get_template_part( 'template-parts/content', 'spiral-conveyors' );
+											}
+											elseif ($post->ID == 1080) { 
+												get_template_part( 'template-parts/content', 'incline-conveyors' );
+											}
+											elseif ($post->ID == 1082) { 
+												get_template_part( 'template-parts/content', 'overhead-conveyors' );
+											}
+
+
+											elseif ($post->ID == 409) { 
 												get_template_part( 'template-parts/content', 'robotics' );
 											}
-											elseif (is_page ('line-integration')) { 
+											elseif ($post->ID == 409) { 
 												get_template_part( 'template-parts/content', 'line-integration' );
 											}
 
 											/* Industrial Displays */
-											elseif (is_page ('large-displays')) { 
+											elseif ($post->ID == 409) { 
 												get_template_part( 'template-parts/content', 'large-displays' );
 											}
-											elseif (is_page ('jumbo-displays-2-12')) { 
+											elseif ($post->ID == 409) { 
 												get_template_part( 'template-parts/content', 'jumbo-displays-2-12' );
 											}
-											elseif (is_page ('multi-line-2-sided')) { 
+											elseif ($post->ID == 409) { 
 												get_template_part( 'template-parts/content', 'multi-line-2-sided' );
 											}
-											elseif (is_page ('counter-timers-target')) { 
+											elseif ($post->ID == 409) { 
 												get_template_part( 'template-parts/content', 'counter-timers-target' );
 											}
-											elseif (is_page ('clocks-gprs-ntp-poe')) { 
+											elseif ($post->ID == 409) { 
 												get_template_part( 'template-parts/content', 'clocks-gprs-ntp-poe' );
 											}
-											elseif (is_page ('protocols-and-inputs')) { 
+											elseif ($post->ID == 409) { 
 												get_template_part( 'template-parts/content', 'protocols-and-inputs' );
 											}
 											
 
-											/* IOT SOlutions */
-											elseif (is_page ('kykloo-unscrambler')) { 
-												get_template_part( 'template-parts/content', 'kykloo-unscrambler' );
+											/* Our Partners */
+											elseif ($post->ID == 1192) { 
+												get_template_part( 'template-parts/content', 'flexcon-conveyor-parts' );
+											}
+											elseif ($post->ID == 840) { 
+												get_template_part( 'template-parts/content', 'kykloo-unscrambling-solutions' );
+											}
+											elseif ($post->ID == 1194) { 
+												get_template_part( 'template-parts/content', 'filber-filling-solutions' );
+											}
+
+											/* Core Values */
+											elseif ($post->ID == 1055) { 
+												get_template_part( 'template-parts/content', 'core-values' );
 											}
 									?>
 						</div>	<!-- internal-content-div -->

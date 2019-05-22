@@ -675,8 +675,8 @@ a:active {
 	clear: both;
 	display: block;
 	float: left;
-	width: 68.5%;
-	line-height: 150px;
+	/* width: 68.5%; */
+	width: 67.75%;
 	font-size: var(--theme-font-body);
 	letter-spacing: 0.03rem;
 	padding-top: 0;
@@ -685,7 +685,6 @@ a:active {
 
 .menu {
 	/* list-style: none;
-	height: 150px;
 	margin: 0;
 	padding: 0; */
 	display: flex;
@@ -693,10 +692,11 @@ a:active {
 	list-style: none;
 	margin: 0;
 	padding-left: 0;
+	height: 125px;
 }
 
 .main-navigation li {
-	width: 25%;
+	width: 20%;
 	color: rgb(116, 116, 121);
 	border: 1px solid var(--theme-white);
 }
@@ -704,45 +704,50 @@ a:active {
 .main-navigation a {
 	display: flex;
     justify-content: center;
-	height: 174px;
+	height: 116px;
 	color: var(--theme-black);
 	font-weight: 600;
-	padding: 0 20px;
+	padding: 0 10px;
 	text-decoration: none;
-	text-align: center;
-	line-height: 170px;
+	/* text-align: center;
+	line-height: 118px; */
+    align-items: center;
 }
 
 .menu-main-menu-container {
 	position: relative;
 	background: white;
-	height: 170px;
+	height: 125px;
 	transform: skew(-20deg) !important;
 }
 
 .menu-div {
 	background: white;
+	height: 125px;
 }
+
+/*----------------------------------------------------------------*/
 
 /* This is the first sub menu */
 .sub-menu {
 	display: flex;
 	flex-direction: column;
-	background-color: var(--theme-lightgray);
+	/* background-color: var(--theme-lightgray); */
+	background-color: var(--theme-white);
 	list-style: none;
 	margin: 10px 0 0 39.5px;
 	padding-left: 0;
 	width: 215px;
-	/* width: 410px; */
 	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 	float: left;
 	position: absolute;
-	top: 98%;
+	top: 91%;
 	/* left: -999em; */
 	left: 0;
 	transform: skew(20deg) !important;
 	padding: 0 10px 10px 0;
-	border: none;
+	border: 3px solid var(--theme-red);
+	font-size: var(--theme-font-button);
 }
 
 .sub-menu li {
@@ -762,13 +767,46 @@ a:active {
 	margin: 0;
 	padding: 10px 0 10px 10px;
 	text-align: left;
-	width: 250px;
-	font-size: var(--theme-font-footer);
+	/* width: 250px; */
+	width: 215px;
+	font-size: var(--theme-font-body);
 	font-weight: normal;
 	height: 35px;
 	line-height: 1;
 	transform: skew(0deg) !important;
 }
+
+/* Products/Services special Sub Menu layout */
+.product-services-menu-item .sub-menu {
+	width: 1100px;
+	margin-left: -350px;
+	height: 350px;
+	column-count: 4;
+	column-gap: 30px;
+	padding: 2em;
+}
+
+/* .product-services-menu-item .sub-menu li:hover > ul,
+.product-services-menu-item .sub-menu li.focus > ul {
+	left: -350px;
+} */
+
+.product-services-menu-item .sub-menu ul {
+	width: 25%;
+	height: 100px;
+}
+
+.product-services-menu-item .sub-menu li {
+	width: 25%;
+	height: 100px;
+}
+
+.product-services-menu-item .sub-menu .sub-menu {
+	width: 215px;
+	/* margin-left: -200px; */
+}
+
+/*----------------------------------------------------------------*/
 
 .main-navigation a:hover, 
 .sub-menu li a:hover {
@@ -866,11 +904,6 @@ a:active {
 }
 
 /* Sub-menu items */
-.main-navigation ul ul a {
-	width: 215px;
-	font-size: var(--theme-font-footer);
-}
-
 .main-navigation ul li:hover > ul,
 .main-navigation ul li.focus > ul {
 	left: auto;
@@ -884,8 +917,8 @@ li:hover > .sub-menu {
 	display: block;
 }
 
-.sub-menu-columns ul.sub-menu li {
-	/* display: inline-block; */
+/* .sub-menu-columns ul.sub-menu li {
+	/* display: inline-block; 
 	float: left;
 	width: 200px;
 	}
@@ -895,7 +928,7 @@ li:hover > .sub-menu {
 	}
 	.sub-menu-columns ul.sub-menu li:nth-child(even) {
 	float: right;
-	}
+	} */
 
 /* Small menu. */
 .menu-toggle,
@@ -1232,7 +1265,7 @@ html,body
 #block-header {
 	background: var(--theme-white);
 	width: 100%;
-	height: 180px;
+	height: 125px;
 	z-index: 900;
 	display: flex;
 	margin: 0;
@@ -1249,7 +1282,8 @@ html,body
 }
 
 .logo-div {
-	width: 29.5%;
+	/* width: 29.5%; */
+	width: 30.25%;
 	position: relative;
 }
 
@@ -1768,8 +1802,8 @@ input.sib-default-btn {
 .internal-page-div {
 	display: flex;
 	justify-content: space-between;
-	margin: 2em 0 0 0;
-	padding-top: 12px;
+	margin: 0;
+	padding-top: 5px;
 	border-bottom: 2px solid var(--theme-lightgray);
 }
 
@@ -1777,7 +1811,7 @@ input.sib-default-btn {
 	/* position: relative; */
 	width: 74.7%;
 	height: 1460px;
-	margin-top: 58px;
+	margin-top: 38px;
 	padding: 0 0 2em 0;
 	overflow-y: scroll;
 }
@@ -1847,7 +1881,11 @@ input.sib-default-btn {
 /* ---------------------------------*/
 .about-section,
 .avontec-today-section {
-	padding: 2em 3em;
+	padding: 1em 3em 2em 3em;
+}
+
+.about-section h4 {
+	margin-top: 0;
 }
 
 .about-section p,
@@ -1879,7 +1917,7 @@ input.sib-default-btn {
 #secondary {
 	width: 25%;
 	height: 1460px;
-	margin: 58px 4px 0 0;
+	margin: 38px 4px 0 0;
 	padding: 2em;
 	text-align: center;
 	background-color: var(--theme-lightgray);

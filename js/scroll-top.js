@@ -33,10 +33,10 @@ jQuery(document).ready(function($){
 		    $('#block-header').css({
                 'position': 'fixed',
                 'top': topHeight+'px'
-            }),
+            })
             $('#content.site-content').css({
                 'margin-top': 150+'px'
-            }); 
+            })
 		} else {  
 		    $('#block-header').css({
                 'position': 'relative',

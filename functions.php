@@ -48,7 +48,12 @@ if ( ! function_exists( 'avontec_theme_setup' ) ) :
 			'footer_menu' => esc_html__( 'Footer Menu', 'avontec_theme' ),
 		) );
 
-		/*
+    wp_nav_menu( array(
+        'theme_location' => 'primary',
+        'menu_class'     => 'primary-menu',
+    ) );
+
+				 /*
 		 * Switch default core markup for search form, comment form, and comments
 		 * to output valid HTML5.
 		 */
