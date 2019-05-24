@@ -1,13 +1,13 @@
 <?php
 /**
- * Template part for displaying page content in modular-conveying.php
+ * Template part for displaying page content in aluminium-flexible-chains.php
  *
  * @package avontec
  */
 
 ?>
 
-<!-- Modular Conveying Page Content -->
+<!-- Aluminium Flexible Chains Page Content -->
 
 <div class="about-section">
         <?php

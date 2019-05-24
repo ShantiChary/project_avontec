@@ -48,10 +48,10 @@ if ( ! function_exists( 'avontec_theme_setup' ) ) :
 			'footer_menu' => esc_html__( 'Footer Menu', 'avontec_theme' ),
 		) );
 
-    wp_nav_menu( array(
-        'theme_location' => 'primary',
-        'menu_class'     => 'primary-menu',
-    ) );
+    // wp_nav_menu( array(
+    //     'theme_location' => 'primary',
+    //     'menu_class'     => 'primary-menu',
+    // ) );
 
 				 /*
 		 * Switch default core markup for search form, comment form, and comments
@@ -356,13 +356,11 @@ add_shortcode('wpb_childpages', 'wpb_list_child_pages');
 //    return ob_get_clean();
 // }
 // add_shortcode('eyesore_childpages', 'eyesore_list_child_pages');
-
-
-
-
 	
 	function is_post_type($type){
 		global $wp_query;
 		if($type == get_post_type($wp_query->post->ID)) return true;
 		return false;
 	}
+
+	

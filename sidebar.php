@@ -22,6 +22,95 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 
                     <!-- Display news slider -->
 
+                    <div class="sidebar-news-slider">
+                        <div id="exampleSlider" class="newsSlider2">      <!-- Give wrapper ID to target with jQuery & CSS -->
+                            <div class="MS-content">
+
+                                <?php
+                                    $args = array(
+                                            'post_type' => 'news',
+                                            'posts_per_page' => -1,
+                                            'order' => 'ASC',
+                                            'orderby' => 'title'
+                                    );
+
+                                    $multislides = new WP_Query($args);
+
+                                    if($multislides->have_posts()) {
+
+                                        echo '<h5>';
+                                        the_field('sidebar_news_heading', 'option');
+                                        echo '</h5>';
+
+                                        while($multislides->have_posts()) {
+                                            $multislides->the_post();
+
+                                            echo '<div id="sidebar-news-single-item" class="item">';
+                                                if(function_exists('get_field')){
+                                                    echo '<div class="sidebar-news-item">'; 
+
+                                                    $image = get_field('news_image');
+                                                    $size = 'thumbnail'; // (thumbnail, medium, large, full or custom size)
+                                                    if(!empty($image)) {
+                                                        if( $image ) {
+
+                                                            echo '<div class="news-image">'; 
+                                                                echo '<a href="';
+                                                                the_permalink();
+                                                                echo '">'; 
+                                                                echo wp_get_attachment_image( $image, $size);
+                                                                echo '</a>';
+                                                            echo '</div>';
+
+                                                            echo '<div class="news-text">'; ?>
+
+                                                                <a href="http://avontec.com/about-us/news/#post-<?php echo the_ID(); ?>">
+
+                                                                    <?php
+                                                                    if(get_field('news_link')){
+                                                                        // echo '<a href="';
+                                                                        // the_permalink();
+                                                                        // echo '">'; 
+                                                                        echo "<h5>";
+                                                                        the_field('news_link');
+                                                                        echo "</h5>";
+                                                                        // echo '</a>';
+                                                                    } ?>
+                                                                    </a> 
+
+                                                                    <?php
+                                                                    if(get_field('news_heading')){
+                                                                        echo "<h6>";
+                                                                        the_field('news_heading');
+                                                                        echo "</h6>";
+                                                                    }
+                                                                    if(get_field('news_excerpt')){
+                                                                        echo "<p>";
+                                                                        the_field('news_excerpt');
+                                                                        echo "</p>";
+                                                                    } ?>
+                                                            </a>                                                                 
+                                                            <?php echo '</div>';
+
+                                                        }
+                                                    }
+                                                    echo '</div>';
+                                                }  ?> <!-- end if -->
+
+                                            <?php echo '</div>';
+
+
+                                        } ?> <!-- end while --> 
+                               
+                                        <?php wp_reset_postdata();
+                                    } ?> <!-- end if -->
+
+                            </div> <!-- end MS-Content -->
+                         </div> <!-- exampleSlider -->                                        
+                    </div>
+
+
+
                     <!-- Display news video -->
                     <div class="sidebar-news">
                         <?php 

@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for displaying page content in business-development.php
+ * Template part for displaying page content in control-engineering.php
  *
  * @package avontec
  */

@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for displaying page content in business-development.php
+ * Template part for displaying page content in large-displays.php
  *
  * @package avontec
  */
@@ -14,10 +14,8 @@
             $ppText = get_field('pp_text');
             $ppImage = get_field('pp_image'); ?>
 
-            <div class="conveying-list-text">
-                <ul>
-                    <?php echo $ppText; ?>
-                </ul>
+            <div>
+                <p><?php echo $ppText; ?></p>
             </div>
 
             <?php   

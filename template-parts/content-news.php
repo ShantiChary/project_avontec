@@ -49,6 +49,16 @@
                                 <h4 id="post-<?php the_ID(); ?>"></h4>
                                 <!-- <h4 id="post-?php the_ID(); ?>"> ?php the_title(); ?> </h4> -->
                             </div>
+
+                            <div>
+                                    <?php
+                                            echo '<h4 id="';
+                                            echo get_the_id($loop);
+                                            echo '">';
+                                            the_title();
+                                            echo '</h4>';
+                                    ?>
+                            </div>
                      
                             <div class="news-article">
 
@@ -71,24 +81,16 @@
                         
                                     ?>
                                 </div>
-                    
+                 
 								<div class="news-div">
 									<?php 
 										$newsHeading = "news_heading";
 										$newsLink = "news_link";
 										$newsText = "news_text";
                                         ?>
-                                        
-                                        <?php
-                                            echo '<h2 id="';
-                                            echo get_the_id($serviceslist);
-                                            echo '">';
-                                            the_title();
-                                            echo '</h2>';
-                                        ?>
-
-                                            <h5><?php the_field($newsHeading); ?></h5>
-                                            <p><?php the_field($newsText); ?></p>
+                                   
+                                        <h5><?php the_field($newsHeading); ?></h5>
+                                        <p><?php the_field($newsText); ?></p>
 								</div>
 
                             </div>  

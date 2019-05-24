@@ -90,7 +90,6 @@
 
 		<!-- <input type="checkbox" name="nav-btn" id="nav-btn" />
 		<span></span> -->
-
 		<nav id="site-navigation" class="main-navigation">
 			<!-- <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">?php esc_html_e( 'Primary Menu', 'avontec' ); ?></button> -->
 			<div class="menu-div">
@@ -100,6 +99,7 @@
 				'menu_id'        => 'primary-menu',
 			) );
 			?>
+			
 			</div>
 		</nav><!-- #site-navigation -->
 	</div>

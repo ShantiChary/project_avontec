@@ -22,7 +22,7 @@
                     }
             ?>
 
-            <div id="exampleSlider">      <!-- Give wrapper ID to target with jQuery & CSS -->
+            <div id="exampleSlider" class="newsSlider">      <!-- Give wrapper ID to target with jQuery & CSS -->
                     <div class="MS-content">
 
                                 <?php

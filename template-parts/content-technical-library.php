@@ -1,13 +1,13 @@
 <?php
 /**
- * Template part for displaying page content in business-development.php
+ * Template part for displaying page content in modular-conveying.php
  *
  * @package avontec
  */
 
 ?>
 
-<!-- Chain Conveying Page Content -->
+<!-- Modular Conveying Page Content -->
 
 <div class="about-section">
         <?php
@@ -26,7 +26,6 @@
             <?php endif;  
         ?>
 </div>
-
 
 
 

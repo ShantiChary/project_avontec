@@ -18,9 +18,9 @@
                     $leadershipImage = get_field('leadership_top_image'); ?>
 
                     <?php   
-                    //     if( !empty($leadershipImage) ): ?
-                    //         <img src="<?php echo $leadershipImage['url']; ?" alt="<?php echo $leadershipImage['alt']; ?" width=600/>
-                    // <?php endif;  ?>
+                        if( !empty($leadershipImage) ): ?>
+                             <img src="<?php echo $leadershipImage['url']; ?>" alt="<?php echo $leadershipImage['alt']; ?>" width=600/>
+                        <?php endif;  ?>
                     </div>              
 
                     <?php

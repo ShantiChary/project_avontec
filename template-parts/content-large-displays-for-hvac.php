@@ -1,13 +1,13 @@
 <?php
 /**
- * Template part for displaying page content in protocols-and-inputs.php
+ * Template part for displaying page content in large-displays.php
  *
  * @package avontec
  */
 
 ?>
 
-<!-- Protocols & Inputs Page Content -->
+<!-- Chain Conveying Page Content -->
 
 <div class="about-section">
         <?php
@@ -15,7 +15,7 @@
             $ppImage = get_field('pp_image'); ?>
 
             <div>
-                <?php echo $ppText; ?>
+                <p><?php echo $ppText; ?></p>
             </div>
 
             <?php   
@@ -24,6 +24,7 @@
             <?php endif;  
         ?>
 </div>
+
 
 
 
