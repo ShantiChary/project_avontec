@@ -62,25 +62,62 @@
 		</div>
 
 		<div class="social-media">
-				<?php if( have_rows('social_media', 'option') ): ?>
 
-					<ul>
-							<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-								<li id="home-icon">			
-									<img src="<?php the_field('home_icon', 'option'); ?>" width=30>
-								</li>
-							</a>
+				<div class="header-buttons">
+								<div class="language-button header-button">
+									<div class="button-text">
+										<p>Language</p>
+									</div>
+									<div class="button-image">
+										<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">	
+												<img src="<?php the_field('language_button', 'option'); ?>" width=40>
+										</a>
+									</div>
+								</div>
 
-							<?php while( have_rows('social_media', 'option') ): the_row(); ?>
-								<a href="<?php the_sub_field('social_media_link'); ?>" target="_blank"> 
-									<li><img src="<?php the_sub_field('social_media_icon'); ?>" width=40>
-									</li>
-								</a>
-							<?php endwhile; ?>
+								<div class="login-button header-button">
+									<div class="button-text">
+										<p>Log In</p>
+									</div>
+									<div class="button-image">
+										<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">	
+												<img src="<?php the_field('login_button', 'option'); ?>" width=40>
+										</a>
+									</div>											
+								</div>
 
-					</ul>
+								<div class="faq-button header-button">
+									<div class="button-text">
+										<p>FAQ</p>
+									</div>
+									<div class="button-image">
+										<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">	
+											<img src="<?php the_field('faq_button', 'option'); ?>" width=40>
+										</a>
+									</div>												
+								</div>
+						</div>
 
-				<?php endif; ?>
+
+						<?php if( have_rows('social_media', 'option') ): ?>
+
+							<ul>
+									<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+										<li id="home-icon">			
+											<img src="<?php the_field('home_icon', 'option'); ?>" width=30>
+										</li>
+									</a>
+
+									<?php while( have_rows('social_media', 'option') ): the_row(); ?>
+										<a href="<?php the_sub_field('social_media_link'); ?>" target="_blank"> 
+											<li><img src="<?php the_sub_field('social_media_icon'); ?>" width=40>
+											</li>
+										</a>
+									<?php endwhile; ?>
+
+							</ul>
+
+						<?php endif; ?>
 		</div>
 
 	</div>

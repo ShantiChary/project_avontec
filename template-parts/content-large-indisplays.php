@@ -1,21 +1,23 @@
 <?php
 /**
- * Template part for displaying page content in engineering-services.php
+ * Template part for displaying page content in aluminium-flexible-chains.php
  *
  * @package avontec
  */
 
 ?>
 
-<!-- Chain Conveying Page Content -->
+<!-- Aluminium Flexible Chains Page Content -->
 
 <div class="about-section">
         <?php
             $ppText = get_field('pp_text');
             $ppImage = get_field('pp_image'); ?>
 
-            <div>
-                <p><?php echo $ppText; ?></p>
+            <div class="conveying-list-text">
+                <ul>
+                    <?php echo $ppText; ?>
+                </ul>
             </div>
 
             <?php   
@@ -24,7 +26,6 @@
             <?php endif;  
         ?>
 </div>
-
 
 
 

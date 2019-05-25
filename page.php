@@ -112,6 +112,9 @@ get_header('internal');
 									<!-- Get template-part content for each page -->
 									<?php
 											/* About Us */
+											if (is_page (77)) { 
+												get_template_part( 'template-parts/content', 'about-us' ); 
+											}
 											if (is_page (409)) { 
 												get_template_part( 'template-parts/content', 'about-avontec' ); 
 											}
@@ -139,6 +142,14 @@ get_header('internal');
 												get_template_part( 'template-parts/content', 'contact-us' );
 											}
 
+											/* Products/Services */
+											elseif (is_page (1059)) { 
+												get_template_part( 'template-parts/content', 'products-services' );
+											}
+											/* Automated Machinery */
+											elseif (is_page (423)) { 
+												get_template_part( 'template-parts/content', 'automated-machinery' );
+											}
 											/* Primary Packaging */
 											elseif (is_page (425)) { 
 												get_template_part( 'template-parts/content', 'primary-packaging' );
@@ -183,6 +194,10 @@ get_header('internal');
 												get_template_part( 'template-parts/content', 'tertiary-packaging' );
 											}
 
+											/* Conveying Systems */
+											elseif (is_page (437)) { 
+												get_template_part( 'template-parts/content', 'conveying-systems' );
+											}
 											/* Chain Conveyors */
 											elseif (is_page (439)) { 
 												get_template_part( 'template-parts/content', 'chain-conveyors' );
@@ -217,6 +232,12 @@ get_header('internal');
 											}
 
 											/* Industrial Displays */
+											elseif (is_page (468)) { 
+												get_template_part( 'template-parts/content', 'industrial-displays' );
+											}
+											elseif (is_page (620)) { 
+												get_template_part( 'template-parts/content', 'jumbo-series-2-12' );
+											}
 											elseif (is_page (1092)) { 
 												get_template_part( 'template-parts/content', 'single-line-displays' );
 											}
@@ -228,6 +249,9 @@ get_header('internal');
 											}
 											elseif (is_page (628)) { 
 												get_template_part( 'template-parts/content', 'clocks-gprs-ntp-poe' );
+											}
+											elseif (is_page (616)) { 
+												get_template_part( 'template-parts/content', 'large-indisplays' );
 											}
 											elseif (is_page (1099)) { 
 												get_template_part( 'template-parts/content', 'large-displays-for-plants' );
@@ -246,6 +270,9 @@ get_header('internal');
 											}
 											
 											/* Systems Integration */
+											elseif (is_page (1113)) { 
+												get_template_part( 'template-parts/content', 'systems-integration' );
+											}
 											elseif (is_page (435)) { 
 												get_template_part( 'template-parts/content', 'robotics' );
 											}
@@ -267,6 +294,9 @@ get_header('internal');
 											}
 
 											/* Engineering Services */
+											elseif (is_page (79)) { 
+												get_template_part( 'template-parts/content', 'engineering-services' );
+											}
 											elseif (is_page (1151)) { 
 												get_template_part( 'template-parts/content', 'application-design-services' );
 											}
@@ -284,6 +314,9 @@ get_header('internal');
 											}
 
 											/* Support */
+											elseif (is_page (1149)) { 
+												get_template_part( 'template-parts/content', 'support' );
+											}
 											elseif (is_page (464)) { 
 												get_template_part( 'template-parts/content', 'annual-maintenance-contracts' );
 											}
@@ -304,6 +337,9 @@ get_header('internal');
 											}
 
 											/* Industries */
+											elseif (is_page (1111)) { 
+												get_template_part( 'template-parts/content', 'food-beverage' );
+											}
 											elseif (is_page (1119)) { 
 												get_template_part( 'template-parts/content', 'food-beverage' );
 											}
@@ -330,6 +366,9 @@ get_header('internal');
 											}
 								
 											/* Our Partners */
+											elseif (is_page (1057)) { 
+												get_template_part( 'template-parts/content', 'our-partners' );
+											}
 											elseif (is_page (1192)) { 
 												get_template_part( 'template-parts/content', 'flexcon-conveyor-parts' );
 											}

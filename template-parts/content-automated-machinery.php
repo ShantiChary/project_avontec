@@ -1,13 +1,13 @@
 <?php
 /**
- * Template part for displaying page content in engineering-services.php
+ * Template part for displaying page content in aluminium-flexible-chains.php
  *
  * @package avontec
  */
 
 ?>
 
-<!-- Chain Conveying Page Content -->
+<!-- Aluminium Flexible Chains Page Content -->
 
 <div class="about-section">
         <?php
@@ -24,7 +24,6 @@
             <?php endif;  
         ?>
 </div>
-
 
 
 
