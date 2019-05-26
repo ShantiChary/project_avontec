@@ -35,7 +35,7 @@ jQuery(document).ready(function($){
                 'top': topHeight+'px'
             })
             $('#content.site-content').css({
-                'margin-top': 150+'px'
+                'margin-top': 80+'px'
             })
 		} else {  
 		    $('#block-header').css({

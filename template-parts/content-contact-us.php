@@ -110,6 +110,16 @@
                     </div>
                 </div>
 
+                <!-- Contact Us -->
+                <div class="contact-form">
+        
+                    <h4>Please fill in the following information</h4>
+
+                    <?php echo do_shortcode('[contact-form-7 id="1389" title="Contact form main"]'); ?>
+
+                </div> <!-- contact-form -->
+
+
             <!-- Google Map embed code -->
             <div class="google-map-div">
                 <iframe class="google-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3778.572502049448!2d73.83166031453652!3d18.727947987288577!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2beb46c541cd5%3A0xa20f93ee52acd028!2sRavon+Engineering+India+Pvt.Ltd.!5e0!3m2!1sen!2sca!4v1557817406894!5m2!1sen!2sca" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe> 

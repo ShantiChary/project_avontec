@@ -144,22 +144,37 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 
 
                     <!-- Contact Us -->
-                    <div class="contact-form">
+                    <!-- <div class="contact-form">
 			
                         <h4>Contact Us!</h4>
     
-                        <?php echo do_shortcode('[contact-form-7 id="714" title="Contact form 1"]'); ?>
+                        ?php echo do_shortcode('[contact-form-7 id="714" title="Contact form 1"]'); ?>
 
-                        <!-- Contact Form Overlay on clicking Submit button -->
+                        !-- Contact Form Overlay on clicking Submit button -->
                         <!-- <div class="contact-us-overlay">
                             ?php 
                                 echo "<p>";
                                 the_field('contact_us_overlay', 'option');
                                 echo "</p>";
                             ?>
-                        </div> -->
+                        </div> --
     
-                    </div> <!-- contact-form -->
+                    </div> contact-form -->
+
+                    <div id="sidebar-form">
+                            <h4>Contact Us!</h4>
+
+                            <input id="name" type="text" name="name" placeholder="Name"/>
+
+                            <input id="email" type="text" name="email" placeholder="Email"/>
+
+                            <input id="designation" type="text" name="designation" placeholder="Designation"/>
+
+                            <input id="company" type="text" name="company" placeholder="Company"/>
+                      
+                            <a href="http://avontec.com/contact-us" class="sidebar-contact-button">More</a>
+
+                    </div>
 
                     <br>
 

@@ -116,7 +116,7 @@ get_header('internal');
 												get_template_part( 'template-parts/content', 'about-us' ); 
 											}
 											if (is_page (409)) { 
-												get_template_part( 'template-parts/content', 'about-avontec' ); 
+												get_template_part( 'template-parts/content', 'lectrotek-ravon' ); 
 											}
 											elseif (is_page (415)) { 
 												get_template_part( 'template-parts/content', 'avontec-today' ); 

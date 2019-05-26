@@ -676,7 +676,7 @@ a:active {
 	display: block;
 	float: left;
 	/* width: 68.5%; */
-	width: 68.2%;
+	width: 67.45%;
 	font-size: var(--theme-font-body);
 	letter-spacing: 0.03rem;
 	padding-top: 0;
@@ -692,7 +692,7 @@ a:active {
 	list-style: none;
 	margin: 0;
 	padding-left: 0;
-	height: 125px;
+	height: 102px;
 }
 
 .main-navigation li {
@@ -704,7 +704,7 @@ a:active {
 .main-navigation a {
 	display: flex;
     justify-content: center;
-	height: 121px;
+	height: 98px;
 	color: var(--theme-black);
 	font-weight: 600;
 	padding: 0 10px;
@@ -717,13 +717,13 @@ a:active {
 .menu-main-menu-container {
 	position: relative;
 	background: white;
-	height: 125px;
+	height: 102px;
 	transform: skew(-20deg) !important;
 }
 
 .menu-div {
 	background: white;
-	height: 122px;
+	height: 99px;
 }
 
 /*----------------------------------------------------------------*/
@@ -1296,7 +1296,7 @@ html,body
 .header-top-fixed {
 	background-color:#e1e1e1;
 	width: 100%;
-	height: 67px;
+	height: 50px;
 	position: fixed;
 	top: 0;
     left: 0;
@@ -1310,7 +1310,7 @@ html,body
 	/* width: 44.75%; */
 	width: 32.4%;
 	margin: 0;
-	padding-top: 25px;
+	padding-top: 5px;
 }
 
 .header-contact-mobile {
@@ -1320,7 +1320,7 @@ html,body
 #block-header {
 	background: var(--theme-white);
 	width: 100%;
-	height: 125px;
+	height: 102px;
 	z-index: 900;
 	display: flex;
 	margin: 0;
@@ -1338,7 +1338,7 @@ html,body
 
 .logo-div {
 	/* width: 29.5%; */
-	width: 30.25%;
+	width: 30.75%;
 	position: relative;
 }
 
@@ -1361,7 +1361,7 @@ html,body
 
 .header-buttons {
 	position: absolute;
-	top: 25%;
+	top: 5px;
 	left: 3%;
 	width: 60%;
 	height: 42px;
@@ -1402,7 +1402,7 @@ html,body
 .social-media ul,
 .social-media-home ul {
 	position: absolute;
-	top: 25%;
+	top: 5px;
 	left: 64%;
 	width: 30%;
 	display: flex;
@@ -1411,6 +1411,11 @@ html,body
 	margin: 0;
 	padding: 0;
 	/* padding: 20px 60px 0 0; */
+}
+
+.social-media ul a li {
+	margin: 0;
+	padding: 5px 0 0 0;
 }
 
 .contact-us-image a:hover,
@@ -1555,7 +1560,12 @@ body {
 }
 
 .sec-5 {
-	margin: 1em 0 2em;
+	margin: 1em 0 0.5em;
+}
+
+.sec-5 h3 {
+	margin: 0 0 0 2px;
+	padding: 0;
 }
 
 .section-2 {
@@ -1849,10 +1859,10 @@ input.sib-default-btn {
 	/* width: 1400px; */
 	/* width: 95%; */
 	/* height: 280px; */
-	height: 250px;
+	height: 185px;
 	position: relative;
 	padding: 0.2em 0.5em;
-	margin: 0 3em 3em;
+	margin: 0 3em 0;
 }
 
 .section-5-inner {
@@ -1861,7 +1871,7 @@ input.sib-default-btn {
 	width: 100%;
 	/* height: 270px; */
 	background-color: var(--theme-white);
-	padding: 10px;
+	padding: 0 10px 10px 10px;
 	border: 2px solid var(--theme-black);
 }
 
@@ -1953,24 +1963,32 @@ input.sib-default-btn {
 #secondary {
 	width: 25%;
 	height: 1460px;
-	margin: 38px 4px 0 0;
-	padding: 2em;
+	margin: 0 4px 0 0;
+	padding: 0.5em;
 	text-align: center;
 	background-color: var(--theme-lightgray);
 }
 
 .contact-form {
+	width: 650px;
 	position: relative;
-	background-color: var(--theme-darkgray);
+	/* background-color: var(--theme-darkgray); */
 	color: var(--theme-white);
-	margin: 0px 0 20px 0;
+	margin: 0 auto;
 	padding: 3px 10px;
+	border: 2px solid var(--theme-lightgray);
 	/* z-index: 9990; */
 }
 
 .contact-form h4 {
 	padding: 5px 0 0;
 	margin: 0;
+	color: var(--theme-black);
+}
+
+.chk-form-class {
+	background: red;
+	color: black;
 }
 
 /* COntact Form 7 Styles */
@@ -1979,6 +1997,7 @@ input.sib-default-btn {
 .wpcf7 textarea.wpcf7-textarea { width: 100%; font-size: 12px; font-weight: bold; color: #6a6868; } 
 .wpcf7-form textarea { height: 100px; }
 input.wpcf7-submit {margin: 0;}
+span.wpcf7-list-item { display: block; }
 
 .wpcf7-validation-errors {
 	display: none; 
@@ -2011,6 +2030,53 @@ input.wpcf7-submit {margin: 0;}
 	z-index: 9998;
 } */
 
+/* Sidebar form styles */
+div#sidebar-form{
+	background-color: var(--theme-darkgray);
+    color: var(--theme-white);
+    margin: 0px 0 20px 0;
+	padding: 3px 10px 10px;
+	width: 300px;
+	}
+
+	h4 {
+		padding: 5px 0 0;
+		margin: 0;	
+	}
+
+	input#name,
+	input#email,
+	input#designation,
+	input#company
+	{
+		width: 100%;
+		font-size: 12px;
+		font-weight: bold;
+		color: #6a6868;
+		margin: 10px 0;
+	}
+
+	.sidebar-contact-button {
+		margin: 20px 0;
+		padding: 3px 5px;
+		background-color: var(--theme-lightgray);
+		text-transform: uppercase;
+		border-radius: 5px;
+		font-size: var(--theme-font-footer);
+		color: var(--theme-white);
+		font-weight: bold;
+		text-decoration: none;
+	}
+	input#submit:hover{
+	background-color:#FF9980
+	}
+	
+
+
+
+/*-----------------------------*/
+
+
 .fb-follow {
 	height: 60px;
 	/* margin: 0 0 0 50px; */
@@ -2034,7 +2100,7 @@ input.wpcf7-submit {margin: 0;}
 .internal-page-div {
 	display: flex;
 	justify-content: space-between;
-	margin: 0;
+    margin: 67.5px 0 0 0;
 	padding-top: 5px;
 	border-bottom: 2px solid var(--theme-lightgray);
 }
@@ -2043,7 +2109,7 @@ input.wpcf7-submit {margin: 0;}
 	/* position: relative; */
 	width: 74.7%;
 	height: 1460px;
-	margin-top: 38px;
+	/* margin-top: 38px; */
 	padding: 0 0 2em 0;
 	overflow-y: scroll;
 }
@@ -2126,6 +2192,10 @@ input.wpcf7-submit {margin: 0;}
 	color: var(--theme-black);
 }
 
+.internal-page-image {
+	padding: 10px 0 20px;
+}
+
 /*---------------------*/
 /*SHARE HOLDER STYLES */
 /*---------------------*/
@@ -2190,6 +2260,11 @@ input.wpcf7-submit {margin: 0;}
 	padding: 0;
 }
 
+
+.about-us-section  {
+	font-size: var(--theme-font-body);
+}
+
 /*---------------------*/
 /*SINGLE PROJECT PAGE STYLES */
 /*---------------------*/
@@ -2210,11 +2285,14 @@ input.wpcf7-submit {margin: 0;}
 News Tabs Styles
 --------------------------------------------------------------*/
 .news-tabs {
+	width: 600px;
 	text-align: center;
 	display: flex;
 	justify-content: space-around;
 	list-style: none;
 	font-size: var(--theme-font-footer);
+	padding: 0;
+    margin: 0 auto;
 }
 
 .news-tabs li {
