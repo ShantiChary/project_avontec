@@ -37,7 +37,7 @@
 
                                 <?php   
                                     if( !empty($icon1) ): ?>
-                                        <img src="<?php echo $icon1['url']; ?>" alt="<?php echo $icon1['alt']; ?>" width=100/>
+                                        <img src="<?php echo $icon1['url']; ?>" alt="<?php echo $icon1['alt']; ?>" width=80/>
                                 <?php endif;  ?>                   
                         </div>
 
@@ -66,7 +66,7 @@
 
                                 <?php   
                                     if( !empty($icon2) ): ?>
-                                        <img src="<?php echo $icon2['url']; ?>" alt="<?php echo $icon2['alt']; ?>" width=100/>
+                                        <img src="<?php echo $icon2['url']; ?>" alt="<?php echo $icon2['alt']; ?>" width=80/>
                                 <?php endif;  ?>                   
                         </div>
 
@@ -90,12 +90,11 @@
 
                                 <?php   
                                     if( !empty($icon2) ): ?>
-                                        <img src="<?php echo $icon2['url']; ?>" alt="<?php echo $icon2['alt']; ?>" width=100/>
+                                        <img src="<?php echo $icon2['url']; ?>" alt="<?php echo $icon2['alt']; ?>" width=80/>
                                 <?php endif;  ?>                   
                         </div>
 
                         <div class="contact-address">
-                        <br>
 
                             <!-- <h3 class="email-title">Email:</h3> -->
                             <!-- <p>?php the_field('email_title_1', 'option'); ?></p> -->
