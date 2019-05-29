@@ -12,18 +12,6 @@
     <div class="about-section">
             <?php
 
-                    // Leadership Top Image // ?>
-                    <div class="leadership_top_image">
-                    <?php
-                    $leadershipImage = get_field('leadership_top_image'); ?>
-
-                    <?php   
-                        if( !empty($leadershipImage) ): ?>
-                             <img src="<?php echo $leadershipImage['url']; ?>" alt="<?php echo $leadershipImage['alt']; ?>" width=600/>
-                        <?php endif;  ?>
-                    </div>              
-
-                    <?php
                     // loop through the rows of data
                     while ( have_rows('member_profile') ) : the_row();
                         // display a sub field value

@@ -1657,6 +1657,46 @@ body {
 	font-size: var(--theme-font-body);
 }
 
+/* PDF link div styles */
+.pdf-buttons,
+.pdf-button {
+	display: flex;
+	/* justify-content: space-between; */
+}
+
+.pdf-buttons {
+	width: 700px;
+	height: 42px;
+	margin: 0;
+	padding: 0;
+}
+
+.pdf-link-h4 h4 {
+	text-align: center;
+}
+
+.pdf-block-1,
+.pdf-block-2 {
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+	align-content: space-evenly;
+}
+
+.pdf-button {
+	align-items: center;
+	width: 85%;
+    height: 50px;
+	border: 3px solid var(--theme-lightgray);
+	margin: 20px 0 0 40px;
+}
+
+.pdf-text {
+	font-size: var(--theme-font-body);
+	text-align: left;
+	padding-left: 20px;
+}
+
 /* Mailchimp Form Fields Styles */
 /* .mc4wp-form-fields input[type='email'] {
 		width: 100%; 
@@ -1695,8 +1735,10 @@ input.sib-default-btn {
 	position: relative;
 	width: 60%;
 	height: 230px;
-	margin: 1em 0;
-	padding: 10px;
+	margin: 0 0 1em 0;
+    padding: 0 10px 10px 10px;
+	/* margin: 1em 0;
+	padding: 10px; */
 }
 
 .social-media-home ul {
@@ -1818,7 +1860,8 @@ input.sib-default-btn {
 /* Sidebar Contact Form Styles */
 #secondary {
 	width: 25%;
-	height: 1460px;
+	height: auto;
+	/* height: 1460px; */
 	margin: 0 4px 0 0;
 	padding: 0.5em;
 	text-align: center;
@@ -1971,7 +2014,8 @@ div#sidebar-form{
 .internal-content-div {
 	/* position: relative; */
 	width: 74.7%;
-	height: 1460px;
+	height: auto;
+	/* height: 1460px; */
 	/* margin-top: 38px; */
 	padding: 0 0 2em 0;
 	overflow-y: scroll;
@@ -2069,11 +2113,11 @@ div#sidebar-form{
 
 .member-details {
 	display: flex;
-	padding: 2em 2em 0;
+	padding: 1em 2em 0 0;
 }
 
 .member-info {
-	padding: 1em 0 0 2em;
+	padding: 1.75em 0 0 1em;
 }
 
 .member-info h4,
@@ -2148,9 +2192,31 @@ div#sidebar-form{
 /* Work at Avontec page styles */
 /*-----------------------------------------------------------*/
 .job-description-div {
-	border: 1px solid var(--theme-darkgray);
-	margin: 20px 0;
-	padding: 20px;
+	position: relative;
+	border: 1px solid var(--theme-lightgray);
+	margin: 10px 0;
+    padding: 10px 15px;
+}
+
+.job-apply-button {
+	position: absolute;
+	top: 1.5%;
+	right: 1.25%;
+	width: 120px;
+	padding: 5px; 
+	background-color: var(--theme-white);
+	border: 1.5px solid var(--theme-darkgray);
+	text-transform: uppercase; 
+	text-align: center;
+	letter-spacing: 0.04rem; 
+	color: var(--theme-red);	
+	font-weight: bold;
+}
+
+.job-apply-button a {
+	color: var(--theme-darkgray);
+	text-decoration: none;
+	font-size: var(--theme-font-body);
 }
 
 .job-description-div h3,
@@ -2160,10 +2226,51 @@ div#sidebar-form{
 }
 
 .job-page-heading {
-	border: 1px solid var(--theme-darkgray);
-	background-color: var(--theme-lightgray);
+	border: 1px solid var(--theme-lightgray);
 	margin: 0;
 	padding: 5px 0 5px 10px;
+	display: flex;
+	justify-content: space-around;
+}
+
+.job-page-heading p {
+	margin: 0;
+	padding: 0;
+}
+
+.job-page-heading .job-page-text {
+	width: 75%;
+}
+
+.job-page-heading .job-page-link {
+	width: 25%;
+	position: relative;
+	/* position: absolute;
+	top: 1.5%;
+	right: 1.25%; */
+
+}
+
+.job-page-heading .job-page-link p {
+	position: absolute;
+	left: 65%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: 120px;
+	padding: 5px; 
+	background-color: var(--theme-white);
+	border: 1px solid var(--theme-red);
+	text-transform: uppercase; 
+	text-align: center;
+	letter-spacing: 0.04rem; 
+	color: var(--theme-red);	
+	font-weight: bold;
+}
+
+.job-page-heading .job-page-link a {
+	color: var(--theme-red);
+	text-decoration: none;
+	font-size: var(--theme-font-footer);
 }
 
 /*--------------------------------------------------------------
@@ -2244,9 +2351,12 @@ News Tabs Styles
 	margin: 0 auto;
 }
 
-.factory-address-block,
-.email-block {
-	padding-top: 10px;
+.factory-address-block {
+	padding-top: 5px;
+}
+
+.phone-block {
+	padding-top: 19px;
 }
 
 .google-map-div {
@@ -2273,12 +2383,36 @@ News Tabs Styles
 
 .contact-address h4 {
 	margin: 0;
+	font-weight: bold;
 }
 
 .contact-address h4,
 .contact-address p {
 	text-align: left;
 }
+
+.factory-address-block h4 {
+	font-size: 13px;
+}
+
+.factory-address-block p {
+	font-size: 12px;
+}
+
+.address-icon {
+	margin-right: 20px;
+}
+
+.contact-us-pdf-block {
+	margin-top: 30px;
+    margin-left: 100px;
+}
+
+.contact-us-pdf-heading h4 {
+    margin-left: 40%;
+}
+
+
 
 /* 
 .google-map {

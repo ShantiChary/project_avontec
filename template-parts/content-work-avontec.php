@@ -10,11 +10,16 @@
 <!-- Work @ Avontec Content -->
 <div class="about-section about-us-section work-avontec-section">
 
-            <div class="job-page-heading">
-                <h3>The following positions are currently available with Avontec:</h3>
-            </div>
+                <div class="job-page-heading">
+                    <div class="job-page-text">
+                        <p><?php the_field('job_page_heading'); ?></p>
+                    </div>
+                    <div class="job-page-link">
+                        <p><a title="Email" href="mailto:hr@avontec.com"><span class="email-id";>SEND US YOUR DETAILS</span></a></p>
+                    </div>
+                </div>
 
-            <div>
+               <div> 
                 <?php
                         // check if the repeater field has rows of data
                         if( have_rows('job_description') ):
@@ -35,6 +40,10 @@
                                 $jobFooter = get_sub_field('job_footer');  ?>
 
                                 <div class="job-description-div">
+                                        <div class="job-apply-button">
+                                            <a title="Email" href="mailto:hr@avontec.com"><span class="email-id";>APPLY NOW</span></a>
+                                        </div>
+
                                         <?php // display a sub field value
                                         if( !empty($jobTitle) ): ?>
                                             <h3>
@@ -116,5 +125,6 @@
 
                         endif;
                 ?>
-            </div>
+            </div>                
+
 </div>
