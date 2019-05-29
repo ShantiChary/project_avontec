@@ -58,7 +58,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	--theme-black: rgb(0, 0, 0);
 
 	/*Font family */
-	--theme-font-family: 'Helvetica', 'Arial', sans-serif;
+	--theme-font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
 
 	/*Font sizes */
 	--theme-font-button: 16px;
@@ -685,7 +685,7 @@ a:active {
 
 .menu {
 	display: flex;
-	background-color: var(--theme-lightgray);
+	/* background-color: var(--theme-lightgray); */
 	list-style: none;
 	margin: 0;
 	padding-left: 0;
@@ -696,7 +696,8 @@ a:active {
 	/* width: 20%; */
 	width: 16.66%;
 	color: rgb(116, 116, 121);
-	border: 1px solid var(--theme-white);
+	border: 1px solid var(--theme-lightgray);
+	/* border: 1px solid var(--theme-white); */
 }
 
 .main-navigation a {
@@ -733,6 +734,18 @@ a:active {
 	color: var(--theme-white);
 }
 
+.sub-menu-div li.current_page_item > a, /* //to change sub menu item colors as well */
+.sub-menu-div li.current-menu-item > a,
+.sub-menu-div li.current_page_ancestor > a,
+.sub-menu-div ul.current-menu-ancestor > a,
+.sub-menu-div ul.current_page_item > a, /* //to change sub menu item colors as well */
+.sub-menu-div ul.current-menu-item > a,
+.sub-menu-div ul.current_page_ancestor > a,
+.sub-menu-div.current-menu-ancestor > a {
+	/* background-color:  var(--theme-red); */
+	color: var(--theme-red);
+}
+
 .main-navigation a:hover, 
 .sub-menu li a:hover {
 	color: var(--theme-white);
@@ -753,10 +766,10 @@ li:hover > .sub-menu {
 .sub-menu {
 	border: none;
 	width: 200px;
-	background-color: var(--theme-white);
 	margin: 0;
 	padding: 0;
-	border: 1px solid var(--theme-black);
+	background-color: rgb(252, 250, 250);
+	/* border: 0.5px solid var(--theme-darkgray); */
 }
 
 .sub-menu li {
@@ -764,6 +777,8 @@ li:hover > .sub-menu {
 	width: 100%;
 	list-style-type: none;
 	text-align: left;
+	border-top: 0.5px solid var(--theme-lightgray);
+	border-bottom: 0.5px solid var(--theme-lightgray);
 }
 
 .sub-menu a {
@@ -788,8 +803,8 @@ li:hover > .sub-menu {
 /* SECOND SUB MENU */
 .main-navigation .sub-menu ul {
 	position: absolute;
-	top: 0;
-	left: 100%;
+    top: -2%;
+    left: 100%;
 }
 
 /* THIRD SUB MENU */
@@ -1127,6 +1142,12 @@ html,body
 	padding-top: 5px;
 }
 
+.contact-us-heading h2 {
+	margin-bottom: 0;
+	padding: 40px 0 0;
+	text-align: center;
+}
+
 .header-contact-mobile {
 	display: none;
 }
@@ -1139,7 +1160,8 @@ html,body
 	display: flex;
 	margin: 0;
 	padding: 0;
-	border-bottom: 3px solid var(--theme-lightgray);
+	top: -10px;
+	border-bottom: 1px solid var(--theme-lightgray);
 }
 
 #block-header.sticky{
@@ -1151,7 +1173,7 @@ html,body
 }
 
 .logo-div {
-	width: 32.25%;
+	width: 32.45%;
 	/* width: 30.75%; */
 	position: relative;
 }
@@ -1248,7 +1270,7 @@ html,body
 
 /* Header Banner Styles */
 .banner-slider {
-	height: 376px;
+	height: 371px;
 }
 
 .banner-slide {
@@ -1422,7 +1444,7 @@ body {
 	z-index: 9999;
 	background-color: rgba(253, 250, 250, 0.80);
 	top: 25%;
-	padding: 1.5em 2.5em;
+	padding: 1.5em;
 	font-weight: 800;
 	z-index: 800;
 	/* transform: translateY(-50%);	 */
@@ -1549,6 +1571,14 @@ body {
 /*---------------------*/
 /* BODY SECTION STYLES */
 /*---------------------*/
+.projects-slider {
+	background-color: var(--theme-lightgray);
+	height: 400px;
+	position: relative;
+	padding: 1em;
+	z-index:777;	
+}
+
 .projects-slider,
 .news-slider {
 	background-color: var(--theme-lightgray);
@@ -1790,7 +1820,7 @@ input.sib-default-btn {
 }
 
 .contact-form {
-	width: 650px;
+	width: 680px;
 	position: relative;
 	/* background-color: var(--theme-darkgray); */
 	color: var(--theme-white);
@@ -1801,9 +1831,9 @@ input.sib-default-btn {
 }
 
 .contact-form h4 {
-	padding: 5px 0 0;
+	padding: 5px 0 0 10px;
 	margin: 0;
-	color: var(--theme-black);
+	color: var(--theme-darkgray);
 }
 
 .chk-form-class {
@@ -1812,12 +1842,12 @@ input.sib-default-btn {
 }
 
 /* COntact Form 7 Styles */
-.wpcf7-form p { margin: 5px; color: var(--theme-darkgray); font-size: 12px;}
-.wpcf7 input.wpcf7-text { width: 100%; font-size: 12px; font-weight: bold; color: #6a6868;} 
-.wpcf7 textarea.wpcf7-textarea { width: 100%; font-size: 12px; font-weight: bold; color: #6a6868; } 
+.wpcf7-form p { margin: 5px; color: var(--theme-darkgray); font-size: 14px;}
+.wpcf7 input.wpcf7-text { width: 100%; font-size: 14px; font-weight: bold; color: #6a6868;} 
+.wpcf7 textarea.wpcf7-textarea { width: 100%; font-size: 14px; font-weight: bold; color: #6a6868; } 
 .wpcf7-form textarea { height: 100px; }
-input.wpcf7-submit {margin: 0;}
-span.wpcf7-list-item { display: block; font-size: 12px;}
+input.wpcf7-submit {margin: 0; font-size: 14px;}
+span.wpcf7-list-item { display: block; font-size: 14px;}
 
 .wpcf7-validation-errors {
 	display: none; 
@@ -2101,6 +2131,28 @@ div#sidebar-form{
 	color: var(--theme-white) !important;
 } */
 
+/*-----------------------------------------------------------*/
+/* Work at Avontec page styles */
+/*-----------------------------------------------------------*/
+.job-description-div {
+	border: 1px solid var(--theme-darkgray);
+	margin: 20px 0;
+	padding: 20px;
+}
+
+.job-description-div h3,
+.job-page-heading h3 {
+	margin: 0;
+	padding: 0;
+}
+
+.job-page-heading {
+	border: 1px solid var(--theme-darkgray);
+	background-color: var(--theme-lightgray);
+	margin: 0;
+	padding: 5px 0 5px 10px;
+}
+
 /*--------------------------------------------------------------
 News Tabs Styles
 --------------------------------------------------------------*/
@@ -2356,12 +2408,18 @@ footer ul li {
 	}
 
 	.slicknav_btn {
-		background-color: white !important;
-		margin: 18px 5px 6px !important;
+		/* background-color: var(--theme-lightgray); */
+		/* margin: 13px 15px 6px 5px !important; */
+		margin: 2px 15px 6px 5px !important;
+		display: flex;
+		flex-direction: column;
 	}
 
 	.slicknav_menu .slicknav_icon-bar {
 		background-color: black !important;
+		display: block;
+		width: 1.5em;
+		height: 0.2em;
 	}
 
 	/* Main menu - mobile */
@@ -2377,26 +2435,33 @@ footer ul li {
 		transform: none;
 	}
 
-	
 	.slicknav_nav li a {
 		font-size: 20px;
 	}
 
-	/* Sub menu drop-down */
+	/* Sub menu drop-down (Second menu)*/
 	.slicknav_nav ul {
 		position: relative;
 		margin: 0 0 0 20px;
 		width: 90%;
-		background: pink;
+		background: var(--theme-white);
 	}
 
 	.slicknav_nav ul li a {
-		font-size: 12px;
+		font-size: 16px;
 	}
 
-	/* Sub Sub menu drop-down */
+	/* Sub Sub menu drop-down (Third Menu)*/
 	.slicknav_nav ul ul {
-		background: yellow;
+		background: var(--theme-lightgray);
+		margin: 0 0 0 20px;
+		width: 90%;
+		display: block;
+	}
+
+	/* Sub Sub menu drop-down (Fourth Menu)*/
+	.slicknav_nav ul ul ul {
+		background: var(--theme-white);
 		margin: 0 0 0 20px;
 		width: 90%;
 		display: block;

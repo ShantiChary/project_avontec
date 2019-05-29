@@ -45,9 +45,13 @@ get_header('internal');
 											if ( $parent == '77' ) {
 												$image = get_field('about_us_banner', 'option');
 											}									
-											/* Products & Services Banner */
+											/* Products Banner */
 											elseif ( $parent == '1059' ) {
-												$image = get_field('products_services_banner', 'option');
+												$image = get_field('products_banner', 'option');
+											}
+											/* Services Banner */
+											elseif ( $parent == '1395' ) {
+												$image = get_field('services_banner', 'option');
 											}
 											/* Industries Banner */
 											elseif ( $parent == '1111' ) {
@@ -142,9 +146,9 @@ get_header('internal');
 												get_template_part( 'template-parts/content', 'contact-us' );
 											}
 
-											/* Products/Services */
+											/* Products */
 											elseif (is_page (1059)) { 
-												get_template_part( 'template-parts/content', 'products-services' );
+												get_template_part( 'template-parts/content', 'products' );
 											}
 											/* Automated Machinery */
 											elseif (is_page (423)) { 
@@ -192,6 +196,11 @@ get_header('internal');
 											/* Tertiary Packaging */
 											elseif (is_page (429)) { 
 												get_template_part( 'template-parts/content', 'tertiary-packaging' );
+											}
+
+											/* Services */
+											elseif (is_page (1395)) { 
+												get_template_part( 'template-parts/content', 'services' );
 											}
 
 											/* Conveying Systems */

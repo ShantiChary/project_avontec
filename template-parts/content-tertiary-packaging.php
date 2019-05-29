@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for displaying page content in page-tertiary-packaging.php
+ * Template part for displaying page content in page-secondary-packaging.php
  *
  * @package avontec
  */

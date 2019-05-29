@@ -29,6 +29,10 @@
                         ?>
 
             <!-- Contact details -->
+            <div class="contact-us-heading">
+                <h2>Contact Us</h2>
+            </div>
+
             <div class="contact-info">
                     <div class="address-block">
                         <div class="address-icon">
@@ -112,7 +116,7 @@
                 <!-- Contact Us -->
                 <div class="contact-form">
         
-                    <h4>Please fill in the following information</h4>
+                    <h4>For more information about our Products and Services, please fill in the form below:</h4>
 
                     <?php echo do_shortcode('[contact-form-7 id="1389" title="Contact form main"]'); ?>
 
