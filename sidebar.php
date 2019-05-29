@@ -79,16 +79,17 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
                                                                     </a> 
 
                                                                     <?php
-                                                                    if(get_field('news_heading')){
-                                                                        echo "<h6>";
-                                                                        the_field('news_heading');
-                                                                        echo "</h6>";
-                                                                    }
-                                                                    if(get_field('news_excerpt')){
+                                                                    // if(get_field('news_heading')){
+                                                                    //     echo "<h6>";
+                                                                    //     the_field('news_heading');
+                                                                    //     echo "</h6>";
+                                                                    // }
+                                                                    if(get_field('sidebar_news_excerpt')){
                                                                         echo "<p>";
-                                                                        the_field('news_excerpt');
+                                                                        the_field('sidebar_news_excerpt');
                                                                         echo "</p>";
-                                                                    } ?>
+                                                                    } 
+                                                                    ?>
                                                             </a>                                                                 
                                                             <?php echo '</div>';
 

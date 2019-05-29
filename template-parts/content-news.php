@@ -20,45 +20,53 @@
                         
                         $loop = new WP_Query( $args );
 
-                        if($loop->have_posts()){
-                            echo "<div>";
-                            echo '<ul class="news-tabs">';
-                            while($loop->have_posts()){
-                                    echo "<li>";
-                                        $loop->the_post();
-                                        $id = get_the_ID();
-                                        echo '<a href="#';
-                                        echo $id;
-                                        echo '">';
-                                        the_title();
-                                        echo '</a>';
-                                        echo "</li>";
-                            }
-                            echo "</ul>";
-                            echo "</div>";
-                            wp_reset_postdata();
-                        }
+                        // if($loop->have_posts()){
+                        //     echo "<div>";
+                        //     echo '<ul class="news-tabs">';
+                        //     while($loop->have_posts()){
+                        //             echo "<li>";
+                        //                 $loop->the_post();
+                        //                 $id = get_the_ID();
+                        //                 echo '<a href="#';
+                        //                 echo $id;
+                        //                 echo '">';
+                        //                 the_title();
+                        //                 echo '</a>';
+                        //                 echo "</li>";
+                        //     }
+                        //     echo "</ul>";
+                        //     echo "</div>";
+                        //     wp_reset_postdata();
+                        // }
             
                         while ( $loop->have_posts() ) : $loop->the_post(); ?>
 
-                            <div class="dummy-div">
+                            <?php 
+                                $newsDate = "news_date";
+                                $newsHeading = "news_heading";
+                                // $newsLink = "news_link";
+                                $newsText = "news_text";
+                            ?>
+
+                            <div>
                                 <!-- Anchor Tag -->
                                 <a name="post-<?php the_ID(); ?>"></a>
 
                                 <?php $post_type=get_post_type(); ?>
-                                <h4 id="post-<?php the_ID(); ?>"></h4>
+                                <!-- <h4 id="post-?php the_ID(); ?>"></h4> -->
+                                <h4 id="post-<?php $newsHeading; ?>"></h4>
                                 <!-- <h4 id="post-?php the_ID(); ?>"> ?php the_title(); ?> </h4> -->
                             </div>
 
-                            <div>
-                                    <?php
+                            <!-- <div>
+                                    ?php
                                             echo '<h4 id="';
                                             echo get_the_id($loop);
                                             echo '">';
                                             the_title();
                                             echo '</h4>';
                                     ?>
-                            </div>
+                            </div> -->
                      
                             <div class="news-article">
 
@@ -83,15 +91,15 @@
                                 </div>
                  
 								<div class="news-div">
-									<?php 
-										$newsHeading = "news_heading";
-										$newsLink = "news_link";
-										$newsText = "news_text";
-                                        ?>
-                                   
+                                        <p><?php the_field($newsDate); ?></p>
                                         <h5><?php the_field($newsHeading); ?></h5>
                                         <p><?php the_field($newsText); ?></p>
-								</div>
+
+                                        <div class="news-page-link">
+                                            <p><a href="#"><span class="email-id";>Know More</span></a></p>
+                                        </div>
+                                </div>
+                                
 
                             </div>  
 

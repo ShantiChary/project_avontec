@@ -73,16 +73,17 @@
                                                                     </a> 
 
                                                                     <?php
-                                                                    if(get_field('news_heading')){
-                                                                        echo "<h5>";
-                                                                        the_field('news_heading');
-                                                                        echo "</h5>";
-                                                                    }
+                                                                    // if(get_field('news_heading')){
+                                                                    //     echo "<h5>";
+                                                                    //     the_field('news_heading');
+                                                                    //     echo "</h5>";
+                                                                    // }
                                                                     if(get_field('news_excerpt')){
                                                                         echo "<p>";
                                                                         the_field('news_excerpt');
                                                                         echo "</p>";
-                                                                    } ?>
+                                                                    } 
+                                                                    ?>
                                                             </a>                                                                 
                                                             <?php echo '</div>';
 

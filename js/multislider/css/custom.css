@@ -39,9 +39,11 @@ html h2 {
   vertical-align: top;
   border: 1px solid #000000;
   /* border-right: none; */
-  width: 30%;
+  /* width: 30%; */
+  width: 25%;
   margin: 0 20px;
 }
+
 @media (max-width: 1200px) {
   .newsSlider .MS-content .item {
     width: 25%;

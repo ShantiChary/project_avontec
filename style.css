@@ -1775,12 +1775,13 @@ input.sib-default-btn {
 
 .news-item {
 	display: flex !important;
+	flex-direction: column !important;
 	height: 150px !important;
 }
 
 .news-image {
 	width: 30%;
-	height: 150px;
+	height: 50px;
 	padding: 3px 0;
 }
 
@@ -1815,7 +1816,7 @@ input.sib-default-btn {
 
 .sidebar-news-item {
 	display: flex !important;
-	/* flex-direction: column !important; */
+	flex-direction: column !important;
 	height: 150px !important;
 	width: 100% !important;
 }
@@ -2273,6 +2274,31 @@ div#sidebar-form{
 	font-size: var(--theme-font-footer);
 }
 
+.projects-page-link,
+.news-page-link {
+	position: absolute;
+	bottom: 10%;
+	left: 42.5%;
+}
+
+.projects-page-link p,
+.news-page-link p {
+	width: 80px;
+	padding: 1px; 
+	margin-top: 15px;
+	background-color: var(--theme-white);
+	border: 1px solid var(--theme-darkgray);
+	text-align: center;
+	letter-spacing: 0.04rem; 
+}
+
+.projects-page-link a,
+.news-page-link a {
+	color: var(--theme-darkgray);
+	text-decoration: none;
+	font-size: var(--theme-font-footer);
+}
+
 /*--------------------------------------------------------------
 News Tabs Styles
 --------------------------------------------------------------*/
@@ -2304,29 +2330,30 @@ News Tabs Styles
 
 
 .news-article {
+	position:relative;
 	width: 100%;
 	height: auto;
-	/* display: flex; */
-	border: 2px solid var(--theme-black);
-	margin: 20px auto;
+	display: flex;
+	border: 1px solid var(--theme-darkgray);
+	margin: 5px auto;
 	padding: 10px 5px 20px;
 }
 
 .news-img {
-	width: 20%;
+	width: 40%;
 	text-align: center;
 	margin: 0 auto;
 }
 
 .news-div {
-	width: 100%;
+	width: 60%;
 	margin: 0 auto;
 	padding: 0 20px;
 }
 
 .news-div h5 {
 	margin: 10px 0;
-	text-align: center;
+	/* text-align: center; */
 }
 
 

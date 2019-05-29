@@ -62,6 +62,10 @@
                                         <h5><?php the_field($projectHeading); ?></h5>
                                         <p><?php the_field($projectText); ?></p>
 
+                                        <div class="projects-page-link">
+                                            <p><a href="#"><span class="email-id";>Know More</span></a></p>
+                                        </div>
+
                                 </div>
 
                             </div>  
