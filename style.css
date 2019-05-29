@@ -1388,7 +1388,7 @@ body {
 /* Home page Styles */
 .section-2-intro,
 .section-2 {
-	margin: 3em;
+	margin: 1em 3em 0.25em;
 }
 
 .section-4 {
@@ -1418,12 +1418,17 @@ body {
 .section-2-para,
 .section-4-para {
 	width: 70%;
+	margin: 0;
 }
 
 .section-2-h1,
 .section-2-,
 .section-4-h3 {
 	margin: 0;
+}
+
+.section-2 {
+	margin-bottom: 20px;
 }
 
 .video-1-section {
@@ -1573,13 +1578,12 @@ body {
 /*---------------------*/
 .projects-slider {
 	background-color: var(--theme-lightgray);
-	height: 400px;
+	height: 330px;
 	position: relative;
 	padding: 1em;
 	z-index:777;	
 }
 
-.projects-slider,
 .news-slider {
 	background-color: var(--theme-lightgray);
 	height: 450px;
@@ -1591,6 +1595,7 @@ body {
 .project-heading {
 	text-align: center;
 	text-transform: uppercase;
+	margin-bottom: 0;
 }
 
 .projects-slide,
@@ -1609,6 +1614,7 @@ body {
 }
 
 .project-slides img {
+	width: 90%;
 	margin: 0 auto;
 }
 
@@ -1834,6 +1840,13 @@ input.sib-default-btn {
 	padding: 5px 0 0 10px;
 	margin: 0;
 	color: var(--theme-darkgray);
+}
+
+.cform-h4 h4 {
+	font-weight: normal;
+	text-align: center;
+	margin: 0 0 10px 0;
+
 }
 
 .chk-form-class {
@@ -2213,15 +2226,32 @@ News Tabs Styles
 /*---------------------*/
 /*CONTACT US STYLES */
 /*---------------------*/
-.contact-us-banner-video {
+/* .contact-us-banner-video {
 	width: 100%;
 	text-align: center;
+} */
+
+
+.contact-block-main {
+	display: flex;
+	margin-bottom: 20px;
 }
 
 .contact-info {
-	padding: 2em;
+	width: 30%;
+	padding: 2em 1em 2em 2em;
 	text-align: center;
 	margin: 0 auto;
+}
+
+.factory-address-block,
+.email-block {
+	padding-top: 10px;
+}
+
+.google-map-div {
+	width: 70%;
+	padding: 2em 1em 1em 1em;
 }
 
 .contact-info p {
@@ -2231,7 +2261,7 @@ News Tabs Styles
 }
 
 .address-block {
-	width: 500px;
+	/* width: 500px; */
 	display: flex;
 	margin: 0 auto;
 }
@@ -2250,16 +2280,12 @@ News Tabs Styles
 	text-align: left;
 }
 
-.google-map-div {
-	padding: 1em;
-	text-align: center;
-}
-
+/* 
 .google-map {
 	width: 80%;
 	margin: 2em 0 0;
 	padding: 1em;
-}
+} */
 
 /*---------------------*/
 /* FOOTER STYLES */
@@ -2425,7 +2451,7 @@ footer ul li {
 	/* Main menu - mobile */
 	.slicknav_nav  {
 		display: block;
-		margin-top: 20px;
+		margin-top: -5px;
 		margin-left: 0;
 		height: 465px;
 		background: var(--theme-lightgray);
@@ -2480,6 +2506,7 @@ footer ul li {
 
 	.section-2-para {
 		width: 100%;
+		margin: 0;
 	}
 
 	.modal-content {

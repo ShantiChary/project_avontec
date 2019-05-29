@@ -78,7 +78,7 @@ get_header('internal');
 
 										<!-- Sub menu div -->
 										<?php
-											if (( ! is_page('contact-us') ) && ( ! is_page('custom-rd') ) && ( ! is_page('digital-transformation') ) && ( ! is_page('iot-solutions') ) && ( ! is_page('core-values') )) { ?>
+											if (( ! is_page('contact-us') ) && ( ! is_page('custom-rd') ) && ( ! is_page('digital-transformation') ) && ( ! is_page('iot-solutions') ) && ( ! is_page('core-values') ) && ( ! is_page ('process-control-instrumentation') ) ) { ?>
 												<div class="sub-menu-div">										
 													<?php
 													global $wp_query;
@@ -117,7 +117,8 @@ get_header('internal');
 									<?php
 											/* About Us */
 											if (is_page (77)) { 
-												get_template_part( 'template-parts/content', 'about-us' ); 
+												// get_template_part( 'template-parts/content', 'about-us' );
+												get_template_part( 'template-parts/content', 'lectrotek-ravon' ); 
 											}
 											if (is_page (409)) { 
 												get_template_part( 'template-parts/content', 'lectrotek-ravon' ); 
@@ -148,7 +149,8 @@ get_header('internal');
 
 											/* Products */
 											elseif (is_page (1059)) { 
-												get_template_part( 'template-parts/content', 'products' );
+												// get_template_part( 'template-parts/content', 'products' );
+												get_template_part( 'template-parts/content', 'automated-machinery' );
 											}
 											/* Automated Machinery */
 											elseif (is_page (423)) { 
@@ -200,7 +202,8 @@ get_header('internal');
 
 											/* Services */
 											elseif (is_page (1395)) { 
-												get_template_part( 'template-parts/content', 'services' );
+												// get_template_part( 'template-parts/content', 'services' );
+												get_template_part( 'template-parts/content', 'digital-transformation' );
 											}
 
 											/* Conveying Systems */
@@ -276,6 +279,11 @@ get_header('internal');
 											}
 											elseif (is_page (1089)) { 
 												get_template_part( 'template-parts/content', 'mimic-panels' );
+											}
+
+											/* Process Control Instrumentation */
+											elseif (is_page (1462)) { 
+												get_template_part( 'template-parts/content', 'process-control' );
 											}
 											
 											/* Systems Integration */
@@ -376,7 +384,8 @@ get_header('internal');
 								
 											/* Our Partners */
 											elseif (is_page (1057)) { 
-												get_template_part( 'template-parts/content', 'our-partners' );
+												// get_template_part( 'template-parts/content', 'our-partners' );
+												get_template_part( 'template-parts/content', 'flexcon-conveyor-parts' );
 											}
 											elseif (is_page (1192)) { 
 												get_template_part( 'template-parts/content', 'flexcon-conveyor-parts' );

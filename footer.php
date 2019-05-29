@@ -71,7 +71,8 @@
 
 		<div class="site-info">	
 			<!-- ?php echo do_shortcode('[mc4wp_form]'); ?> -->
-			<p class="copy">Copyright &copy; <?php echo date('Y'); ?> Avontec Automation Pvt Ltd. All Rights Reserved</p>        <p class="site-design">Designed by <a href="https://www.arusansystems.com" target="_blank">Arusan.com</a></p>
+			<p class="copy">Copyright &copy; <?php echo date('Y'); ?> Avontec Automation Pvt Ltd. All Rights Reserved</p>      
+			<!-- <p class="site-design">Designed by <a href="https://www.arusansystems.com" target="_blank">Arusan.com</a></p> -->
 		</div><!-- .site-info -->
 
 	</footer><!-- #colophon -->

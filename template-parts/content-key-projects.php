@@ -13,7 +13,7 @@
     <section id="key-projects" class="projects-slider">
                         <?php
                             echo '<h3 class="project-heading">';
-                            echo "Projects";
+                            echo "Case Studies";
                             echo '</h3>';
                         ?>
 
@@ -38,7 +38,7 @@
                                                     if(function_exists('get_field')){
 
                                                         $image = get_field('project_image');
-                                                        $size = 'thumbnail'; // (thumbnail, medium, large, full or custom size)
+                                                        $size = 'small'; // (thumbnail, medium, large, full or custom size)
                                                                                                             
                                                         if(!empty($image)) {                                
                                                             if( $image ) {
