@@ -741,7 +741,8 @@ a:active {
 .sub-menu-div ul.current_page_item > a, /* //to change sub menu item colors as well */
 .sub-menu-div ul.current-menu-item > a,
 .sub-menu-div ul.current_page_ancestor > a,
-.sub-menu-div.current-menu-ancestor > a {
+.sub-menu-div.current-menu-ancestor > a,
+.sub-menu-div .current-news {
 	/* background-color:  var(--theme-red); */
 	color: var(--theme-red);
 }

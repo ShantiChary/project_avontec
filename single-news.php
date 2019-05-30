@@ -46,30 +46,6 @@ get_header('internal');
 											<?php 
 												if ( ! is_page('contact-us') ) { ?>
 													<div class="sub-menu-div">
-
-														<!-- <h3>?php echo 'More' . ' ' . get_the_title( $post->post_parent ); ?></h3> -->
-														<!-- ?php
-														if ($post->post_parent)	{
-														$ancestors=get_post_ancestors($post->ID);
-														$root=count($ancestors)-1;
-														$parent = $ancestors[$root];}
-														?> -->
-														<!-- ?php 
-														// $currentpage = $post->ID;
-														// immediate parent page id
-														// $parentpage = $post->post_parent;
-														// get all parents and grand parents in an array
-														// $grandparent = get_post_ancestors($currentpage);
-														// grand parent page id = From the array created above
-														// $grandparentID = $grandparent[1];
-														// echo out your new array if you want to see
-														// echo "<pre>"; print_r($parent); echo "</pre>";
-														// ?>
-
-														<-- <h4>?php echo get_the_title( $grandparentID ); ?></h4> -->
-														<!-- <h4>?php echo get_the_title( $post->post_parent ); ?></h4>
-														?php echo do_shortcode('[eyesore_childpages]'); ?> -->
-
 														<?php
 														// Define the WP query
 														$args = array(
@@ -79,12 +55,14 @@ get_header('internal');
 															'orderby' => 'title'
 														);
 
+														$current_post_id = get_the_ID();
 														$query = new WP_Query( $args );
 
 														if ($query->have_posts()) {
 
 															echo '<h4>';
 															$post_type = get_post_type_object( get_post_type($post) );
+
 															echo $post_type->label; 
 															echo '</h4>';
 
@@ -94,7 +72,9 @@ get_header('internal');
 																// Start the Loop
 																while ( $query->have_posts() ) : $query->the_post(); ?>
 																<li class="cpt-sub-menu" id="post-<?php the_ID(); ?>">
-																	<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+																	<!-- <a href="?php the_permalink(); ?>" ?php get_the_ID() == $current_post_id ? 'class="current-news"' : ''; ?>>?php the_title(); ?></a> -->
+																	<a href="<?php the_permalink(); ?>" <?php echo get_the_ID() == $current_post_id ? 'class="current-news"' : ''; ?>><?php the_title(); ?></a>
+ 
 																</li>
 
 																<?php endwhile;
@@ -114,8 +94,50 @@ get_header('internal');
 										<div class = "news-content">
 											<?php
 
-												get_template_part( 'template-parts/content', 'news' ); 
-											?>	
+												// get_template_part( 'template-parts/content', 'news' ); 
+												
+
+															the_post();
+
+															$newsDate = "news_date";
+															$newsHeading = "news_heading";
+															// $newsLink = "news_link";
+															$newsText = "news_text";
+														?>
+							
+
+																		 
+														<div class="news-article">
+							
+															<div class="news-img">
+															
+																<?php 
+																	$field_name = "news_image";
+																	$image = get_field('news_image');
+																	$size = 'medium'; // (thumbnail, medium, large, full or custom size)
+													
+																	if(!empty($image)) {
+																		$field = get_field_object($field_name); ?>
+													
+																		<?php 
+													
+																		if( $image ) {
+																			echo wp_get_attachment_image( $image, $size );
+																		}
+																	}
+													
+																?>
+															</div>
+											 
+															<div class="news-div">
+																	<p><?php the_field($newsDate); ?></p>
+																	<h5><?php the_field($newsHeading); ?></h5>
+																	<p><?php the_field($newsText); ?></p>
+															</div>
+															
+							
+														</div>  
+												
 										</div>	
 									</div>	
 

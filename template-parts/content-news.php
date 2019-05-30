@@ -96,7 +96,7 @@
                                         <p><?php the_field($newsText); ?></p>
 
                                         <div class="news-page-link">
-                                            <p><a href="#"><span class="email-id";>Know More</span></a></p>
+                                            <p><a href="<?php echo get_permalink(); ?>"><span class="email-id";>Know More</span></a></p>
                                         </div>
                                 </div>
                                 
