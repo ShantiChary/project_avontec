@@ -63,7 +63,7 @@
                                         <p><?php the_field($projectText); ?></p>
 
                                         <div class="projects-page-link">
-                                            <p><a href="#"><span class="email-id";>Know More</span></a></p>
+                                            <p><a href="<?php echo get_permalink(); ?>"><span class="email-id";>Know More</span></a></p>
                                         </div>
 
                                 </div>

@@ -56,6 +56,7 @@ get_header('internal');
 															'orderby' => 'title'
 														);
 
+														$current_project_id = get_the_ID();
 														$query = new WP_Query( $args );
 
 														if ($query->have_posts()) {
@@ -68,20 +69,12 @@ get_header('internal');
 															// Output the post titles in a list
 															echo '<ul>';
 
-															// echo '<h4>';
-															// if ( 0 == $post->post_parent ) {
-															// 	echo get_the_title( $post->post_parent );
-															// } else {
-															// 	$parents = get_post_ancestors( $post->ID );
-															// 	echo apply_filters( "the_title", get_the_title( end ( $parents ) ) );
-															// }
-															// echo '</h4>'; 
-
 																// Start the Loop
 																while ( $query->have_posts() ) : $query->the_post(); ?>
 
 																<li class="cpt-sub-menu" id="post-<?php the_ID(); ?>">
-																	<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+																	<!-- <a href="?php the_permalink(); ?>"><php the_title(); ?></a> -->
+																	<a href="<?php the_permalink(); ?>" <?php echo get_the_ID() == $current_project_id ? 'class="current-project"' : ''; ?>><?php the_title(); ?></a>																	
 																</li>
 
 																<?php endwhile;
@@ -99,10 +92,50 @@ get_header('internal');
 
 									<!-- Get template-part content for each page -->
 									<div class = "about-section">
+
+										<div class = "news-content">
 										<?php
 
-											get_template_part( 'template-parts/content', 'project' ); 
-										?>	
+														the_post();
+
+														$projectHeading = "project_heading";
+														// $newsLink = "news_link";
+														$projectText = "project_text";
+													?>
+						
+
+																	 
+													<div class="news-article">
+						
+														<div class="news-img">
+														
+															<?php 
+																$field_name = "project_image";
+																$image = get_field('project_image');
+																$size = 'medium'; // (thumbnail, medium, large, full or custom size)
+												
+																if(!empty($image)) {
+																	$field = get_field_object($field_name); ?>
+												
+																	<?php 
+												
+																	if( $image ) {
+																		echo wp_get_attachment_image( $image, $size );
+																	}
+																}
+												
+															?>
+														</div>
+										 
+														<div class="news-div">
+																<h5><?php the_field($projectHeading); ?></h5>
+																<p><?php the_field($projectText); ?></p>
+														</div>													
+						
+													</div>  
+											
+										</div>	
+
 									</div>								
 
 						</div>	<!-- internal-content-div -->
