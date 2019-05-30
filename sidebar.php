@@ -162,8 +162,8 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
     
                     </div> contact-form -->
 
-                    <div id="sidebar-form">
-                            <h4>Contact Us!</h4>
+                    <!-- <div id="sidebar-form"> -->
+                            <!-- <h4>Contact Us!</h4>
 
                             <input id="name" type="text" name="name" placeholder="Name"/>
 
@@ -171,11 +171,11 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 
                             <input id="designation" type="text" name="designation" placeholder="Designation"/>
 
-                            <input id="company" type="text" name="company" placeholder="Company"/>
-                      
-                            <a href="http://avontec.com/contact-us" class="sidebar-contact-button">More</a>
-
-                    </div>
+                            <input id="company" type="text" name="company" placeholder="Company"/> -->
+                      <div class="sidebar-contact-div">
+                            <a href="http://avontec.com/contact-us" class="sidebar-contact-button">Contact US</a>
+                      </div>
+                    <!-- </div> -->
 
                     <br>
 

@@ -69,7 +69,7 @@
 							</div>
 							<div class="button-image">
 								<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">	
-										<img src="<?php the_field('language_button', 'option'); ?>" width=40>
+										<img src="<?php the_field('language_button', 'option'); ?>" width=45>
 								</a>
 							</div>
 						</div>

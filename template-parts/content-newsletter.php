@@ -57,7 +57,7 @@
                                     <div class="pdf-button-1 pdf-button">
                                         <div class="pdf-image">
                                             <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">	
-                                                    <img src="<?php the_field('pdf_link_image_1', 'option'); ?>" width=40>
+                                            <img src="<?php the_field('pdf_link_image_1', 'option'); ?>" width=30>
                                             </a>
                                         </div>
 
@@ -73,7 +73,7 @@
                                     <div class="pdf-button-2 pdf-button">
                                         <div class="pdf-image">
                                             <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">	
-                                                    <img src="<?php the_field('pdf_link_image_2', 'option'); ?>" width=40>
+                                            <img src="<?php the_field('pdf_link_image_1', 'option'); ?>" width=30>
                                             </a>
                                         </div>
                                         <?php if( !empty(get_field('pdf_link_2', 'option')) ): ?>
@@ -88,7 +88,7 @@
                                     <div class="pdf-button-3 pdf-button">
                                         <div class="pdf-image">
                                             <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">	
-                                                <img src="<?php the_field('pdf_link_image_3', 'option'); ?>" width=40>
+                                            <img src="<?php the_field('pdf_link_image_1', 'option'); ?>" width=30>
                                             </a>
                                         </div>	
                                         <?php if( !empty(get_field('pdf_link_3', 'option')) ): ?>
@@ -105,7 +105,7 @@
                                     <div class="pdf-button-4 pdf-button">
                                         <div class="pdf-image">
                                             <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">	
-                                                    <img src="<?php the_field('pdf_link_image_4', 'option'); ?>" width=40>
+                                            <img src="<?php the_field('pdf_link_image_1', 'option'); ?>" width=30>
                                             </a>
                                         </div>                                        
                                         <?php if( !empty(get_field('pdf_link_3', 'option')) ): ?>
@@ -120,7 +120,7 @@
                                     <div class="pdf-button-5 pdf-button">
                                         <div class="pdf-image">
                                             <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">	
-                                                    <img src="<?php the_field('pdf_link_image_5', 'option'); ?>" width=40>
+                                            <img src="<?php the_field('pdf_link_image_1', 'option'); ?>" width=30>
                                             </a>
                                         </div>	                                        
                                         <?php if( !empty(get_field('pdf_link_3', 'option')) ): ?>
@@ -135,7 +135,7 @@
                                     <div class="pdf-button-6 pdf-button">
                                         <div class="pdf-image">
                                             <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">	
-                                                <img src="<?php the_field('pdf_link_image_6', 'option'); ?>" width=40>
+                                            <img src="<?php the_field('pdf_link_image_1', 'option'); ?>" width=30>
                                             </a>
                                         </div>	                                        
                                         <?php if( !empty(get_field('pdf_link_3', 'option')) ): ?>

@@ -71,8 +71,9 @@ get_header('internal');
 										if ( ! is_page('contact-us') ) { ?>
 											<div class="banner-img-div">
 												<img class="banner-img" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" width="890"/>
-
-												<h1 class="banner-h1"><?php echo get_the_title(); ?> </h1>
+												<div class="banner-opaque-div">
+													<h1 class="banner-h1"><?php echo get_the_title(); ?> </h1>
+												</div>
 											</div>
 										<?php } ?>	
 

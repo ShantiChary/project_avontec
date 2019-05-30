@@ -70,7 +70,7 @@
 									</div>
 									<div class="button-image">
 										<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">	
-												<img src="<?php the_field('language_button', 'option'); ?>" width=40>
+												<img src="<?php the_field('language_button', 'option'); ?>" width=45>
 										</a>
 									</div>
 								</div>
@@ -139,9 +139,9 @@
 						?>
 							<div class="banner-slide">
 								<img src="<?php echo $image['url']; ?>"/>
-								<div class="banner-text">
-									<h1><?php echo $bannerText; ?></h1>
-								</div>
+								<!-- <div class="banner-text">
+									<h1>?php echo $bannerText; ?></h1>
+								</div> -->
 							</div>
 								
 							<!-- <div> -->
