@@ -1504,11 +1504,11 @@ body {
 /*-------------------------------------------*/
 
 .video-1-section button {
-	padding: 8px 15px; 
+	padding: 5px 10px; 
 	background-color: var(--theme-white);
 	border: 1.5px solid #cf311d;
 	text-transform: uppercase; 
-	font-size: var(--theme-font-button);
+	font-size: var(--theme-font-body);
 	letter-spacing: 0.04rem; 
 	color: var(--theme-red);	
 	font-weight: bold;
@@ -1580,7 +1580,7 @@ body {
 /*---------------------*/
 .projects-slider {
 	background-color: var(--theme-lightgray);
-	height: 330px;
+	height: 400px;
 	position: relative;
 	padding: 1em;
 	z-index:777;	
@@ -1618,6 +1618,7 @@ body {
 .project-slides img {
 	width: 90%;
 	margin: 0 auto;
+	text-align: center;
 }
 
 .project-slides h4 {
@@ -1627,7 +1628,7 @@ body {
 
 .project-slides p {
 	margin: 0 auto;
-	padding: 0 40px;
+	padding: 5px 10px 0 20px;
 	font-size: var(--theme-font-body);
 }
 
@@ -1690,7 +1691,7 @@ body {
 	width: 85%;
     height: 50px;
 	border: 3px solid var(--theme-lightgray);
-	margin: 20px 0 0 40px;
+	margin: 20px auto 0;
 }
 
 .pdf-text {
@@ -1776,8 +1777,8 @@ input.sib-default-btn {
 }
 
 .news-item {
-	display: flex !important;
-	flex-direction: column !important;
+	/* display: flex !important; */
+	/* flex-direction: column !important; */
 	height: 150px !important;
 }
 
@@ -1817,8 +1818,8 @@ input.sib-default-btn {
 }
 
 .sidebar-news-item {
-	display: flex !important;
-	flex-direction: column !important;
+	/* display: flex !important;
+	flex-direction: column !important; */
 	height: 150px !important;
 	width: 100% !important;
 }
@@ -1916,13 +1917,14 @@ span.wpcf7-list-item { display: block; font-size: 14px;}
 /* Message box after clicking 'Submit' */
 .wpcf7-response-output,
 .wpcf7-form .wpcf7-response-output.wpcf7-mail-sent-ok {
-	width: 295px;
-	height: 257px;
+	width: 350px;
+	height: 200px;
 	background-color: var(--theme-white);
 	color: var(--theme-black);
 	position: absolute;
-	top: -20px;
-	left: 0;
+    top: 0;
+    left: 0;
+    transform: translate(50%, 50%);
 
 }
 
@@ -2279,7 +2281,7 @@ div#sidebar-form{
 .projects-page-link,
 .news-page-link {
 	position: absolute;
-	bottom: 10%;
+	bottom: 5%;
 	left: 42.5%;
 }
 
@@ -2433,15 +2435,14 @@ News Tabs Styles
 }
 
 .contact-us-pdf-block {
-	margin-top: 30px;
-    margin-left: 100px;
+    width: 700px;
+    height: 280px;
+	margin: 30px auto 0;
 }
 
-.contact-us-pdf-heading h4 {
-    margin-left: 40%;
+.contact-us-pdf-block h4 {
+    text-align: center;
 }
-
-
 
 /* 
 .google-map {

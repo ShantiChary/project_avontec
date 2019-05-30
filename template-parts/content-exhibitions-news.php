@@ -65,9 +65,9 @@
                                                                         // echo '<a href="';
                                                                         // the_permalink();
                                                                         // echo '">'; 
-                                                                        echo "<h5>";
-                                                                        the_field('news_link');
-                                                                        echo "</h5>";
+                                                                        // echo "<h5>";
+                                                                        // the_field('news_link');
+                                                                        // echo "</h5>";
                                                                         // echo '</a>';
                                                                     } ?>
                                                                     </a> 

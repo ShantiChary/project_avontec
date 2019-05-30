@@ -78,7 +78,7 @@ get_header('internal');
 
 										<!-- Sub menu div -->
 										<?php
-											if (( ! is_page('contact-us') ) && ( ! is_page('custom-rd') ) && ( ! is_page('digital-transformation') ) && ( ! is_page('iot-solutions') ) && ( ! is_page('core-values') ) && ( ! is_page ('process-control-instrumentation') ) ) { ?>
+											if (( ! is_page('contact-us') ) && ( ! is_page('custom-rd') ) && ( ! is_page('digital-transformation') ) && ( ! is_page('iot-solutions') ) && ( ! is_page('core-values') ) && ( ! is_page ('process-control-instrumentation') )  && ( ! is_page ('products') ) && ( ! is_page ('services') ) ) { ?>
 												<div class="sub-menu-div">										
 													<?php
 													global $wp_query;

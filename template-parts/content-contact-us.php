@@ -129,9 +129,9 @@
 
                 
                 <div class="social-media-home contact-us-pdf-block">
-                            <div class="pdf-link-h4 contact-us-pdf-heading">
-                                <h4>Download PDF Catalogs</h4>
-                            </div>
+
+                            <h4>Download PDF Catalogs</h4>
+
                             <div class="pdf-buttons">
                                 <div class="pdf-block-1">
                                     <div class="pdf-button-1 pdf-button">

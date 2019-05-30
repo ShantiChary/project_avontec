@@ -54,13 +54,13 @@
                                                         </a> 
                                                         
                                                         <?php
-                                                        if(get_field('project_heading')){ ?>
+                                                        // if(get_field('project_heading')){ ?
 
-                                                            <?php
-                                                                echo "<h4>";
-                                                                the_field('project_heading');
-                                                                echo "</h4>";
-                                                        }
+                                                        //     <?php
+                                                        //         echo "<h4>";
+                                                        //         the_field('project_heading');
+                                                        //         echo "</h4>";
+                                                        // }
                                                         if(get_field('project_excerpt')){
                                                                 echo "<p>";
                                                                 the_field('project_excerpt');
