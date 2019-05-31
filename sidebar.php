@@ -53,20 +53,23 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
                                                     $size = 'thumbnail'; // (thumbnail, medium, large, full or custom size)
                                                     if(!empty($image)) {
                                                         if( $image ) {
-
+?>
+                                                                <a href="http://avontec.com/about-us/news/#post-<?php echo the_ID(); ?>">
+<?php
                                                             echo '<div class="news-image">'; 
                                                                 echo '<a href="';
                                                                 the_permalink();
                                                                 echo '">'; 
-                                                                echo wp_get_attachment_image( $image, $size);
+                                                                echo wp_get_attachment_image( $image);
                                                                 echo '</a>';
                                                             echo '</div>';
-
+                                                            ?>
+                                                            </a>                                                             
+<?php
                                                             echo '<div class="news-text">'; ?>
 
-                                                                <a href="http://avontec.com/about-us/news/#post-<?php echo the_ID(); ?>">
 
-                                                                    <?php
+                                                                    <!-- ?php
                                                                     if(get_field('news_link')){
                                                                         // echo '<a href="';
                                                                         // the_permalink();
@@ -76,7 +79,7 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
                                                                         echo "</h5>";
                                                                         // echo '</a>';
                                                                     } ?>
-                                                                    </a> 
+                                                                    </a>  -->
 
                                                                     <?php
                                                                     // if(get_field('news_heading')){

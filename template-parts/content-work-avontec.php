@@ -41,7 +41,7 @@
 
                                 <div class="job-description-div">
                                         <div class="job-apply-button">
-                                            <a title="Email" href="mailto:hr@avontec.com"><span class="email-id";>APPLY NOW</span></a>
+                                            <a title="Email" href="mailto:hr@avontec.com"><span class="email-id";>APPLY FOR ROLE</span></a>
                                         </div>
 
                                         <?php // display a sub field value

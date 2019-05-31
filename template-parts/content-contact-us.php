@@ -38,7 +38,7 @@
 
                                     <?php   
                                         if( !empty($icon1) ): ?>
-                                            <img src="<?php echo $icon1['url']; ?>" alt="<?php echo $icon1['alt']; ?>" width=80/>
+                                            <img src="<?php echo $icon1['url']; ?>" alt="<?php echo $icon1['alt']; ?>" width=50/>
                                     <?php endif;  ?>                   
                             </div>
 
@@ -67,7 +67,7 @@
 
                                     <?php   
                                         if( !empty($icon2) ): ?>
-                                            <img src="<?php echo $icon2['url']; ?>" alt="<?php echo $icon2['alt']; ?>" width=80/>
+                                            <img src="<?php echo $icon2['url']; ?>" alt="<?php echo $icon2['alt']; ?>" width=50/>
                                     <?php endif;  ?>                   
                             </div>
 
@@ -90,7 +90,7 @@
 
                                     <?php   
                                         if( !empty($icon2) ): ?>
-                                            <img src="<?php echo $icon2['url']; ?>" alt="<?php echo $icon2['alt']; ?>" width=80/>
+                                            <img src="<?php echo $icon2['url']; ?>" alt="<?php echo $icon2['alt']; ?>" width=50/>
                                     <?php endif;  ?>                   
                             </div>
 
@@ -111,7 +111,7 @@
 
                     <!-- Google Map embed code -->
                     <div class="google-map-div">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3778.57034224134!2d73.83194051489592!3d18.72804458728851!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2cba90c0d0f07%3A0x13a9ac6330b24b3a!2sAvontec+Automation+Private+Limited!5e0!3m2!1sen!2sca!4v1559146648562!5m2!1sen!2sca" width="630" height="330" frameborder="0" style="border:0" allowfullscreen></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3778.57034224134!2d73.83194051489592!3d18.72804458728851!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2cba90c0d0f07%3A0x13a9ac6330b24b3a!2sAvontec+Automation+Private+Limited!5e0!3m2!1sen!2sca!4v1559146648562!5m2!1sen!2sca" width="630" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
                     </div>
                 </div>
 

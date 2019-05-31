@@ -59,7 +59,7 @@
                                         $projectText = "project_text";
                                         ?>
 
-                                        <h5><?php the_field($projectHeading); ?></h5>
+                                        <h4><?php the_field($projectHeading); ?></h4>
                                         <p><?php the_field($projectText); ?></p>
 
                                         <div class="projects-page-link">

@@ -92,7 +92,7 @@
                  
 								<div class="news-div">
                                         <p><?php the_field($newsDate); ?></p>
-                                        <h5><?php the_field($newsHeading); ?></h5>
+                                        <h4><?php the_field($newsHeading); ?></h4>
                                         <p><?php the_field($newsText); ?></p>
 
                                         <div class="news-page-link">

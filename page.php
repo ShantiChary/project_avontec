@@ -134,7 +134,7 @@ get_header('internal');
 												get_template_part( 'template-parts/content', 'our-customers' ); 
 											}
 											elseif (is_page (981)) { 
-												get_template_part( 'template-parts/content', 'projects' ); 
+												get_template_part( 'template-parts/content', 'case-studies' ); 
 											}
 											elseif (is_page (975)) { 
 												get_template_part( 'template-parts/content', 'news' ); 

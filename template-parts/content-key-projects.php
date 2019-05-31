@@ -21,7 +21,7 @@
 
                                 <?php
                                     $args = array(
-                                            'post_type' => 'project',
+                                            'post_type' => 'casestudy',
                                             'posts_per_page' => -1,
                                             'order' => 'ASC',
                                             'orderby' => 'title'
@@ -45,7 +45,7 @@
 
                                                                 // the_permalink(); ?>
 
-                                                                <a href="http://avontec.com/about-us/projects/#post-<?php echo the_ID(); ?>">
+                                                                <a href="http://avontec.com/about-us/case-studies/#post-<?php echo the_ID(); ?>">
                                                                 
                                                                 <?php echo wp_get_attachment_image( $image, $size );                                                 
                                                             }
