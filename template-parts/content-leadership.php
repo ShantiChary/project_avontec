@@ -24,20 +24,23 @@
                         ?>
 
                         <div class="member-details">
-                            <div class="member-image">
-                                <img src="<?php echo $memberImage['url']; ?>" width=80>
+                            <div class="member-img-heading">
+                                <div class="member-image">
+                                    <img src="<?php echo $memberImage['url']; ?>" width=80>
+                                </div>
+
+                                <div class="member-info">
+                                    <h4><?php echo $memberName; ?></h4>
+                                    <h5><?php echo $memberTitle; ?></h5>
+                                </div>
                             </div>
 
-                            <div class="member-info">
-                                <h4><?php echo $memberName; ?></h4>
-                                <h5><?php echo $memberTitle; ?></h5>
+                            <div class="member-blurb">
+                                <ul>
+                                    <?php echo $memberBlurb; ?>
+                                </ul>
                             </div>
-                        </div>
-                        <div class="member-blurb">
-                            <ul>
-                                <?php echo $memberBlurb; ?>
-                            </ul>
-                         </div>
+                        </div>                            
     
                     <?php
                     endwhile;

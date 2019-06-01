@@ -121,7 +121,7 @@
                 </div>
                 <div class="contact-form">
         
-                    <h4>For more information about our Products and Services, please fill in the form below:</h4>
+                    <!-- <h4>For more information about our Products and Services, please fill in the form below:</h4> -->
 
                     <?php echo do_shortcode('[contact-form-7 id="1389" title="Contact form main"]'); ?>
 

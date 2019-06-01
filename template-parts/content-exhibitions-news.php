@@ -56,9 +56,8 @@
                                                     <a href="http://avontec.com/about-us/news/#post-<?php echo the_ID(); ?>">
                                                     <?php
                                                     echo wp_get_attachment_image( $image, $size );
-                                                    // echo '</a>';
+                                                    echo '</a>';
                                                 echo '</div>'; ?>
-                                                </a> 
 
                                                 <?php
                                                 echo '<div class="news-text">'; ?>

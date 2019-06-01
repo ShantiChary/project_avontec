@@ -66,7 +66,6 @@
                             </div> -->
                      
                             <div class="news-article">
-
                                 <div class="news-img">
                                 
                                     <?php 
@@ -87,8 +86,10 @@
                                     ?>
                                 </div>
                  
-								<div class="news-div">
-                                         <h4 id="post-<?php echo the_ID(); ?>"></h4>
+                                <div class="news-div">
+                                    <!-- Anchor Tag -->
+                                    <a class="hidden-anchor" name="post-<?php the_ID(); ?>"></a>
+
                                         <p><?php the_field($newsDate); ?></p>
                                         <h4><?php the_field($newsHeading); ?></h4>
                                         <p><?php the_field($newsText); ?></p>
@@ -106,9 +107,9 @@
                                         </div>
                                 </div>
                                  <!-- Anchor Tag -->
-                                 <a name="post-<?php the_ID(); ?>"></a>
+                                 <!-- <a name="post-?php the_ID(); ?>"></a>
 
-<?php $post_type=get_post_type(); ?>                               
+?php $post_type=get_post_type(); ?>                                -->
 
                             </div>  
 
