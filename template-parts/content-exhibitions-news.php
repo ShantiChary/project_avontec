@@ -22,83 +22,88 @@
                     }
             ?>
 
-            <div id="exampleSlider" class="newsSlider">      <!-- Give wrapper ID to target with jQuery & CSS -->
+            <div id="exampleSlider" class="newsSlider">      <!-- Give wrapper ID to target with Multislider jQuery & CSS -->
                     <div class="MS-content">
 
-                                <?php
-                                    $args = array(
-                                            'post_type' => 'news',
-                                            'posts_per_page' => -1,
-                                            'order' => 'ASC',
-                                            'orderby' => 'title'
-                                    );
+                        <?php
+                        $args = array(
+                                'post_type' => 'news',
+                                'posts_per_page' => -1,
+                                'order' => 'ASC',
+                                'orderby' => 'title'
+                        );
 
-                                    $multislides = new WP_Query($args);
+                        $multislides = new WP_Query($args);
 
-                                    if($multislides->have_posts()) {
-                                        while($multislides->have_posts()) {
-                                            $multislides->the_post();
+                        if($multislides->have_posts()) {
+                            while($multislides->have_posts()) {
+                                $multislides->the_post();
 
-                                            echo '<div class="item">';
-                                                if(function_exists('get_field')){
-                                                    echo '<div class="news-item">'; 
+                                echo '<div class="item">';
+                                    if(function_exists('get_field')){
+                                        echo '<div class="news-item">'; 
 
-                                                    $image = get_field('news_image');
-                                                    $size = 'thumbnail'; // (thumbnail, medium, large, full or custom size)
-                                                    if(!empty($image)) {
-                                                        if( $image ) {
+                                        $image = get_field('news_image');
+                                        $size = 'medium'; // (thumbnail, medium, large, full or custom size)
+                                        if(!empty($image)) {
+                                            if( $image ) {
 
-                                                            echo '<div class="news-image">'; 
-                                                                echo '<a href="';
-                                                                the_permalink();
-                                                                echo '">'; 
-                                                                echo wp_get_attachment_image( $image, $size );
-                                                                echo '</a>';
-                                                            echo '</div>';
+                                                echo '<div class="news-image">'; 
+                                                    // echo '<a href="';
+                                                    // the_permalink();
+                                                    // echo '">'; 
+                                                    ?>
+                                                    <a href="http://avontec.com/about-us/news/#post-<?php echo the_ID(); ?>">
+                                                    <?php
+                                                    echo wp_get_attachment_image( $image, $size );
+                                                    // echo '</a>';
+                                                echo '</div>'; ?>
+                                                </a> 
 
-                                                            echo '<div class="news-text">'; ?>
+                                                <?php
+                                                echo '<div class="news-text">'; ?>
 
-                                                                <a href="http://avontec.com/about-us/news/#post-<?php echo the_ID(); ?>">
+                                                    <a href="http://avontec.com/about-us/news/#post-<?php echo the_ID(); ?>">
 
-                                                                    <?php
-                                                                    if(get_field('news_link')){
-                                                                        // echo '<a href="';
-                                                                        // the_permalink();
-                                                                        // echo '">'; 
-                                                                        // echo "<h5>";
-                                                                        // the_field('news_link');
-                                                                        // echo "</h5>";
-                                                                        // echo '</a>';
-                                                                    } ?>
-                                                                    </a> 
+                                                        <?php
+                                                        if(get_field('news_link')){
+                                                            // echo '<a href="';
+                                                            // the_permalink();
+                                                            // echo '">'; 
+                                                            // echo "<h5>";
+                                                            // the_field('news_link');
+                                                            // echo "</h5>";
+                                                            // echo '</a>';
+                                                        } ?>
+                                                        </a> 
 
-                                                                    <?php
-                                                                    // if(get_field('news_heading')){
-                                                                    //     echo "<h5>";
-                                                                    //     the_field('news_heading');
-                                                                    //     echo "</h5>";
-                                                                    // }
-                                                                    if(get_field('news_excerpt')){
-                                                                        echo "<p>";
-                                                                        the_field('news_excerpt');
-                                                                        echo "</p>";
-                                                                    } 
-                                                                    ?>
-                                                            </a>                                                                 
-                                                            <?php echo '</div>';
+                                                        <?php
+                                                        // if(get_field('news_heading')){
+                                                        //     echo "<h5>";
+                                                        //     the_field('news_heading');
+                                                        //     echo "</h5>";
+                                                        // }
+                                                        if(get_field('news_excerpt')){
+                                                            echo "<p>";
+                                                            the_field('news_excerpt');
+                                                            echo "</p>";
+                                                        } 
+                                                        ?>
+                                                </a>                                                                 
+                                                <?php echo '</div>';
 
-                                                        }
-                                                    }
-                                                    echo '</div>';
-                                                }  ?> <!-- end if -->
+                                            }
+                                        }
+                                        echo '</div>';
+                                    }  ?> <!-- end if -->
 
-                                            <?php echo '</div>';
+                                <?php echo '</div>';
 
 
-                                        } ?> <!-- end while --> 
-                               
-                                        <?php wp_reset_postdata();
-                                    } ?> <!-- end if -->
+                            } ?> <!-- end while --> 
+                    
+                            <?php wp_reset_postdata();
+                        } ?> <!-- end if -->
 
                     </div> <!-- end MS-Content -->
             </div> <!-- exampleSlider -->                                        

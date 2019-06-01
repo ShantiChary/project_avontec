@@ -21,14 +21,14 @@
                         $loop = new WP_Query( $args );
                         while ( $loop->have_posts() ) : $loop->the_post(); ?>
 
-                            <div class="dummy-div">
+                            <!-- <div class="dummy-div"> -->
                                 <!-- Anchor Tag -->
                                 <a name="post-<?php the_ID(); ?>"></a>
 
                                 <?php $post_type=get_post_type(); ?>
                                 <h4 id="post-<?php the_ID(); ?>"></h4>
                                 <!-- <h4 id="post-?php the_ID(); ?>"> ?php the_title(); ?> </h4> -->
-                            </div>
+                            <!-- </div> -->
                      
                             <div class="news-article">
 

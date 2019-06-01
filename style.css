@@ -58,7 +58,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	--theme-black: rgb(0, 0, 0);
 
 	/*Font family */
-	--theme-font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+	--theme-font-family: 'Lato', 'Open Sans', 'Roboto', 'Helvetica', 'Arial', sans-serif;
 
 	/*Font sizes */
 	--theme-font-button: 16px;
@@ -134,6 +134,7 @@ pre {
 
 a {
 	background-color: transparent;
+	cursor: pointer;
 }
 
 /**
@@ -1420,7 +1421,11 @@ body {
 	justify-content: space-between;
 }
 
-.section-2-para,
+.section-2-para {
+	width: 100%;
+	margin: 0;
+}
+
 .section-4-para {
 	width: 70%;
 	margin: 0;
@@ -1430,6 +1435,11 @@ body {
 .section-2-,
 .section-4-h3 {
 	margin: 0;
+}
+
+.section-2-h1 {
+	font-size: 18px;
+	padding-bottom: 3px;
 }
 
 .section-2 {
@@ -1454,7 +1464,7 @@ body {
 	z-index: 9999;
 	background-color: rgba(253, 250, 250, 0.80);
 	top: 25%;
-	padding: 1.5em;
+	padding: 1.15em;
 	font-weight: 800;
 	z-index: 800;
 	/* transform: translateY(-50%);	 */
@@ -1710,6 +1720,19 @@ body {
 	padding-left: 20px;
 }
 
+.pdf-text a {
+	text-decoration: none;
+	color: var(--theme-darkgray);
+	padding: 10px;
+}
+
+.pdf-text a:hover,
+.projects-page-link a:hover,
+.news-page-link a:hover {
+	background-color: var(--theme-blue);
+	color: var(--theme-white);
+}
+
 /* Mailchimp Form Fields Styles */
 /* .mc4wp-form-fields input[type='email'] {
 		width: 100%; 
@@ -1787,6 +1810,7 @@ input.sib-default-btn {
 }
 
 .news-item {
+	position: relative;
 	display: flex !important;
 	flex-direction: column !important;
 	justify-content: center;
@@ -1795,29 +1819,41 @@ input.sib-default-btn {
 }
 
 .news-image {
+	position: absolute;
+	top: 0;
+	left: 0;
 	width: 100%;
-	height: 60px;
+	/* height: 60px; */
 	text-align: center;
-	padding-top: 2px;
 }
 
 .news-image img {
 	max-width: 100%;
 	height: 90%;
-	padding: 0 0 2px 0;
+	padding: 2px 0;
 	text-align: center;
 	margin: 0 auto;
 }
 
+.news-image a:hover {
+	background-color: transparent;
+}
+
 .news-text {
+	position: absolute;
+	bottom: 0;
+	left: 0;
 	width: 100%;
 	text-align:center;
+	margin: 0;
+	padding:0;
+	height: 70px;
 }
 
 .news-text,
 .news-text p {
 	padding: 1px;
-	height: 50px;
+	/* height: 50px; */
 }
 
 .news-text h5 {
@@ -2128,7 +2164,7 @@ div#sidebar-form{
 	list-style-type: none;
 	text-align: left;
 	background: var(--theme-lightgray);
-	font-size: var(--theme-font-body);
+	font-size: var(--theme-font-footer);
 }
 
 .sub-menu-div ul li {
@@ -2163,7 +2199,7 @@ div#sidebar-form{
 /* ---------------------------------*/
 .about-section,
 .avontec-today-section {
-	padding: 0 3em 2em 3em;
+	padding: 0 2em 2em 3em;
 }
 
 .about-section h4 {
@@ -2212,7 +2248,9 @@ div#sidebar-form{
 }
 
 .member-blurb {
-	border: 1px solid var(--theme-black);
+    width: 860px;
+    border: 1px solid var(--theme-black);
+    padding-right: 7px;
 }
 
 .member-blurb ul,
@@ -2288,7 +2326,7 @@ div#sidebar-form{
 	position: absolute;
 	top: 1.5%;
 	right: 1.25%;
-	width: 120px;
+	width: 125px;
 	padding: 5px; 
 	background-color: var(--theme-white);
 	border: 1.5px solid var(--theme-darkgray);
@@ -2302,7 +2340,7 @@ div#sidebar-form{
 .job-apply-button a {
 	color: var(--theme-darkgray);
 	text-decoration: none;
-	font-size: var(--theme-font-footer);
+	font-size: 12px;
 }
 
 .job-description-div h3,
@@ -2313,7 +2351,7 @@ div#sidebar-form{
 
 .job-page-heading {
 	border: 1px solid var(--theme-lightgray);
-	margin: 0;
+    margin: 5px 0 0;
 	padding: 5px 0 5px 10px;
 	display: flex;
 	justify-content: space-around;
@@ -2342,7 +2380,7 @@ div#sidebar-form{
 	left: 65%;
 	top: 50%;
 	transform: translate(-50%, -50%);
-	width: 120px;
+	width: 125px;
 	padding: 5px; 
 	background-color: var(--theme-white);
 	border: 1px solid var(--theme-red);
@@ -2356,14 +2394,13 @@ div#sidebar-form{
 .job-page-heading .job-page-link a {
 	color: var(--theme-red);
 	text-decoration: none;
-	font-size: var(--theme-font-footer);
+	font-size: 12px;
 }
 
 .projects-page-link,
 .news-page-link {
 	position: absolute;
 	bottom: 5%;
-	left: 42.5%;
 }
 
 .projects-page-link p,
@@ -2372,17 +2409,21 @@ div#sidebar-form{
 	padding: 1px; 
 	margin-top: 15px;
 	background-color: var(--theme-white);
-	border: 1px solid var(--theme-darkgray);
+	border: 1px solid var(--theme-black);
 	text-align: center;
 	letter-spacing: 0.04rem; 
+	line-height: 2;
 }
 
 .projects-page-link a,
 .news-page-link a {
-	color: var(--theme-darkgray);
+	color: var(--theme-black);
 	text-decoration: none;
 	font-size: var(--theme-font-footer);
+	padding: 5px 3px;
 }
+
+
 
 /*--------------------------------------------------------------
 News Tabs Styles
@@ -2417,21 +2458,21 @@ News Tabs Styles
 .news-article {
 	position:relative;
 	width: 100%;
-	height: 250px;
+	height: 200px;
 	display: flex;
 	border: 1px solid var(--theme-darkgray);
-	margin: 5px auto;
+	margin: 5px auto 20px;
 	padding: 10px 5px 5px;
 }
 
 .news-img {
-	width: 40%;
+	width: 30%;
 	text-align: center;
 	margin: 0 auto;
 }
 
 .news-div {
-	width: 60%;
+	width: 70%;
 	margin: 0 auto;
 	padding: 0 20px;
 }
@@ -2768,7 +2809,7 @@ footer ul li {
 
 	.section-2-intro h1 {
 		/* font-size: var(--theme-font-button); */
-		font-size: 20px;
+		font-size: 14px;
 		text-align: center;
 	}
 

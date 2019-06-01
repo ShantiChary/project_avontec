@@ -50,21 +50,23 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
                                                     echo '<div class="sidebar-news-item">'; 
 
                                                     $image = get_field('news_image');
-                                                    $size = 'thumbnail'; // (thumbnail, medium, large, full or custom size)
+                                                    $size = 'medium'; // (thumbnail, medium, large, full or custom size)
                                                     if(!empty($image)) {
                                                         if( $image ) {
 ?>
-                                                                <a href="http://avontec.com/about-us/news/#post-<?php echo the_ID(); ?>">
+                                                                <!-- <a href="http://avontec.com/about-us/news/#post-?php echo the_ID(); ?>"> -->
 <?php
                                                             echo '<div class="news-image">'; 
-                                                                echo '<a href="';
-                                                                the_permalink();
-                                                                echo '">'; 
-                                                                echo wp_get_attachment_image( $image);
-                                                                echo '</a>';
-                                                            echo '</div>';
-                                                            ?>
-                                                            </a>                                                             
+                                                                // echo '<a href="';
+                                                                // the_permalink();
+                                                                // echo '">'; 
+                                                                ?>
+                                                                <a href="http://avontec.com/about-us/news/#post-<?php echo the_ID(); ?>">
+                                                                <?php
+                                                                echo wp_get_attachment_image( $image, $size );
+                                                                // echo '</a>';
+                                                            echo '</div>'; ?>
+                                                            </a>                                                            
 <?php
                                                             echo '<div class="news-text">'; ?>
 

@@ -95,7 +95,7 @@
                                     
                                             // Display video ?>
                                             <div class="video2TitleText">
-                                                <h3 class='video2Title'><?php echo $videoTitle; ?></h3>
+                                                <h4 class='video2Title'><?php echo $videoTitle; ?></h4>
 
                                                 <p class='video2Text'><?php echo $videoText; ?></p>
                                             </div>

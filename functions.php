@@ -154,7 +154,10 @@ function avontec_theme_scripts() {
 	wp_enqueue_script( 'scrolltop', get_stylesheet_directory_uri() . '/js/scroll-top.js', array( 'jquery' ) );
 
 	// Google Fonts
+	wp_enqueue_style('avontec-googlefonts', 'https://fonts.googleapis.com/css?family=Lato:400,700&display=swap'); 
+	wp_enqueue_style('avontec-googlefonts', 'https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap'); 
 	wp_enqueue_style('avontec-googlefonts', 'https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap'); 
+
 
 	// //POPUP MODAL script
 	// wp_enqueue_script( 'popup', get_stylesheet_directory_uri() . '/js/popup-modal.js', array( 'jquery' ) );

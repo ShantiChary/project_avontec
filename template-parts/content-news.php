@@ -48,15 +48,12 @@
                                 $newsText = "news_text";
                             ?>
 
-                            <div>
-                                <!-- Anchor Tag -->
-                                <a name="post-<?php the_ID(); ?>"></a>
+                            <!-- <div> -->
 
-                                <?php $post_type=get_post_type(); ?>
-                                <!-- <h4 id="post-?php the_ID(); ?>"></h4> -->
-                                <h4 id="post-<?php $newsHeading; ?>"></h4>
+
+                                <!-- <h4 id="post-?php echo $newsHeading; ?>"></h4> -->
                                 <!-- <h4 id="post-?php the_ID(); ?>"> ?php the_title(); ?> </h4> -->
-                            </div>
+                            <!-- </div> -->
 
                             <!-- <div>
                                     ?php
@@ -91,15 +88,27 @@
                                 </div>
                  
 								<div class="news-div">
+                                         <h4 id="post-<?php echo the_ID(); ?>"></h4>
                                         <p><?php the_field($newsDate); ?></p>
                                         <h4><?php the_field($newsHeading); ?></h4>
                                         <p><?php the_field($newsText); ?></p>
 
+                                        <!-- <div class="news-page-link">
+                                            <p><a href="?php echo get_permalink(); ?>"><span class="email-id";>Know More</span></a></p>
+                                        </div> -->
+
                                         <div class="news-page-link">
-                                            <p><a href="<?php echo get_permalink(); ?>"><span class="email-id";>Know More</span></a></p>
+                                            <p>
+                                            <!-- <a href="?php echo get_permalink(); ?>"><span class="email-id";>Know More</span> -->
+                                            <a href="<?php the_field('news_pdf'); ?>" target="_blank">Know more</a>
+                                            </a>
+                                            </p>
                                         </div>
                                 </div>
-                                
+                                 <!-- Anchor Tag -->
+                                 <a name="post-<?php the_ID(); ?>"></a>
+
+<?php $post_type=get_post_type(); ?>                               
 
                             </div>  
 
