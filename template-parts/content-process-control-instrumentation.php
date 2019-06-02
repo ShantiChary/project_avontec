@@ -1,13 +1,13 @@
 <?php
 /**
- * Template part for displaying page content in custom-iiot-h-w-s-w.php
+ * Template part for displaying page content in clocks-gprs-ntp-poe.php
  *
  * @package avontec
  */
 
 ?>
 
-<!-- Chain Conveying Page Content -->
+<!-- Clocks GPRS NTP/PoE Page Content -->
 
 <div class="about-section">
 <?php
@@ -82,7 +82,3 @@
                 <img class="internal-page-image" src="<?php echo $ppImage5['url']; ?>" alt="<?php echo $ppImage5['alt']; ?>" width=100%/>
             <?php endif;  ?>
 </div>
-
-
-
-

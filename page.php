@@ -70,7 +70,7 @@ get_header('internal');
 										<?php
 										if ( ! is_page('contact-us') ) { ?>
 											<div class="banner-img-div">
-												<img class="banner-img" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" width="890"/>
+												<img class="banner-img" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" width=100%/>
 												<div class="banner-opaque-div">
 													<h1 class="banner-h1"><?php echo get_the_title(); ?> </h1>
 												</div>
@@ -79,7 +79,7 @@ get_header('internal');
 
 										<!-- Sub menu div -->
 										<?php
-											if (( ! is_page('contact-us') ) && ( ! is_page('custom-rd') ) && ( ! is_page('digital-transformation') ) && ( ! is_page('iot-solutions') ) && ( ! is_page('core-values') ) && ( ! is_page ('process-control-instrumentation') )  && ( ! is_page ('products') ) && ( ! is_page ('services') ) ) { ?>
+											if (( ! is_page('contact-us') ) && ( ! is_page('custom-rd') ) && ( ! is_page('digital-transformation') ) && ( ! is_page('iot-solutions') ) && ( ! is_page('core-values') ) && ( ! is_page ('process-control') )  && ( ! is_page ('products') ) && ( ! is_page ('services') ) ) { ?>
 												<div class="sub-menu-div">										
 													<?php
 													global $wp_query;
@@ -282,9 +282,15 @@ get_header('internal');
 												get_template_part( 'template-parts/content', 'mimic-panels' );
 											}
 
-											/* Process Control Instrumentation */
-											elseif (is_page (1462)) { 
+											/* Process Control */
+											elseif (is_page (1656)) { 
 												get_template_part( 'template-parts/content', 'process-control' );
+											}
+											elseif (is_page (1462)) { 
+												get_template_part( 'template-parts/content', 'process-control-instrumentation' );
+											}
+											elseif (is_page (1654)) { 
+												get_template_part( 'template-parts/content', 'process-control-catalog' );
 											}
 											
 											/* Systems Integration */

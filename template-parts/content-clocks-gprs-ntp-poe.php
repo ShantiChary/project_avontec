@@ -9,7 +9,7 @@
 
 <!-- Clocks GPRS NTP/PoE Page Content -->
 
-<div class="about-section">
+<div class="about-section industrial-displays-section">
         <?php
             $ppText = get_field('pp_text');
             $ppImage = get_field('pp_image');

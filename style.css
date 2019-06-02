@@ -1925,7 +1925,7 @@ input.sib-default-btn {
 	height: auto;
 	/* height: 1460px; */
 	margin: 0 4px 0 0;
-	padding: 0.5em;
+    padding: 1em 0.5em 0.5em;
 	text-align: center;
 	background-color: var(--theme-lightgray);
 }
@@ -2045,22 +2045,21 @@ div#sidebar-form{
 
 	.sidebar-contact-div {
 		position: relative;
-		width: 250px;
+		width: 300px;
 		height: 150px;
-		margin: 0 0 50px 0;
 		padding: 0;
 	}
 	
 	.sidebar-contact-button {
 		position: absolute;
-		top: 50%;
-		left: 50%;
+		top: 40%;
+		left: 40%;
 		transform: translate(-50%, -50%);
 		width: 200px;
 		margin: 20px;
 		padding: 20px;
 		/* padding: 3px 5px; */
-		background-color: var(--theme-white);
+		background-color: var(--theme-darkgray);
 		text-transform: uppercase;
 		border: 1px solid var(--theme-black);
 		/* border-radius: 5px; */
@@ -2070,9 +2069,10 @@ div#sidebar-form{
 		text-decoration: none;
 	}
 
-	.sidebar-contact-button a {
-		color: var(--theme-black);
-		font-size: var(--theme-font-button);
+	.sidebar-contact-div a,
+	.sidebar-contact-div a:active {
+		color: var(--theme-white) !important;
+		font-size: var(--theme-font-body);
 	}
 	
 
@@ -2124,6 +2124,7 @@ div#sidebar-form{
 
 .banner-img-div {
 	position: relative;
+	width: 100%;
 }
 
 .banner-opaque-div {
@@ -2214,6 +2215,14 @@ div#sidebar-form{
 
 .internal-page-image {
 	padding: 10px 0 20px;
+}
+
+.industrial-displays-section {
+	text-align: center;
+}
+
+.industrial-displays-section img  {
+	width: 65%;
 }
 
 /*---------------------*/
@@ -2898,12 +2907,12 @@ footer ul li {
 		width: 100%;
 	}
 
-	/* .social-media-home {
+	.social-media-home {
 		width: 100%;
 		height: auto;
 	}
 
-	.social-media-home ul {
+	/*.social-media-home ul {
 		width: 100%;
 	}
 
