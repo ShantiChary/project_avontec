@@ -56,95 +56,129 @@
                                 <div class="pdf-block-1">
                                     <div class="pdf-button-1 pdf-button">
                                         <div class="pdf-image">
-                                            <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">	
+                                            <!-- <a href="?php echo esc_url( home_url( '/' ) ); ?>" rel="home">	 -->
                                             <img src="<?php the_field('pdf_link_image_1', 'option'); ?>" width=30>
-                                            </a>
+                                            <!-- </a> -->
                                         </div>
 
-                                        <?php if( !empty(get_field('pdf_link_1', 'option')) ): ?>
+                                        <?php if( !empty(get_field('pdf_link_heading_1', 'option')) ): ?>
                                             <div class="pdf-text">
-                                                <?php echo "<p>"; ?>			
-                                                    <a href="<?php the_field('pdf_link_1', 'option'); ?>" target="_blank">Corporate Brochure</a>
-                                                <?php echo "</p>"; ?>
+                                                <?php if( !empty(get_field('pdf_link_1', 'option')) ): ?>
+                                                    <?php echo "<p>"; ?>			
+                                                        <a href="<?php the_field('pdf_link_1', 'option'); ?>" target="_blank"><?php the_field('pdf_link_heading_1', 'option'); ?></a>
+                                                    <?php echo "</p>"; ?>
+                                                <?php else : ?>
+                                                    <?php echo "<p>"; ?>			
+                                                        <a href="#"><?php the_field('pdf_link_heading_1', 'option'); ?></a>
+                                                    <?php echo "</p>"; ?>
+                                                <?php endif; ?>  
                                             </div>						
-                                        <?php endif; ?>                                    
+                                        <?php endif; ?>  
+
+                                        <!-- ?php if( !empty(get_field('pdf_link_1', 'option')) ): ?>
+                                            <div class="pdf-text">
+                                                ?php echo "<p>"; ?>			
+                                                    <a href="?php the_field('pdf_link_1', 'option'); ?>" target="_blank">?php the_field('pdf_link_heading_1', 'option'); ?></a>
+                                                ?php echo "</p>"; ?>
+                                            </div>						
+                                        ?php endif; ?>                                     -->
                                     </div>
 
                                     <div class="pdf-button-2 pdf-button">
                                         <div class="pdf-image">
-                                            <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">	
-                                            <img src="<?php the_field('pdf_link_image_1', 'option'); ?>" width=30>
-                                            </a>
+                                            <img src="<?php the_field('pdf_link_image_2', 'option'); ?>" width=30>
                                         </div>
-                                        <?php if( !empty(get_field('pdf_link_2', 'option')) ): ?>
+                                        <?php if( !empty(get_field('pdf_link_heading_2', 'option')) ): ?>
                                             <div class="pdf-text">
-                                                <?php echo "<p>"; ?>			
-                                                    <a href="<?php the_field('pdf_link_2', 'option'); ?>" target="_blank">Conveyer Systems</a>
-                                                <?php echo "</p>"; ?>
+                                                <?php if( !empty(get_field('pdf_link_2', 'option')) ): ?>
+                                                    <?php echo "<p>"; ?>			
+                                                        <a href="<?php the_field('pdf_link_2', 'option'); ?>" target="_blank"><?php the_field('pdf_link_heading_2', 'option'); ?></a>
+                                                    <?php echo "</p>"; ?>
+                                                <?php else : ?>
+                                                    <?php echo "<p>"; ?>			
+                                                        <a href="#"><?php the_field('pdf_link_heading_2', 'option'); ?></a>
+                                                    <?php echo "</p>"; ?>
+                                                <?php endif; ?>  
                                             </div>						
-                                        <?php endif; ?>                                          	                         
+                                        <?php endif; ?>                                            	                         
                                     </div>
 
                                     <div class="pdf-button-3 pdf-button">
                                         <div class="pdf-image">
-                                            <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">	
-                                            <img src="<?php the_field('pdf_link_image_1', 'option'); ?>" width=30>
-                                            </a>
+                                            <img src="<?php the_field('pdf_link_image_3', 'option'); ?>" width=30>
                                         </div>	
-                                        <?php if( !empty(get_field('pdf_link_3', 'option')) ): ?>
+                                        <?php if( !empty(get_field('pdf_link_heading_3', 'option')) ): ?>
                                             <div class="pdf-text">
-                                                <?php echo "<p>"; ?>			
-                                                    <a href="<?php the_field('pdf_link_3', 'option'); ?>" target="_blank">Custom Instrumentation R&D</a>
-                                                <?php echo "</p>"; ?>
+                                                <?php if( !empty(get_field('pdf_link_3', 'option')) ): ?>
+                                                    <?php echo "<p>"; ?>			
+                                                        <a href="<?php the_field('pdf_link_3', 'option'); ?>" target="_blank"><?php the_field('pdf_link_heading_3', 'option'); ?></a>
+                                                    <?php echo "</p>"; ?>
+                                                <?php else : ?>
+                                                    <?php echo "<p>"; ?>			
+                                                        <a href="#"><?php the_field('pdf_link_heading_3', 'option'); ?></a>
+                                                    <?php echo "</p>"; ?>
+                                                <?php endif; ?>  
                                             </div>						
-                                        <?php endif; ?>                                       									
+                                        <?php endif; ?>  	
                                     </div>
                                 </div>
 
                                 <div class="pdf-block-2">
                                     <div class="pdf-button-4 pdf-button">
-                                        <div class="pdf-image">
-                                            <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">	
-                                            <img src="<?php the_field('pdf_link_image_1', 'option'); ?>" width=30>
-                                            </a>
-                                        </div>                                        
-                                        <?php if( !empty(get_field('pdf_link_3', 'option')) ): ?>
+                                    <div class="pdf-image">
+                                            <img src="<?php the_field('pdf_link_image_4', 'option'); ?>" width=30>
+                                        </div>                                      
+                                        <?php if( !empty(get_field('pdf_link_heading_4', 'option')) ): ?>
                                             <div class="pdf-text">
-                                                <?php echo "<p>"; ?>			
-                                                    <a href="<?php the_field('pdf_link_4', 'option'); ?>" target="_blank">Industrial Displays</a>
-                                                <?php echo "</p>"; ?>
+                                                <?php if( !empty(get_field('pdf_link_4', 'option')) ): ?>
+                                                    <?php echo "<p>"; ?>			
+                                                        <a href="<?php the_field('pdf_link_4', 'option'); ?>" target="_blank"><?php the_field('pdf_link_heading_4', 'option'); ?></a>
+                                                    <?php echo "</p>"; ?>
+                                                <?php else : ?>
+                                                    <?php echo "<p>"; ?>			
+                                                        <a href="#"><?php the_field('pdf_link_heading_4', 'option'); ?></a>
+                                                    <?php echo "</p>"; ?>
+                                                <?php endif; ?>  
                                             </div>						
                                         <?php endif; ?>  
                                     </div>
 
                                     <div class="pdf-button-5 pdf-button">
-                                        <div class="pdf-image">
-                                            <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">	
-                                            <img src="<?php the_field('pdf_link_image_1', 'option'); ?>" width=30>
-                                            </a>
+                                    <div class="pdf-image">
+                                            <img src="<?php the_field('pdf_link_image_5', 'option'); ?>" width=30>
                                         </div>	                                        
-                                        <?php if( !empty(get_field('pdf_link_3', 'option')) ): ?>
+                                        <?php if( !empty(get_field('pdf_link_heading_5', 'option')) ): ?>
                                             <div class="pdf-text">
-                                                <?php echo "<p>"; ?>			
-                                                    <a href="<?php the_field('pdf_link_5', 'option'); ?>" target="_blank">Automated Machinery</a>
-                                                <?php echo "</p>"; ?>
+                                                <?php if( !empty(get_field('pdf_link_5', 'option')) ): ?>
+                                                    <?php echo "<p>"; ?>			
+                                                        <a href="<?php the_field('pdf_link_5', 'option'); ?>" target="_blank"><?php the_field('pdf_link_heading_5', 'option'); ?></a>
+                                                    <?php echo "</p>"; ?>
+                                                <?php else : ?>
+                                                    <?php echo "<p>"; ?>			
+                                                        <a href="#"><?php the_field('pdf_link_heading_5', 'option'); ?></a>
+                                                    <?php echo "</p>"; ?>
+                                                <?php endif; ?>  
                                             </div>						
                                         <?php endif; ?>  									
                                     </div>
 
                                     <div class="pdf-button-6 pdf-button">
-                                        <div class="pdf-image">
-                                            <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">	
-                                            <img src="<?php the_field('pdf_link_image_1', 'option'); ?>" width=30>
-                                            </a>
-                                        </div>	                                        
-                                        <?php if( !empty(get_field('pdf_link_3', 'option')) ): ?>
+                                    <div class="pdf-image">
+                                            <img src="<?php the_field('pdf_link_image_6', 'option'); ?>" width=30>
+                                        </div>                                        
+                                        <?php if( !empty(get_field('pdf_link_heading_6', 'option')) ): ?>
                                             <div class="pdf-text">
-                                                <?php echo "<p>"; ?>			
-                                                    <a href="<?php the_field('pdf_link_3', 'option'); ?>" target="_blank">Digital Transformation</a>
-                                                <?php echo "</p>"; ?>
+                                                <?php if( !empty(get_field('pdf_link_6', 'option')) ): ?>
+                                                    <?php echo "<p>"; ?>			
+                                                        <a href="<?php the_field('pdf_link_6', 'option'); ?>" target="_blank"><?php the_field('pdf_link_heading_6', 'option'); ?></a>
+                                                    <?php echo "</p>"; ?>
+                                                <?php else : ?>
+                                                    <?php echo "<p>"; ?>			
+                                                        <a href="#"><?php the_field('pdf_link_heading_6', 'option'); ?></a>
+                                                    <?php echo "</p>"; ?>
+                                                <?php endif; ?>  
                                             </div>						
-                                        <?php endif; ?>  											
+                                        <?php endif; ?>   											
                                     </div>
                                 </div>
                             </div>

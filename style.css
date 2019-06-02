@@ -677,7 +677,8 @@ a:active {
 	display: block;
 	float: left;
 	/* width: 68.5%; */
-	width: 68%;
+	/* width: 68%; */
+	width: 62%;
 	font-size: var(--theme-font-body);
 	letter-spacing: 0.03rem;
 	padding-top: 0;
@@ -1472,8 +1473,15 @@ body {
 
 .video1Text {
 	margin: 0;
-	padding-bottom: 10px;
+	padding-bottom: 18px;
 	font-size: var(--theme-font-body);
+}
+
+.video1Container iframe,
+.video1Container object,
+.video1Container embed { 
+	/* max-width: 100%; */
+    height: 350px;
 }
 
 /*---------------------*/
@@ -1586,6 +1594,14 @@ body {
 .video2Text {
 	margin: 0;
 	padding: 0;
+}
+
+.video2Container iframe,
+.video2Container object,
+.video2Container embed { 
+	max-width: 100%;
+	width: 370px;
+    height: 170px;
 }
 
 /*---------------------*/
@@ -1714,10 +1730,8 @@ body {
 }
 
 .pdf-text {
-	width: 80%;
+	width: 100%;
 	font-size: var(--theme-font-body);
-	text-align: left;
-	padding-left: 20px;
 }
 
 .pdf-text a {
@@ -1873,6 +1887,7 @@ input.sib-default-btn {
 /* Sidebar Styles */
 .sidebar-news-slider {
 	width: 260px;
+	margin: 0 0 50px 0;
 }
 
 .sidebar-news-item {
@@ -1880,6 +1895,7 @@ input.sib-default-btn {
 	flex-direction: column !important; */
 	height: 150px !important;
 	width: 100% !important;
+	background-color: var(--theme-white);
 }
 
 .sidebar-news .sidebarNewsSlider .MS-content .item {
@@ -1917,6 +1933,7 @@ input.sib-default-btn {
 
 .sidebar-news p {
 	font-size: var(--theme-font-body);
+	margin-top: 2px;
 }
 
 /* Sidebar Contact Form Styles */
@@ -2221,9 +2238,23 @@ div#sidebar-form{
 	text-align: center;
 }
 
-.industrial-displays-section img  {
-	width: 65%;
+.industrial-displays-section img {
+	width: 70%;
 }
+
+.conveyers-section {
+	text-align: center;
+}
+
+.conveyers-section h4,
+.conveyers-section p {
+	text-align: left;
+}
+
+.conveyers-section img  {
+	width: 70%;
+}
+
 
 /*---------------------*/
 /*SHARE HOLDER STYLES */
@@ -2859,6 +2890,7 @@ footer ul li {
 
 	.video1Container {
 		width: 100%;
+		height: 300px;
 	}
 
 	.video1Container iframe,
@@ -2892,7 +2924,7 @@ footer ul li {
 	}
 
 	.video-1-section p {
-		margin-left: 10px;
+		margin: 60px 0 0 10px;
 	}
 
 	.learn-button {
@@ -3101,10 +3133,39 @@ footer ul li {
 		padding: 1em 0 0 0;
 	}
 
+	.job-page-heading {
+		display: block;
+	}
+
+
+	.job-page-heading .job-page-text {
+		width: 100%;
+		height: 160px;
+	}
+
+	.job-page-heading .job-page-link {
+		padding: 0 0 70px 75%;
+	}
+
+	.job-apply-button {
+		top: 2.8%;
+	}
+
+	.job-apply-button a {
+		font-size: 10px;
+	}
 	/* .contact-us-banner-video {
 		width: 80%;
 		margin: 0 auto;
 	} */
+
+	.news-article {
+		height: 430px;
+	}
+
+	.news-div {
+		width: 100%;
+	}
 
 	.contact-block-main {
 		display: block;

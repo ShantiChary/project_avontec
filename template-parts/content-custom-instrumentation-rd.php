@@ -17,10 +17,10 @@
             $ppImage2 = get_field('pp_image_2');
             $ppText3 = get_field('pp_text_3');
             $ppImage3 = get_field('pp_image_3');
-            $ppText2 = get_field('pp_text_4');
-            $ppImage2 = get_field('pp_image_4');
-            $ppText3 = get_field('pp_text_5');
-            $ppImage3 = get_field('pp_image_5'); ?>
+            $ppText4 = get_field('pp_text_4');
+            $ppImage4 = get_field('pp_image_4');
+            $ppText5 = get_field('pp_text_5');
+            $ppImage5 = get_field('pp_image_5'); ?>
 
             <div>
                 <?php  

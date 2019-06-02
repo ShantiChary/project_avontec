@@ -29,8 +29,8 @@
                         $args = array(
                                 'post_type' => 'news',
                                 'posts_per_page' => -1,
-                                'order' => 'ASC',
-                                'orderby' => 'title'
+                                'order' => 'DESC',
+                                'orderby' => 'news_date'
                         );
 
                         $multislides = new WP_Query($args);
