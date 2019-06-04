@@ -2266,13 +2266,29 @@ div#sidebar-form{
 	text-align: center;
 }
 
-.jumbo-img-1 img {
+.jumbo-img-1 img,
+.support-img img {
 	width: 35%;
 }
 
 .jumbo-chart-img img {
 	width: 65%;
 }
+
+.support-section {
+	text-align: left;
+}
+
+.support-section h4 {
+	font-size: var(--theme-font-body);
+}
+
+.support-section img{
+	width: 35%;
+	text-align: center !important;
+}
+
+
 
 /*---------------------*/
 /*SHARE HOLDER STYLES */

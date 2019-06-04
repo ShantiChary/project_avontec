@@ -79,7 +79,7 @@ get_header('internal');
 
 										<!-- Sub menu div -->
 										<?php
-											if (( ! is_page('contact-us') ) && ( ! is_page('custom-rd') ) && ( ! is_page('digital-transformation') ) && ( ! is_page('iot-solutions') ) && ( ! is_page('core-values') ) && ( ! is_page ('process-control') )  && ( ! is_page ('products') ) && ( ! is_page ('services') ) ) { ?>
+											if (( ! is_page('contact-us') ) && ( ! is_page('custom-rd') ) && ( ! is_page('digital-transformation') ) && ( ! is_page('iot-solutions') ) && ( ! is_page('core-values') ) && ( ! is_page ('process-control') )  && ( ! is_page ('products') ) && ( ! is_page ('services') ) && ( ! is_page ('mimic-panels') ) ) { ?>
 												<div class="sub-menu-div">										
 													<?php
 													global $wp_query;
