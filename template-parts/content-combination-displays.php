@@ -22,10 +22,12 @@
             $ppText5 = get_field('pp_text_5');
             $ppImage5 = get_field('pp_image_5'); ?>
 
-            <?php   
-                if( !empty($ppImage) ): ?>
-                    <img class="internal-page-image" src="<?php echo $ppImage['url']; ?>" alt="<?php echo $ppImage['alt']; ?>" width=100%/>
-            <?php endif;  ?>
+            <div class="jumbo-img-1">
+                <?php   
+                    if( !empty($ppImage) ): ?>
+                        <img src="<?php echo $ppImage['url']; ?>" alt="<?php echo $ppImage['alt']; ?>" width=100%/>
+                <?php endif;  ?>
+            </div>
 
             <div>
                 <?php  
@@ -34,12 +36,14 @@
                 <?php endif;   ?>              
             </div>
 
-            <?php
-            if( !empty($ppImage2) ): ?>
-                <img class="internal-page-image" src="<?php echo $ppImage2['url']; ?>" alt="<?php echo $ppImage2['alt']; ?>" width=100%/>
-            <?php endif;  ?>
+            <div class="jumbo-chart-img">
+                <?php
+                    if( !empty($ppImage2) ): ?>
+                        <img src="<?php echo $ppImage2['url']; ?>" alt="<?php echo $ppImage2['alt']; ?>" width=100%/>
+                    <?php endif;  ?>
+            </div>
 
-            <div>
+            <div>                    
                 <?php  
                     if( !empty($ppText2) ): ?>
                     <?php echo $ppText2; ?>

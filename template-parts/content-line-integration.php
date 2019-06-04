@@ -22,21 +22,15 @@
             $ppText5 = get_field('pp_text_5');
             $ppImage5 = get_field('pp_image_5'); ?>
 
-            <?php   
-                if( !empty($ppImage) ): ?>
-                    <img class="internal-page-image" src="<?php echo $ppImage['url']; ?>" alt="<?php echo $ppImage['alt']; ?>" width=100%/>
-            <?php endif;  ?>
-
             <div>
                 <?php  
                     if( !empty($ppText) ): ?>
                     <?php echo $ppText; ?>
                 <?php endif;   ?>              
             </div>
-
-            <?php
-            if( !empty($ppImage2) ): ?>
-                <img class="internal-page-image" src="<?php echo $ppImage2['url']; ?>" alt="<?php echo $ppImage2['alt']; ?>" width=100%/>
+            <?php   
+                if( !empty($ppImage) ): ?>
+                    <img class="internal-page-image" src="<?php echo $ppImage['url']; ?>" alt="<?php echo $ppImage['alt']; ?>" width=100%/>
             <?php endif;  ?>
 
             <div>
@@ -45,22 +39,21 @@
                     <?php echo $ppText2; ?>
                 <?php endif;   ?>              
             </div>
-
             <?php
-            if( !empty($ppImage3) ): ?>
-                <img class="internal-page-image" src="<?php echo $ppImage3['url']; ?>" alt="<?php echo $ppImage3['alt']; ?>" width=100%/>
+            if( !empty($ppImage2) ): ?>
+                <img class="internal-page-image" src="<?php echo $ppImage2['url']; ?>" alt="<?php echo $ppImage2['alt']; ?>" width=100%/>
             <?php endif;  ?>
-  
+
+
             <div>
                 <?php  
                     if( !empty($ppText3) ): ?>
                     <?php echo $ppText3; ?>
                 <?php endif;   ?>              
             </div>
-
             <?php
-            if( !empty($ppImage4) ): ?>
-                <img class="internal-page-image" src="<?php echo $ppImage4['url']; ?>" alt="<?php echo $ppImage4['alt']; ?>" width=100%/>
+            if( !empty($ppImage3) ): ?>
+                <img class="internal-page-image" src="<?php echo $ppImage3['url']; ?>" alt="<?php echo $ppImage3['alt']; ?>" width=100%/>
             <?php endif;  ?>
   
             <div>
@@ -69,10 +62,9 @@
                     <?php echo $ppText4; ?>
                 <?php endif;   ?>              
             </div>
-
             <?php
-            if( !empty($ppImage5) ): ?>
-                <img class="internal-page-image" src="<?php echo $ppImage5['url']; ?>" alt="<?php echo $ppImage5['alt']; ?>" width=100%/>
+            if( !empty($ppImage4) ): ?>
+                <img class="internal-page-image" src="<?php echo $ppImage4['url']; ?>" alt="<?php echo $ppImage4['alt']; ?>" width=100%/>
             <?php endif;  ?>
   
             <div>
@@ -81,7 +73,11 @@
                     <?php echo $ppText5; ?>
                 <?php endif;   ?>              
             </div>
-  
+            <?php
+            if( !empty($ppImage5) ): ?>
+                <img class="internal-page-image" src="<?php echo $ppImage5['url']; ?>" alt="<?php echo $ppImage5['alt']; ?>" width=100%/>
+            <?php endif;  ?>
+   
 </div>
 
 
