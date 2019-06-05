@@ -136,11 +136,11 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
                                 
                                 // Get the video URL and put it in the $video variable
                                 // Check if there is in fact a video URL
-                                if ($videoUrl) {
-                                    echo '<div>';
-                                    echo $videoUrl;
-                                    echo '</div>';
-                                }
+                                echo '<div class="sidebar-news-video">';
+                                    if ($videoUrl) {
+                                        echo $videoUrl;
+                                    }
+                                echo '</div>';                                
 
                                 echo '<p>';
                                 echo $videoText;

@@ -38,12 +38,12 @@
                         // Get the video URL and put it in the $video variable
                         $video1ID = get_post_meta($post->ID, 'video_1_url', true);
                         // Check if there is in fact a video URL
-                        if ($video1ID) {
-                            echo '<div class="video1Container">';
-                            // Echo the embed code via oEmbed
-                            echo wp_oembed_get( 'http://www.youtube.com/watch?v=' . $video1ID ); 
-                            echo '</div>';
-                        }
+                        echo '<div class="video1Container">';
+                            if ($video1ID) {
+                                // Echo the embed code via oEmbed
+                                echo wp_oembed_get( 'http://www.youtube.com/watch?v=' . $video1ID ); 
+                            }
+                        echo '</div>';
 
                         echo '<p class="video1Text">';
                             the_field('video_1_text');
@@ -102,16 +102,16 @@
 
                                             <?php
                                             // Get the video URL and put it in the $video variable
-                                            // Check if there is in fact a video URL
-                                            if ($video2ID) {
-                                                echo '<div class="video2Container">';
-                                                // Echo the embed code via oEmbed
-                                                // echo wp_oembed_get( 'http://www.youtube.com/watch?v=' . $videoHome2, array('width'=>280, 'height'=>150)); 
-                                                // echo wp_oembed_get( 'http://www.youtube.com/watch?v=' . $video2ID ); 
-                                                // echo do_shortcode("[video src=".get_sub_field('video_url')."]");
-                                                echo $video2ID;
-                                                echo '</div>';
-                                            }
+                                            // Check if there is in fact a video 
+                                            echo '<div class="video2Container">';
+                                                if ($video2ID) {
+                                                    // Echo the embed code via oEmbed
+                                                    // echo wp_oembed_get( 'http://www.youtube.com/watch?v=' . $videoHome2, array('width'=>280, 'height'=>150)); 
+                                                    // echo wp_oembed_get( 'http://www.youtube.com/watch?v=' . $video2ID ); 
+                                                    // echo do_shortcode("[video src=".get_sub_field('video_url')."]");
+                                                    echo $video2ID;
+                                                }
+                                            echo '</div>';
                                         ?>
                                         </div>
                 

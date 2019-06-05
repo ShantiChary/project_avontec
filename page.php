@@ -392,10 +392,10 @@ get_header('internal');
 											/* Our Partners */
 											elseif (is_page (1057)) { 
 												// get_template_part( 'template-parts/content', 'our-partners' );
-												get_template_part( 'template-parts/content', 'flexcon-conveyor-parts' );
+												get_template_part( 'template-parts/content', 'flexkon-conveyor-parts' );
 											}
 											elseif (is_page (1192)) { 
-												get_template_part( 'template-parts/content', 'flexcon-conveyor-parts' );
+												get_template_part( 'template-parts/content', 'flexkon-conveyor-parts' );
 											}
 											elseif (is_page (840)) { 
 												get_template_part( 'template-parts/content', 'kykloo-unscrambling-solutions' );
